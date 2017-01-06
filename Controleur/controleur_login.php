@@ -3,13 +3,13 @@
 if(isset($_POST['confirm-button']))
 {
 
-	$username = mysql_real_escape_string(htmlspecialchars($_POST["username"]));
+	$mail = mysql_real_escape_string(htmlspecialchars($_POST["email"]));
 	$password = sha1($_POST["password"]);
 
-	if(!empty($_POST['username']) AND !empty($_POST['password']))
+	if(!empty($_POST['email']) AND !empty($_POST['password']))
 	{
-		$requser = $bdd->prepare("SELECT * FROM membres WHERE username = ? AND password = ?");
-		$requser->execute(array($username, $password));
+		$requser = $bdd->prepare("SELECT * FROM membres WHERE mail = ? AND password = ?");
+		$requser->execute(array($mail, $password));
 		$userexist = $requser->rowCount();
 
 		if($userexist == 1)

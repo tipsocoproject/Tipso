@@ -27,8 +27,8 @@ include("../Modele/cookies.php");
 		<form method="POST" action="">
 			<table>
 				<tr>
-					<td><br><label class="userlog" for="username">Identifiant (ou mail)</label></td>	
-					<td><br><input class="input-box" type="text" name="username" placeholder="  Identifiant" value=<?php echo $_COOKIE["username"]; ?>></td>
+					<td><br><label class="userlog" for="username">Email</label></td>	
+					<td><br><input class="input-box" type="email" name="email" placeholder="  Identifiant" value=<?php echo $_COOKIE["email"]; ?>></td>
 				</tr>				
 				<tr>
 					<td><br><label class="userlog" for="password">Mot de passe</label></td>	
@@ -46,6 +46,7 @@ include("../Modele/cookies.php");
 					<td><br><input class="button" type="submit" name="confirm-button"></td>
 				</tr>
 			</table>
+			<br>
 			<br>
 			<br>
 			<a href="inscription.php"><p class="noaccount">Pas de compte ? Cliquez ici pour vous inscrire.</label></a>	
