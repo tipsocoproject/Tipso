@@ -1,11 +1,5 @@
-@font-face { /* Définition d'une nouvelle police nommée LearningCurveProRegular*/ 
-    font-family: 'LearningCurveProRegular';
-    src: url('LearningCurve_OT-webfont.eot');
-    src: url('LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
-         url('LearningCurve_OT-webfont.woff') format('woff'),
-         url('LearningCurve_OT-webfont.ttf') format('truetype'),
-         url('LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');$
-}
+/* Feuille de style CSS par défaut sur la page "mainpage"*/
+
 
 *{
 	font-family: calibri;
@@ -19,7 +13,6 @@ header{
 }
 
 body{
-	/*background-image:url(http://buidln.clipdealer.com/002/656/764//previews/6--2656764-Grey%20background..jpg);*/
     background-color: #EAF1F8;
     margin: 0px;
 }
@@ -47,33 +40,15 @@ body{
 }
 
 .bouton_top_acc{
-	/*background-color: #6F3E9C;*/
-    /*border: solid;
-    border-radius: 12px;*/
     color: #EAF1F8;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-    /*transition: font-size 500ms ease;
-    -webkit-transition: font-size 500ms ease-out;
-    -moz-transition: font-size 500s ease-out;
-    -o-transition: font-size 500s ease-out;
-    /*transition: background-color 2s ease;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-    transition: border-radius 2s ease;
-    -webkit-transition: border-radius 2s ease-out;
-    -moz-transition: border-radius 2s ease-out;
-    -o-transition: border-radius 2s ease-out;*/
 }
 
 .bouton_top_acc:hover{
-	/*background-color: #C265C0;*/
-    /*border: solid;
-    border-radius: 4px;*/
     color: #EAF1F8;
     padding: 15px 32px;
     text-align: center;
@@ -82,21 +57,6 @@ body{
     border-top: 1px #EAF1F8 solid;
     border-bottom: 1px #EAF1F8 solid;
     cursor: pointer
-
-
-    /*font-size: 35px;
-    /*transition: font-size 500ms ease;
-    -webkit-transition: font-size 500ms ease-out;
-    -moz-transition: font-size 500ms ease-out;
-    -o-transition: font-size 500ms ease-out;
-    /*transition: background-color 2s ease;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-     transition: border-radius 2s ease;
-    -webkit-transition: border-radius 2s ease-out;
-    -moz-transition: border-radius 2s ease-out;
-    -o-transition: border-radius 2s ease-out;*/
 }
 
 .menu_dér{
@@ -135,29 +95,16 @@ body{
 }
 
 .bouton_left_nav{
-	/*background-color: #C265C0;*/
 	color: #627890;
 	text-align: center;
-	/*border: 1px solid #6F3E9C;*/
 	text-decoration: none;
 	font-size: 20px;
-	/*transition
-     font-size 500ms ease-out;
-	 -webkit-transition: font-size 500ms ease-out;
-    -moz-transition: font-size 500ms ease-out;
-    -o-transition: font-size 500ms ease-out;*/
 }
 
 .bouton_left_nav:hover{
 	color:#627890;
     border-top: 1px solid #627890;
     border-bottom: 1px solid #627890;
-	/*font-size: 30px;*/
-	/*text-decoration: underline;*/
-	/*transition: font-size 500ms ease-out;
-	 -webkit-transition: font-size 500ms ease-out;
-    -moz-transition: font-size 500ms ease-out;
-    -o-transition: font-size 500ms ease-out;*/
 }
 
 
@@ -170,38 +117,7 @@ section{
     height: 70%;
     background-color: white;
     box-sizing: border-box;
-    /*height: 600px;
-    width: 1100px;
-    background-color: white;
-    box-shadow: 10px 10px 5px #AFAFAF;*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -222,13 +138,11 @@ footer{
 
 }
 
-.copyright{ /* Utilisation de la police qu'on vient de définir sur toute la page */
-	/*font-family: 'LearningCurveProRegular', Arial, serif;*/
+.copyright{
     color: #EAF1F8;
 	font-size: 19px;
 	display: flex;
 	justify-content: flex-start;
-	/*border: solid 1px #C265C0;*/
 	width: 200px;
 	position: absolute;
 	bottom: 0px;

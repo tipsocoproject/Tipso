@@ -9,7 +9,6 @@ header{
 }
 
 body{
-	/*background-image:url(http://buidln.clipdealer.com/002/656/764//previews/6--2656764-Grey%20background..jpg);*/
     background-color: #EAF1F8;
     box-sizing: border-box;
     width: 100%;
@@ -27,21 +26,12 @@ footer{
     
 }
 
-/*.image{
-border: solid black 1px;
-position: absolute;
-left: 150px;
-}*/
 
 img{
 	min-width: 100px;
 	max-height: 100px;
 }
 
-/*.title{
-	font: bold;
-	position: relative;
-}*/
 
 .content{
 	border: solid black 1px;

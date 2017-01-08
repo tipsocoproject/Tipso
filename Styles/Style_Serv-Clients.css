@@ -42,33 +42,15 @@ textarea {
 }
 
 .bouton_top_acc{
-	/*background-color: #6F3E9C;*/
-    /*border: solid;
-    border-radius: 12px;*/
     color: #EAF1F8;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-    /*transition: font-size 500ms ease;
-    -webkit-transition: font-size 500ms ease-out;
-    -moz-transition: font-size 500s ease-out;
-    -o-transition: font-size 500s ease-out;
-    /*transition: background-color 2s ease;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-    transition: border-radius 2s ease;
-    -webkit-transition: border-radius 2s ease-out;
-    -moz-transition: border-radius 2s ease-out;
-    -o-transition: border-radius 2s ease-out;*/
 }
 
 .bouton_top_acc:hover{
-	/*background-color: #C265C0;*/
-    /*border: solid;
-    border-radius: 4px;*/
     color: #EAF1F8;
     padding: 15px 32px;
     text-align: center;
@@ -76,22 +58,7 @@ textarea {
     display: inline-block;
     border-top: 1px #EAF1F8 solid;
     border-bottom: 1px #EAF1F8 solid;
-    cursor: pointer
-
-
-    /*font-size: 35px;
-    /*transition: font-size 500ms ease;
-    -webkit-transition: font-size 500ms ease-out;
-    -moz-transition: font-size 500ms ease-out;
-    -o-transition: font-size 500ms ease-out;
-    /*transition: background-color 2s ease;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-     transition: border-radius 2s ease;
-    -webkit-transition: border-radius 2s ease-out;
-    -moz-transition: border-radius 2s ease-out;
-    -o-transition: border-radius 2s ease-out;*/
+    cursor: pointer;
 }
 
 .menu_dér{
@@ -168,7 +135,6 @@ footer{
 }
 
 body{
-	/*background-image:url(http://buidln.clipdealer.com/002/656/764//previews/6--2656764-Grey%20background..jpg);*/
     background-color: #EAF1F8;
     box-sizing: border-box;
     width: 100%;

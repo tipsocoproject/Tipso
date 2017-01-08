@@ -3,10 +3,6 @@ body {
 }
 
 div {
-	/*
-	border-width: 1px;
-	border-color: black;
-	border-style: solid;*/
 	min-width: 550px;
 	margin: auto;
 

@@ -49,7 +49,7 @@
 						</section>
 					</body>
 				<footer>
-					<p class="copyright">Copyright: Tipso 2016</p>
+					<p class="copyright">Copyright : Tipso 2016</p>
 				</footer>
 
 		</html>
