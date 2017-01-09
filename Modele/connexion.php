@@ -9,7 +9,6 @@ try {
 	
 
 	$bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$passwd");
-	$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	}
 
@@ -19,10 +18,9 @@ catch(PDOException $e)
 		$dbname = "bdd_tipso";
 		$host = 'localhost';
 		$user = 'root';
-		$passwd = 'root';
+		$passwd = '';
 
 		$bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$passwd");
-		$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		}
 
