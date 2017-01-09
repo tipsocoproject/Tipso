@@ -2,7 +2,7 @@
 	$dbname = "bdd_tipso";
 	$host = 'localhost';
 	$user = 'root';
-	$passwd = 'root';
+	$passwd = '';
 
 	$bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$passwd");
 <<<<<<< HEAD

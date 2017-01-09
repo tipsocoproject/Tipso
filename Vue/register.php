@@ -2,7 +2,6 @@
 
 require ("../Modele/connexion.php");
 
-include ("../Controleur/controleur_register.php");
 
 ?>
 
