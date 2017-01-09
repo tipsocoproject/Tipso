@@ -16,7 +16,7 @@ catch(PDOException $e)
 		$dbname = "bdd_tipso";
 		$host = 'localhost';
 		$user = 'root';
-		$passwd = '';
+		$passwd = 'root';
 
 		$bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$passwd");
 
