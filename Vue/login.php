@@ -49,7 +49,7 @@ include("../Modele/cookies.php");
 			<br>
 			<br>
 			<br>
-			<a href="inscription.php"><p class="noaccount">Pas de compte ? Cliquez ici pour vous inscrire.</label></a>	
+			<a href="register.php"><p class="noaccount">Pas de compte ? Cliquez ici pour vous inscrire.</label></a>	
 		</form>
 
 		<br>

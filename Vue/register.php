@@ -1,7 +1,7 @@
 <?php
 
 require ("../Modele/connexion.php");
-
+include ("../Controleur/controleur_register.php");
 
 ?>
 
@@ -11,7 +11,7 @@ require ("../Modele/connexion.php");
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/register.css">
-	<title>Inscription</title>
+	<title>Register</title>
 
 </head>
 <header>
@@ -38,7 +38,7 @@ require ("../Modele/connexion.php");
 					</tr>			
 					<tr>
 						<td><br><label for="password">Mot de passe</label></td>	
-						<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe"></td>
+						<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe" value=<?php if(isset($password)) { echo $password;} ?>></td>
 					</tr>
 					<tr>
 						<td><br><label for="confirm-password">Confirmez mot de passe</label></td>	
@@ -46,7 +46,7 @@ require ("../Modele/connexion.php");
 					</tr>
 					<tr>
 						<td><br><label for="serialnumber">Numéro de série du capteur</label></td>	
-						<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  Numéro de série capteur"></td>
+						<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  Numéro de série capteur" value=<?php if(isset($serialnumber)) { echo $serialnumber;} ?>></td>
 					</tr>
 					<tr>
 						<td></td>
