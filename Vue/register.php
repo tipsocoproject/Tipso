@@ -10,7 +10,7 @@ require ("../Modele/connexion.php");
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../Styles/inscription.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/register.css">
 	<title>Inscription</title>
 
 </head>
@@ -35,11 +35,7 @@ require ("../Modele/connexion.php");
 					<tr>
 						<td><br><label for="mail">E-mail</label></td>	
 						<td><br><input class="input-box" type="email" name="mail" placeholder="  E-mail" value=<?php if(isset($mail)) { echo $mail;} ?>></td>
-					</tr>
-					<tr>
-						<td><br><label for="username">Identifiant</label></td>	
-						<td><br><input class="input-box" type="text" name="username" placeholder="  Identifiant" value=<?php if(isset($username)) { echo $username;} ?>></td>
-					</tr>				
+					</tr>			
 					<tr>
 						<td><br><label for="password">Mot de passe</label></td>	
 						<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe"></td>
@@ -51,6 +47,10 @@ require ("../Modele/connexion.php");
 					<tr>
 						<td><br><label for="serialnumber">Numéro de série du capteur</label></td>	
 						<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  Numéro de série capteur"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>	
 			</form>
