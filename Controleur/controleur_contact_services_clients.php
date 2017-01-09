@@ -16,8 +16,6 @@ if(isset($_POST['confirm-button']))
 	{
 		$insert = $bdd->prepare("INSERT INTO `messages` (`nom`, `numtel`, `numrue`, `nomrue`, `pays`, `numappart`, `email`, `comments`) VALUES(?,?,?,?,?,?,?,?)");
 		$insert->execute(array($name, $num_tel, $num_rue, $nom_rue, $country, $num_appart, $email, $comments));
-		header("Location: ../Tipso/Vue/login.php");
-		exit();
 	}
 
 	else {
@@ -25,4 +23,5 @@ if(isset($_POST['confirm-button']))
 	}
 
 }
+
 ?>
