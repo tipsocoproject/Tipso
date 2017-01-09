@@ -184,6 +184,11 @@ input:checked + .rounded:after{
 
 }
 
+.votre_message{
+	position: absolute;
+	top: 100px;
+}
+
 .span_flex{
 	 display: block;
     overflow: hidden;
