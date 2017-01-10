@@ -22,6 +22,7 @@ include ("../Controleur/controleur_register.php");
 	    	<br>
 			<h2 class="main-text">Créer votre compte !</h2>
 			<br>
+			<br>
 			<form method="POST" action="">
 				<table>
 					<tr>
@@ -50,7 +51,7 @@ include ("../Controleur/controleur_register.php");
 					</tr>
 					<tr>
 						<td></td>
-						<td><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
+						<td><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>	
 			</form>

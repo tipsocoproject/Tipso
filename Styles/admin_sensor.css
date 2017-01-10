@@ -19,7 +19,9 @@ div.form{
 }
 
 table{
-
+	position: absolute;
+	top: 300px;
+	left: 550px;
 	height: 200px;
 	width: 600px;
 	margin-left: -200px;
@@ -110,8 +112,8 @@ footer{
 
 form{
 	background-color: white;
-	width: 550px;	
-	height: 360px;
+	width: 500px;	
+	height: 120px;
 	-webkit-box-shadow: 0 0 50px #C5C6D6;
 			box-shadow: 0 0 50px #C5C6D6;
 	margin-top: -20px;
@@ -129,9 +131,9 @@ table{
 .button{
 	position: relative;
 	left: 265px;
-	top:25px;
-	height: 50%;
-	width: 25%;
+	top:-40px;
+	height: 32%;
+	width: 40%;
 	font-size: 80%;
 	font-weight: bold;
 	background-color: #ecf0f1;
