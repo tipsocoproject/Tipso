@@ -19,6 +19,9 @@ include("../Controleur/controleur_adminsensor.php");
 <body>
     <div class="form" align="center">
     	<br>
+    	<br>
+    	<br>
+    	<br>
 		<h2 class="main-text">Rentrez le numéro de série</h2>
 		<br>
 		<br>

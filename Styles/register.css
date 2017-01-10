@@ -18,9 +18,10 @@ h2{
 }
 
 table{
-
+	position: relative;
+	left: -40px;
 	height: 500px;
-	width: 550px;
+	width: 580px;
 	font-size: 120%;
 	text-align: right;
 }
@@ -87,7 +88,7 @@ footer{
 
 form{
 	background-color: white;
-	width: 600px;	
+	width: 560px;	
 	height: 500px;
 	-webkit-box-shadow: 0 0 50px #C5C6D6;
 			box-shadow: 0 0 50px #C5C6D6;
