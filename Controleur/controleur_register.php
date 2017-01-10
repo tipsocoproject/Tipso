@@ -2,38 +2,44 @@
 
 if(isset($_POST['confirm-button']))
 {
+<<<<<<< HEAD
 	$lastname = uninjection_sql(htmlspecialchars($_POST['last-name']));
 	$firstname = uninjection_sql(htmlspecialchars($_POST['first-name']));
 	$mail = uninjection_sql(htmlspecialchars($_POST['mail']));
 	$username = uninjection_sql(htmlspecialchars($_POST['username']));
+=======
+	$lastname = mysql_real_escape_string(htmlspecialchars($_POST['last-name']));
+	$firstname = mysql_real_escape_string(htmlspecialchars($_POST['first-name']));
+	$mail = mysql_real_escape_string(htmlspecialchars($_POST['mail']));
+>>>>>>> origin/master
 	$password = sha1($_POST['password']);
 	$confirmpassword = sha1($_POST['confirm-password']);
 	$serialnumber = uninjection_sql(htmlspecialchars($_POST['serialnumber']));
 
-
-	if(!empty($_POST['last-name']) AND !empty($_POST['first-name']) AND !empty($_POST['mail']) AND !empty($_POST['username']) AND !empty($_POST['password']) AND !empty($_POST['confirm-password']) AND !empty($_POST['serial'])
+	if(!empty($_POST['last-name']) AND !empty($_POST['first-name']) AND !empty($_POST['mail']) AND !empty($_POST['password']) AND !empty($_POST['confirm-password']) AND !empty($_POST['serialnumber']))
 	{
+		$requser = $bdd->prepare("SELECT * FROM membres WHERE serialnumber = ?"); //selection de toutes les entrees de la table membre
+		$requser->execute(array($serialnumber));
+		$userexist = $requser->rowCount();
 
-		$usernamelen = strlen($username);
-
-		if($usernamelen <= 255)
-		{
-			$requser = $bdd->prepare("SELECT * FROM membres WHERE username = ?"); //selection de toutes les entrees de la table membre
-			$requser->execute(array($username));
-			$userexist = $requser->rowCount();
-
-			$mobilelen = strlen($mobilenumber);
-
-			if ($mobilelen <= 13)
+			if($serial == 0)
 			{
-				if($userexist == 0)
+				if(filter_var($mail, FILTER_VALIDATE_EMAIL))
 				{
-					if(filter_var($mail, FILTER_VALIDATE_EMAIL))
-					{
-						$reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
-						$reqmail->execute(array($mail));
-						$mailexist = $reqmail->rowCount();
+					$reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
+					$reqmail->execute(array($mail));
+					$mailexist = $reqmail->rowCount();
 
+					if($mailexist == 0)
+					{
+						if($password == $confirmpassword)
+						{
+
+						$insertmbr = $bdd->prepare("INSERT INTO membres(lastname, firstname, password, mail, serialnumber) VALUES(?,?,?,?,?)");
+						$insertmbr->execute(array($lastname, $firstname, $mail, $password, $serialnumber));
+						$error = "Merci de vous être inscrit ! Connectez-vous pour continuer !"; 
+
+<<<<<<< HEAD
 							if($mailexist == 0)
 							{
 								if($password == $confirmpassword)
@@ -43,36 +49,35 @@ if(isset($_POST['confirm-button']))
 									$error = "Merci de vous être inscrit ! Connectez-vous pour continuer !"; 
 									sleep(2);
 									header("Location: ../Vue/login.php");
+=======
+						$array = array("2C8Z-UF5H-UHJ8","2GQ3-6ARA-ZMNY","2NPP-MFR4-5MHZ","2S77-75KR-UCXX","332Q-DLQP-SVHB","46CW-86YM-72H4","4H2L-CZ4H-ZBD4","54GA-CJRN-RA97","59NW-UDPQ-VBRJ","5TB3-5ARE-PKLM", "5UJ7-6PD9-QKNS", "5VNZ-LH98-SGNM");
+						$array = implode(",", $data);
+						$sql = "INSERT INTO capteurs(sensorserial) VALUES $data";
+						mysql_query($sql);
+>>>>>>> origin/master
 
-								}
-								else
-								{
-									$error = "Mots de passes non correspondant !";
-								}
-							}
-							else
-							{
-								$error = "Adresse mail existante !";
-							}
+
+						header("Location: login.php");
+						}
+						else
+						{
+							$error = "Mots de passes non correspondant !";
+						}
 					}
 					else
-					{ lide !";
+					{
+						$error = "Adresse mail existante !";
 					}
 				}
 				else
 				{
-					$error = "Identifiant déjà existant !";
+					$error = "Votre adresse mail n'est pas valide !";
 				}
 			}
 			else
 			{
-				$error = "Numéro de mobile trop long";
+				$error = "Adresse mail existante !";
 			}
-		}
-		else
-		{
-			$error = "Racourcir Identifiant";
-		}
 	}
 	else
 	{

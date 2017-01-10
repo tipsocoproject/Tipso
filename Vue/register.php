@@ -2,7 +2,7 @@
 
 include ("../fonction/function_uninjection_sql.php");
 require ("../Modele/connexion.php");
-
+include ("../Controleur/controleur_register.php");
 
 ?>
 
@@ -11,8 +11,8 @@ require ("../Modele/connexion.php");
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../Styles/inscription.css">
-	<title>Inscription</title>
+	<link rel="stylesheet" type="text/css" href="../Styles/register.css">
+	<title>Register</title>
 
 </head>
 <header>
@@ -22,6 +22,7 @@ require ("../Modele/connexion.php");
 	    	<br>
 	    	<br>
 			<h2 class="main-text">Créer votre compte !</h2>
+			<br>
 			<br>
 			<form method="POST" action="">
 				<table>
@@ -36,14 +37,10 @@ require ("../Modele/connexion.php");
 					<tr>
 						<td><br><label for="mail">E-mail</label></td>	
 						<td><br><input class="input-box" type="email" name="mail" placeholder="  E-mail" value=<?php if(isset($mail)) { echo $mail;} ?>></td>
-					</tr>
-					<tr>
-						<td><br><label for="username">Identifiant</label></td>	
-						<td><br><input class="input-box" type="text" name="username" placeholder="  Identifiant" value=<?php if(isset($username)) { echo $username;} ?>></td>
-					</tr>				
+					</tr>			
 					<tr>
 						<td><br><label for="password">Mot de passe</label></td>	
-						<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe"></td>
+						<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe" value=<?php if(isset($password)) { echo $password;} ?>></td>
 					</tr>
 					<tr>
 						<td><br><label for="confirm-password">Confirmez mot de passe</label></td>	
@@ -51,7 +48,11 @@ require ("../Modele/connexion.php");
 					</tr>
 					<tr>
 						<td><br><label for="serialnumber">Numéro de série du capteur</label></td>	
-						<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  Numéro de série capteur"></td>
+						<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  Numéro de série capteur" value=<?php if(isset($serialnumber)) { echo $serialnumber;} ?>></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>	
 			</form>
