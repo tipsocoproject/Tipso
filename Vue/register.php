@@ -1,5 +1,6 @@
 <?php
 
+include ("../fonction/function_uninjection_sql.php");
 require ("../Modele/connexion.php");
 
 

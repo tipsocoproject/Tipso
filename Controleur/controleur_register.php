@@ -2,13 +2,13 @@
 
 if(isset($_POST['confirm-button']))
 {
-	$lastname = mysql_real_escape_string(htmlspecialchars($_POST['last-name']));
-	$firstname = mysql_real_escape_string(htmlspecialchars($_POST['first-name']));
-	$mail = mysql_real_escape_string(htmlspecialchars($_POST['mail']));
-	$username = mysql_real_escape_string(htmlspecialchars($_POST['username']));
+	$lastname = uninjection_sql(htmlspecialchars($_POST['last-name']));
+	$firstname = uninjection_sql(htmlspecialchars($_POST['first-name']));
+	$mail = uninjection_sql(htmlspecialchars($_POST['mail']));
+	$username = uninjection_sql(htmlspecialchars($_POST['username']));
 	$password = sha1($_POST['password']);
 	$confirmpassword = sha1($_POST['confirm-password']);
-	$serialnumber = mysql_real_escape_string(htmlspecialchars($_POST['serialnumber']));
+	$serialnumber = uninjection_sql(htmlspecialchars($_POST['serialnumber']));
 
 
 	if(!empty($_POST['last-name']) AND !empty($_POST['first-name']) AND !empty($_POST['mail']) AND !empty($_POST['username']) AND !empty($_POST['password']) AND !empty($_POST['confirm-password']) AND !empty($_POST['serial'])
@@ -42,7 +42,7 @@ if(isset($_POST['confirm-button']))
 									$insertmbr->execute(array($lastname, $firstname, $username, $mail, $password, $serialnumber);
 									$error = "Merci de vous être inscrit ! Connectez-vous pour continuer !"; 
 									sleep(2);
-									header("Location: login.php");
+									header("Location: ../Vue/login.php");
 
 								}
 								else
