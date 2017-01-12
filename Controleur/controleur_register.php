@@ -22,17 +22,29 @@ if(isset($_POST['confirm-button']))
 
 			if($mailexist == 0)
 			{
-				if($password == $confirmpassword)
+				$reqserial = $bdd->prepare("SELECT * FROM sensors WHERE sensorserial = ?");
+				$reqserial->execute(array($serialnumber));
+				$serialexist = $reqmail->rowCount();
+
+				if($serialexist == 1)
 				{
-					$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
-					$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
-					$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
-					sleep(2);
-					header("Location: ../Vue/login.php");
+					if($password == $confirmpassword)
+					{
+						$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
+						$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
+						$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
+						sleep(2);
+						header("Location: ../Vue/login.php");
+					}
+
+					else
+					{
+						$error = "Mots de passes non correspondant !";
+					}
 				}
 				else
 				{
-					$error = "Mots de passes non correspondant !";
+					$error = "Ce numéro de série n'existe pas !";
 				}
 			}
 			else

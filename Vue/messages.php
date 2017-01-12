@@ -10,7 +10,7 @@ include("../Controleur/controleur_messages.php");
 <head>
 	<meta charset="utf-8">
 	<title>Contacts</title>
-	<link rel="stylesheet" type="text/css" href="../Styles/Style_Serv-Clients.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/messages.css">
 </head>
 
 	<header>
@@ -47,9 +47,16 @@ include("../Controleur/controleur_messages.php");
 					<h1 class="votre_message">Votre message</h1>
 					<div class="message_box">
 						<form method="POST" action="">
-								<input type="email" name="email" size="40" maxlength="50" id="email" placeholder="   Votre mail:  exemple : ***@gmail.com">
-								</br>
-								<input type="sujet" name="sujet" size="40" maxlength="50" id="sujet" placeholder="   Le sujet de votre requête">
+							<table>
+								<tr>
+									<td><label class="input-text">Email</label></td>
+									<td><input type="email" name="email" size="40" maxlength="50" id="email" placeholder="   Votre mail:  exemple : ***@gmail.com"></td>
+								</tr>
+								<tr>
+									<td><label class="input-text">Sujet</label></td>
+									<td><input type="sujet" name="sujet" size="40" maxlength="50" id="sujet" placeholder="   Le sujet de votre requête"></td>
+								</tr>
+							</table>
 								<textarea name="comments" id="comments" rows="10" cols="50" placeholder="   Postez votre message ici."></textarea>
 								<input class ="button" type="submit" value="Envoyer" name="confirm-button" id="button"/>
 						</form>

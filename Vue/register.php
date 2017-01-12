@@ -27,41 +27,41 @@ include("../Controleur/controleur_register.php");
 			<form method="POST" action="">
 				<table>
 					<tr>
-						<td><br><label for="last-name">Nom</label></td>	
+						<td><br><label class="text-input" for="last-name">Nom</label></td>	
 						<td><br><input class="input-box" type="text" name="last-name" placeholder="  Nom" value=<?php if(isset($lastname)) { echo $lastname;} ?>></td>
 					</tr>
 					<tr>
-						<td><br><label for="first-name">Prénom</label></td>	
+						<td><br><label class="text-input" for="first-name">Prénom</label></td>	
 						<td><br><input class="input-box" type="text" name="first-name" placeholder="  Prénom" value=<?php if(isset($firstname)) { echo $firstname;} ?>></td>
 					</tr>
 					<tr>
-						<td><br><label for="mail">E-mail</label></td>	
+						<td><br><label class="text-input" for="mail">E-mail</label></td>	
 						<td><br><input class="input-box" type="email" name="mail" placeholder="  E-mail" value=<?php if(isset($mail)) { echo $mail;} ?>></td>
 					</tr>			
 					<tr>
-						<td><br><label for="password">Mot de passe</label></td>	
+						<td><br><label class="text-input" for="password">Mot de passe</label></td>	
 						<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe"></td>
 					</tr>
 					<tr>
-						<td><br><label for="confirm-password">Confirmez mot de passe</label></td>	
+						<td><br><label class="text-input" for="confirm-password">Confirmez mot de passe</label></td>	
 						<td><br><input class="input-box" type="password" name="confirm-password" placeholder="  Confirmez votre mot de passe"></td>
 					</tr>
 					<tr>
-						<td><br><label for="serialnumber">Numéro de série du capteur</label></td>	
+						<td><br><label class="text-input" for="serialnumber">Numéro de série du capteur</label></td>	
 						<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  Numéro de série capteur" value=<?php if(isset($serialnumber)) { echo $serialnumber;} ?>></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
-				</table>	
+				</table>
+				<span class="error">
+				<?php
+					require("../Modele/error.php");
+				?>
+				</span>	
 			</form>
 			<br>
-		<span class="error">
-		<?php
-			include ("../Modele/error.php");
-		?>
-		</span>
 	</body>
 	<footer>
 	</footer>

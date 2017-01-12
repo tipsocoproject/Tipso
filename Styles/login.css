@@ -42,13 +42,6 @@ input.input-box{
 	margin-right: 10px;
 }
 
-.button{
-
-	height: 50%;
-	width: 20%;
-	font-size: 80%;
-	font-weight: bold;
-}
 
 .noaccount{
 
@@ -135,7 +128,7 @@ table{
 	font-size: 80%;
 	font-weight: bold;
 	background-color: #ecf0f1;
-	border-radius: 12px;
+	border-radius: 2px;
 }
 
 .noaccount{
