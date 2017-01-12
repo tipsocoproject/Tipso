@@ -1,5 +1,8 @@
 <?php
 
+//refaire la liaison avec base de données
+
+
 if($userrooms['numroom'] == ''){
 	
 	if(isset($_POST['confirm-button']))

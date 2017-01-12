@@ -5,79 +5,51 @@ if(isset($_POST['confirm-button']))
 	$lastname = uninjection_sql(htmlspecialchars($_POST['last-name']));
 	$firstname = uninjection_sql(htmlspecialchars($_POST['first-name']));
 	$mail = uninjection_sql(htmlspecialchars($_POST['mail']));
-	$username = uninjection_sql(htmlspecialchars($_POST['username']));
 	$password = sha1($_POST['password']);
 	$confirmpassword = sha1($_POST['confirm-password']);
 	$serialnumber = uninjection_sql(htmlspecialchars($_POST['serialnumber']));
+	$typeclient = 0;
 
 
-	if(!empty($_POST['last-name']) AND !empty($_POST['first-name']) AND !empty($_POST['mail']) AND !empty($_POST['username']) AND !empty($_POST['password']) AND !empty($_POST['confirm-password']) AND !empty($_POST['serial'])
+
+	if(!empty($_POST['last-name']) AND !empty($_POST['first-name']) AND !empty($_POST['mail']) AND !empty($_POST['password']) AND !empty($_POST['confirm-password']) AND !empty($_POST['serialnumber']))
 	{
-
-		$usernamelen = strlen($username);
-
-		if($usernamelen <= 255)
+		if(filter_var($mail, FILTER_VALIDATE_EMAIL))
 		{
-			$requser = $bdd->prepare("SELECT * FROM membres WHERE username = ?"); //selection de toutes les entrees de la table membre
-			$requser->execute(array($username));
-			$userexist = $requser->rowCount();
+			$reqmail = $bdd->prepare("SELECT * FROM client WHERE mail = ?");
+			$reqmail->execute(array($mail));
+			$mailexist = $reqmail->rowCount(); //change --> if serial exist
 
-			$mobilelen = strlen($mobilenumber);
-
-			if ($mobilelen <= 13)
+			if($mailexist == 0)
 			{
-				if($userexist == 0)
+				if($password == $confirmpassword)
 				{
-					if(filter_var($mail, FILTER_VALIDATE_EMAIL))
-					{
-						$reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
-						$reqmail->execute(array($mail));
-						$mailexist = $reqmail->rowCount();
-
-							if($mailexist == 0)
-							{
-								if($password == $confirmpassword)
-								{
-									$insertmbr = $bdd->prepare("INSERT INTO membres(lastname, firstname, username, mail, serialnumber) VALUES(?,?,?,?,?)");
-									$insertmbr->execute(array($lastname, $firstname, $username, $mail, $password, $serialnumber);
-									$error = "Merci de vous être inscrit ! Connectez-vous pour continuer !"; 
-									sleep(2);
-									header("Location: ../Vue/login.php");
-
-								}
-								else
-								{
-									$error = "Mots de passes non correspondant !";
-								}
-							}
-							else
-							{
-								$error = "Adresse mail existante !";
-							}
-					}
-					else
-					{ lide !";
-					}
+					$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
+					$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
+					$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
+					sleep(2);
+					header("Location: ../Vue/login.php");
 				}
 				else
 				{
-					$error = "Identifiant déjà existant !";
+					$error = "Mots de passes non correspondant !";
 				}
 			}
 			else
 			{
-				$error = "Numéro de mobile trop long";
+				$error = "Adresse mail existante !";
 			}
 		}
 		else
 		{
-			$error = "Racourcir Identifiant";
+			$error = " Votre adresse email n'est pas valide !";
 		}
 	}
 	else
 	{
 		$error = "Champ(s) non complété(s)";
 	}
+
 }
 
 ?>

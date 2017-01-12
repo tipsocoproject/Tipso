@@ -29,11 +29,11 @@ include("../Modele/cookies.php");
 			<table>
 				<tr>
 					<td><br><label class="userlog" for="username">Email</label></td>	
-					<td><br><input class="input-box" type="email" name="email" placeholder="  Identifiant" value=<?php echo $_COOKIE["email"]; ?>></td>
+					<td><br><input class="input-box" type="email" name="email" placeholder="  Identifiant" value=<?php //echo $_COOKIE["email"]; ?>></td>
 				</tr>				
 				<tr>
 					<td><br><label class="userlog" for="password">Mot de passe</label></td>	
-					<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe" value=<?php echo $_COOKIE["password"]; ?>></td>
+					<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe" value=<?php //echo $_COOKIE["password"]; ?>></td>
 				</tr>
 				<tr>
 					<!--<td id="checkbox-text"><br><input id="checkbox" type="checkbox" class="checkbox" name="checkbox"><label for="checkbox" class="checkbox checked">
@@ -50,13 +50,13 @@ include("../Modele/cookies.php");
 			<br>
 			<br>
 			<br>
-			<a href="inscription.php"><p class="noaccount">Pas de compte ? Cliquez ici pour vous inscrire.</label></a>	
+			<a href="register.php"><p class="noaccount">Pas de compte ? Cliquez ici pour vous inscrire.</label></a>	
 		</form>
 
 		<br>
 
 		<?php
-			include ("error_champs_non_complet.php");
+			include ("../Modele/error.php");
 		?>
 <footer>
 </footer>

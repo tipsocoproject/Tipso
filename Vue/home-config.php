@@ -164,7 +164,7 @@ include("../Controleur/controleur_home_config.php");
 			<br>
 			<span class="error">
 			<?php
-				require ("error_champs_non_complet.php");
+				require ("../Modele/error.php");
 			?>
 			</span>
 

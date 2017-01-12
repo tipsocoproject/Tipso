@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	require("../Modele/connexion.php");
-	include("../Controleur/controleur_connexion.php");
 
 ?>
 		<html>

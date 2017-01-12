@@ -1,8 +1,9 @@
 <?php
-session_start();
+
 require ("../Modele/connexion.php");
-include ("../fonction/function_uninjection_sql.php");
+
 include ("../Controleur/controleur_inscription.php");
+
 ?>
 
 <html>
@@ -330,8 +331,7 @@ include ("../Controleur/controleur_inscription.php");
 			<br>
 		<span class="error">
 		<?php
-			include ("../Vue/error_champs_non_complet.php");
-			die();
+			include ("../Modele/error.php");
 		?>
 		</span>
 	</body>
