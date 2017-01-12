@@ -3,7 +3,7 @@
 if(isset($_POST['confirm-button']))
 {
 
-	$mail = mysql_real_escape_string(htmlspecialchars($_POST["email"]));
+	$mail = uninjection_sql(htmlspecialchars($_POST["email"]));
 	$password = sha1($_POST["password"]);
 
 	if(!empty($_POST['email']) AND !empty($_POST['password']))

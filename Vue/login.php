@@ -1,6 +1,7 @@
 <?php
 session_start();
 require("../Modele/connexion.php");
+include("../fonction/function_uninjection_sql.php");
 include("../Controleur/controleur_login.php");
 include("../Modele/cookies.php");
 ?>
@@ -49,7 +50,7 @@ include("../Modele/cookies.php");
 			<br>
 			<br>
 			<br>
-			<a href="register.php"><p class="noaccount">Pas de compte ? Cliquez ici pour vous inscrire.</label></a>	
+			<a href="inscription.php"><p class="noaccount">Pas de compte ? Cliquez ici pour vous inscrire.</label></a>	
 		</form>
 
 		<br>

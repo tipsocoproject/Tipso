@@ -13,7 +13,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 
 }
 else{
-	header("Location: login.php");
+	header("Location: ../Vue/login.php");
 }
 
 ?>
