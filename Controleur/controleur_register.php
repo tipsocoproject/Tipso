@@ -32,6 +32,12 @@ if(isset($_POST['confirm-button']))
 						$insertmbr->execute(array($lastname, $firstname, $mail, $password, $serialnumber));
 						$error = "Merci de vous être inscrit ! Connectez-vous pour continuer !"; 
 
+						$array = array("2C8Z-UF5H-UHJ8","2GQ3-6ARA-ZMNY","2NPP-MFR4-5MHZ","2S77-75KR-UCXX","332Q-DLQP-SVHB","46CW-86YM-72H4","4H2L-CZ4H-ZBD4","54GA-CJRN-RA97","59NW-UDPQ-VBRJ","5TB3-5ARE-PKLM", "5UJ7-6PD9-QKNS", "5VNZ-LH98-SGNM");
+						$array = implode(",", $data);
+						$sql = "INSERT INTO capteurs(sensorserial) VALUES $data";
+						mysql_query($sql);
+
+
 						header("Location: login.php");
 						}
 						else

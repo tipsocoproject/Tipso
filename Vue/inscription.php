@@ -1,6 +1,7 @@
 <?php
 
 require ("../Modele/connexion.php");
+
 include ("../Controleur/controleur_inscription.php");
 
 ?>
