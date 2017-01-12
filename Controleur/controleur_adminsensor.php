@@ -1,21 +1,28 @@
 <?php
 
-if(isset($_POST['confirm-button']))
+if($userinfo['type'] == "0")
+{
+	header("Location: login.php");
+}
+else
 {
 
-	$serialnumber = mysql_real_escape_string(htmlspecialchars($_POST["serialnumber"]));
-
-	if(!empty($_POST['serialnumber']))
+	if(isset($_POST['confirm-button']))
 	{
-		$requser = $bdd->prepare("SELECT * FROM capteurs WHERE sensorserial = ?");
-		$requser->execute(array($serialnumber));
-		$userexist = $requser->rowCount();
 
-	}
-	else
-	{
-		$error = "Champ(s) non complété(s)";
+		$serialnumber = mysql_real_escape_string(htmlspecialchars($_POST["serialnumber"]));
+
+		if(!empty($_POST['serialnumber']))
+		{
+			$insertmbr = $bdd->prepare("INSERT INTO capteurs(sensorserial) VALUES(?)");
+			$insertmbr->execute(array($serialnumber));
+		}
+		else
+		{
+			$error = "Champ(s) non complété(s)";
+		}
 	}
 }
+
 
 ?>

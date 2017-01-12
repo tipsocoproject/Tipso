@@ -2,8 +2,7 @@
 session_start();
 require ("../Modele/connexion.php");
 
-include ("../Controleur/controleur_contact_services_clients.php");
-
+// ajouter controleur
 ?>
 
 <DOCTYPE! html>
@@ -66,7 +65,7 @@ include ("../Controleur/controleur_contact_services_clients.php");
 	</div>
 
 <?php
-	include ("error_champs_non_complet.php");
+	include ("error.php");
 ?>
 
 </body>
