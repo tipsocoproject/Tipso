@@ -9,14 +9,7 @@
 
 *{
 	font-family: calibri;
-}
 
-
-}
-
-body{
-    background-color: #EAF1F8;
-    margin: 0px;
 }
 
 
@@ -59,16 +52,6 @@ body{
 }
 
 
-section{
-    position: absolute;
-    top: 15%;
-    margin-left:53px;
-    left: 15%;
-    width: 80%;
-    height: 70%;
-    background-color: white;
-    box-sizing: border-box;
-}
 
 
 
@@ -153,8 +136,10 @@ header{
 }
 
 body{
-  margin:0%;
+    margin: 0%;
+    background-color: #EAF1F8;
 }
+
 
 .copyright{
     color: #EAF1F8;
@@ -174,25 +159,27 @@ footer{
     width: 100%;
  }
 
- #boxbottom{
+  #boxbottom{
     position: absolute;
     bottom: : 0.5vh;
-  left: 25%;
-    right: 25%;
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
+    right: 5%;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
  }
-.bouton_bot_footer{
+.bouton_bot_footer_cgu{
+    position: absolute;
+    bottom: 1px;
+    right: 0vh;
     color: #EAF1F8;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 3vh;
+    font-size: 2vh;
 }
 
-.bouton_bot_footer:hover{
+.bouton_bot_footer_cgu:hover{
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -200,6 +187,89 @@ footer{
     display: inline-block;
     cursor: pointer;
 }
+
+.bouton_bot_footer_confi{
+    position: absolute;
+    bottom: 4vh;
+    right: 1vh;
+    color: #EAF1F8;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2vh;
+}
+
+.bouton_bot_footer_confi:hover{
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/*----------------------------------------------------------- 13/01/17 ----------------------------------------------------------------------------------*/
+
+
+
+
+
+.etat{
+    background-color: #EAF1F8;
+    border: 1px black solid;
+    width: 30vh;
+    height: 80vh;
+}
+
+
+
+section{
+    border: 1px black solid;
+    position: absolute;
+    top: 10%;
+    margin-left:53px;
+    left: 15%;
+    width: 80%;
+    height: 80%;
+    background-color: #EAF1F8;
+    box-sizing: border-box;
+}
+
+
+
+.div_top{
+    border: 1px black solid;
+    width: 100%;
+    height: 33%;
+}
+
+.div_mid{
+    border: 1px black solid;
+    width: 100%;
+    height: 33%;
+}
+
+.div_bot{
+    border: 1px black solid;
+    width: 100%;
+    height: 33%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
