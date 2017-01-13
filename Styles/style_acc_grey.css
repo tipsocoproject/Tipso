@@ -2,7 +2,7 @@
 
 
 *{
-	font-family: calibri;
+    font-family: calibri;
 }
 
 header{
@@ -22,21 +22,21 @@ body{
 .logo{
     min-width: 160 px;
     max-width: 220px;
-	width: 20%;
-	height: auto;
+    width: 20%;
+    height: auto;
     margin-top: -10px;
-	left: 0px;
+    left: 0px;
     margin-left: 0px;
 }
 
 #boxtop{
-	position: absolute;
+    position: absolute;
     top: 0px;
-	left: 25%;
+    left: 25%;
     right: 25%;
-	display: flex;
-	justify-content: space-around;
-	width: 50%;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
 }
 
 .bouton_top_acc{
@@ -60,10 +60,10 @@ body{
 }
 
 .menu_dér{
-	position: absolute;
+    position: absolute;
     top: 30px;
-	right: 10px;
-	 width: 120px;
+    right: 10px;
+     width: 120px;
    height: 34px;
    overflow: hidden;
    background: url(new_arrow.png) no-repeat right #ddd;
@@ -71,7 +71,7 @@ body{
 }
 
 .menu_dér select{
-	 background: #EAF1F8;
+     background: #EAF1F8;
    width: 150px;
    padding: 5px;
    font-size: 16px;
@@ -86,8 +86,8 @@ body{
     position: absolute;
     left: 45px;
     top: 250px;
-	display: flex;
-	justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
     flex-direction: column;
     height: 250px;
     width: 95px;
@@ -95,14 +95,14 @@ body{
 }
 
 .bouton_left_nav{
-	color: #627890;
-	text-align: center;
-	text-decoration: none;
-	font-size: 20px;
+    color: #627890;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .bouton_left_nav:hover{
-	color:#627890;
+    color:#627890;
     border-top: 1px solid #627890;
     border-bottom: 1px solid #627890;
 }
@@ -122,8 +122,8 @@ section{
 
 
 .content_section{
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     font-size: 200%;
 }
@@ -140,12 +140,12 @@ footer{
 
 .copyright{
     color: #EAF1F8;
-	font-size: 19px;
-	display: flex;
-	justify-content: flex-start;
-	width: 200px;
-	position: absolute;
-	bottom: 0px;
+    font-size: 19px;
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+    position: absolute;
+    bottom: 0px;
 }
 
 

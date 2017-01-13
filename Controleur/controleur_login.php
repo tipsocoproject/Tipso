@@ -22,6 +22,11 @@ if(isset($_POST['confirm-button']))
 			$_SESSION['postcode'] = $userinfo['postcode'];
 			$_SESSION['mobilenumber'] = $userinfo['mobilenumber'];
 
+
+
+			//ajouter id à sensoriel sensors
+
+			
 			header("Location: home-config.php?id=".$_SESSION['id']);
 
 		}
