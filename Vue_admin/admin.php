@@ -2,7 +2,7 @@
 session_start();
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
-include("../Controleur/controleur_adminsensor.php");
+include("../Controleur_admin/controleur_admin.php");
 ?>
 
 <html>
@@ -35,8 +35,8 @@ include("../Controleur/controleur_adminsensor.php");
 			<br>
 			<table>
 				<tr>
-					<td><br><label class="userlog" for="username">Numéro de série</label></td>	
-					<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  exemple : 100011301002B01251B"></td>
+					<td><br><label class="userlog" for="username">Admin key</label></td>	
+					<td><br><input class="input-box" type="text" name="adminkey" placeholder="  exemple : 100011301002B01251B"></td>
 				</tr>				
 				<tr>
 					<td><br><input class="button" type="submit" name="confirm-button"></td>

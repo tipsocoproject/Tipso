@@ -1,7 +1,7 @@
 /* Feuille de style CSS secondaire pour la page "mainpage" quand la fenêtre du navigateur est en dessous de 650px permet de rendre cette page responsive*/
 
 *{
-	font-family: calibri;
+    font-family: calibri;
 }
 
 .logo{

@@ -3,7 +3,7 @@
 	if(isset($_POST['confirm-button']))
 	{
 
-		$serialnumber = mysql_real_escape_string(htmlspecialchars($_POST["serialnumber"]));
+		$serialnumber = uninjection_sql(htmlspecialchars($_POST["serialnumber"]));
 
 		if(!empty($_POST['serialnumber']))
 		{
