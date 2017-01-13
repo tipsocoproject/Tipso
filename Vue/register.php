@@ -1,5 +1,4 @@
 <?php
-
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
 include("../Controleur/controleur_register.php");
