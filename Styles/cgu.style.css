@@ -1,0 +1,20 @@
+*{
+}
+
+textarea{
+	position: relative;
+	left: 35vh;
+	width: 100vh;
+	height: 100vh;
+}
+
+h1{
+	width: 600px;
+	position: relative;
+	top: 8vh;
+	left: 55vh;
+}
+
+body{
+	margin: 0%;
+}
