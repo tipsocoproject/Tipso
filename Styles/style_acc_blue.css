@@ -1,0 +1,102 @@
+/* Feuille de style CSS par défaut sur la page "mainpage"*/
+
+
+*{
+	font-family: calibri;
+}
+
+
+}
+
+body{
+    background-color: #EAF1F8;
+    margin: 0px;
+}
+
+
+
+.logo{
+    min-width: 160 px;
+    max-width: 220px;
+	width: 20%;
+	height: auto;
+    margin-top: -10px;
+	left: 0px;
+    margin-left: 0px;
+}
+
+
+
+#boxleft{
+    position: absolute;
+    left: 45px;
+    top: 250px;
+	display: flex;
+	justify-content: space-around;
+    flex-direction: column;
+    height: 250px;
+    width: 95px;
+
+}
+
+.bouton_left_nav{
+	color: #627890;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.bouton_left_nav:hover{
+	color:#627890;
+    border-top: 1px solid #627890;
+    border-bottom: 1px solid #627890;
+}
+
+
+section{
+    position: absolute;
+    top: 15%;
+    margin-left:53px;
+    left: 15%;
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+
+
+.content_section{
+	display: flex;
+	justify-content: center;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+
+
+
+
+.copyright{
+    color: #EAF1F8;
+	font-size: 19px;
+	display: flex;
+	justify-content: flex-start;
+	width: 200px;
+	position: absolute;
+	bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

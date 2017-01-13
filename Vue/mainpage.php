@@ -5,8 +5,9 @@
 ?>
 		<html>
 			<head>
-				<link rel="stylesheet" type="text/css" href="../Styles/style_acc_grey.css">
+				<link rel="stylesheet" type="text/css" href="../Styles/style_acc_blue.css">
 				<link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="../Styles/style_acc_blue_mob.css">
+				<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 				<title>Accueil Tipsoco</title>
@@ -47,8 +48,9 @@
 
 						</section>
 					</body>
-				<footer>
-					<p class="copyright">Copyright : Tipso 2016</p>
-				</footer>
+				<?php
 
+				include("footer.html")
+
+				?>
 		</html>

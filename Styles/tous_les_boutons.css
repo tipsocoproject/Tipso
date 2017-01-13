@@ -1,0 +1,85 @@
+/* Ce fichier Style CSS n'est là que pour servire de repère pour crée le Style des différents boutons CSS */ 
+
+
+
+
+/* BUTTON DE LA PAGE messages.php*/
+#button {
+	top: 320px;
+	left: 570px;
+	position: absolute;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+	width: 105px;
+	height: 25px;
+	background-color: #ecf0f1;
+	border-radius: 2px;
+}
+
+
+/* BUTTON DE LA mainpage.php gauche température co2 etc..*/
+.bouton_left_nav{
+	color: #627890;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.bouton_left_nav:hover{
+	color:#627890;
+    border-top: 1px solid #627890;
+    border-bottom: 1px solid #627890;
+}
+
+/* BUTTON DE LA PAGE login.php "envoyer" */
+.button{
+	position: relative;
+	left: 265px;
+	top:25px;
+	height: 50%;
+	width: 25%;
+	font-size: 80%;
+	font-weight: bold;
+	background-color: #ecf0f1;
+	border-radius: 2px;
+}
+
+/*BUTTON DE LA PAGE register.php "valider" */
+.button{
+	width: 90px;
+	height: 25px;
+	background-color: #ecf0f1;
+	border-radius: 2px;
+	cursor: pointer;
+	text-align: center;
+	position : relative;
+	font-size: 90%;
+	top: 10px;
+	right: 5px;
+}
+
+
+/*BUTTON DE LA PAGE inscription.php "valider"*/
+.button{
+	width: 315px;
+	height: 25px;
+	background-color: #ecf0f1;
+	border-radius: 12px;
+	font-size: 80%;
+	font-weight: bold;
+
+}
+
+/*BUTTON DE LA PAGE adminsensor.php*/
+.button{
+	position: relative;
+	left: 265px;
+	top:-40px;
+	height: 32%;
+	width: 40%;
+	font-size: 80%;
+	font-weight: bold;
+	background-color: #ecf0f1;
+	border-radius: 12px;
+}

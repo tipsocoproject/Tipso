@@ -48,6 +48,7 @@ select{
 	width: 20%;
 	font-size: 80%;
 	font-weight: bold;
+
 }
 
 header{
@@ -77,6 +78,9 @@ footer{
 	height: 25px;
 	background-color: #ecf0f1;
 	border-radius: 12px;
+	font-size: 80%;
+	font-weight: bold;
+
 }
 
 .error{

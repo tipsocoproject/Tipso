@@ -11,38 +11,19 @@ include("../Controleur/controleur_messages.php");
 	<meta charset="utf-8">
 	<title>Contacts</title>
 	<link rel="stylesheet" type="text/css" href="../Styles/messages.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
+
 </head>
 
-	<header>
+		<?php
 
-					
-					<div class="menu_dér">
-							<select class="menu_dér_in" href="a_définir" alt="menu déroulant avec option connecté et déconnectée">
-  							<option value="volvo">Connecté</option>
-  							<option value="saab">Se Déconnecter</option>
-							</select>
-					</div>
-
-
-
-					<!-- <p>Ici il y'aura le logo</p> -->
-					<div id="boxtop">
-					<a href="a_définir" alt="bouton qui renvoit vers le service" class="bouton_top_acc" <input type="bouton" name="service" value="service"> Account </a>
-					<a href="a_définir" alt="bouton qui renvoit vers la gestion" class="bouton_top_acc" <input type="bouton" name="gestion" value="gestion"> Management </a>
-					<a href="a_définir" alt="bouton qui renvoit vers la page contacts" class="bouton_top_acc" <input type="bouton" name="contacts" value="contacts"> Contact </a>
-					</div> <!-- Here it's for the 3 push for entrance -->
-	
-
-	</header>
+		include("header.html");
+		?>
 
 
 	<body>
 	<img src="#" id="logo">
 		<div class="global">
-
-			<div class="gauche">
-					<span> <strong>Téléphone : </strong> 08 ** ** ** **  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Fax : </strong> 08 ** ** ** ** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Email : </strong>  ******@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-				</div>
 
 					<h1 class="votre_message">Votre message</h1>
 					<div class="message_box">
@@ -60,19 +41,30 @@ include("../Controleur/controleur_messages.php");
 								<textarea name="comments" id="comments" rows="10" cols="50" placeholder="   Postez votre message ici."></textarea>
 								<input class ="button" type="submit" value="Envoyer" name="confirm-button" id="button"/>
 						</form>
+
+
 						<span class="error" align="center">
 							<?php
 								include ("/../Modele/error.php");
 							?>
+
+
 						</span>
 					</div>
 				</div>
+			<div class="gauche">
+
+					<p> <span class="Tel"><strong>Téléphone : </strong> 08 ** ** ** ** </span></p>
+					<p> <span class="Fax"> <strong>Fax : </strong> 08 ** ** ** ** </span></p>
+					<p> <span class="Email"><strong>Email : </strong>  ******@gmail.com</span> </p>
 			</div>
-		</div>	
 
 </body>
 
-<footer>
-</footer>
+<?php 
+
+include("footer.html")
+
+ ?>
 
 </html>

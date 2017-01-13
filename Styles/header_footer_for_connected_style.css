@@ -30,14 +30,13 @@ header{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-top: 1px #EAF1F8 solid;
     border-bottom: 1px #EAF1F8 solid;
     cursor: pointer;
 }
 
 .menu_dér{
 	position: absolute;
-    top: 30px;
+    top: 15px;
 	right: 10px;
 	 width: 120px;
    height: 34px;
@@ -62,10 +61,20 @@ body{
   margin:0%;
 }
 
+.copyright{
+    color: #EAF1F8;
+  font-size: 19px;
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+  position: absolute;
+  bottom: 0px;
+}
+
 footer{
     position: absolute;
     background-color: #627890;
     height: 75px;
-    bottom: 0%;
+    bottom: 0px;
     width: 100%;
  }
