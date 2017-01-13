@@ -48,7 +48,7 @@ include("../Controleur_admin/controleur_register_admin.php");
 					</tr>
 					<tr>
 						<td><br><label class="text-input" for="serialnumber">Clé d'authentification</label></td>	
-						<td><br><input class="input-box" type="text" name="serialnumber" placeholder="  i.e : XX010X001X" value=<?php if(isset($serialnumber)) { echo $serialnumber;} ?>></td>
+						<td><br><input class="input-box" type="text" name="adminkey" placeholder="  i.e : XX010X001X" value=<?php if(isset($serialnumber)) { echo $serialnumber;} ?>></td>
 					</tr>
 					<tr>
 						<td></td>

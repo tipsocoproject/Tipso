@@ -20,19 +20,19 @@ if(isset($_POST['confirm-button']))
 
 			if($mailexist == 0)
 			{
-				$reqadminkey = $bdd->prepare("SELECT * FROM admin WHERE adminkey = ?");
-				$reqadminkey->execute(array($serialnumber));
+				$reqadminkey = $bdd->prepare("SELECT * FROM administrator WHERE adminkey = ?");
+				$reqadminkey->execute(array($adminkey));
 				$adminkeyexist = $reqadminkey->rowCount();
 
-				if($adminkey == 1)
+				if($adminkeyexist == 1)
 				{
 					if($password == $confirmpassword)
 					{
 
-						$updateadmin = $bdd->prepare("INSERT INTO administrator(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?) WHERE adminkey = ?");
-						$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
+						$updateadmin = $bdd->prepare("UPDATE administrator SET firstname=?, lastname=?, mail=?, password= ?, type= ? WHERE adminkey = ?");
+						$updateadmin->execute(array($firstname, $lastname, $mail, $password, $typeclient, $adminkey));
 						$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
-						sleep(2);
+						sleep(2); 
 						header("Location: ../Vue/login.php");
 					}
 
