@@ -1,5 +1,3 @@
-*{
-}
 
 textarea{
 	position: relative;
@@ -12,9 +10,10 @@ h1{
 	width: 600px;
 	position: relative;
 	top: 8vh;
-	left: 55vh;
+	left: 60vh;
 }
 
 body{
 	margin: 0%;
 }
+

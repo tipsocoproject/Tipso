@@ -7,7 +7,6 @@
 			<head>
 				<link rel="stylesheet" type="text/css" href="../Styles/style_acc_blue.css">
 				<link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="../Styles/style_acc_blue_mob.css">
-				<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 				<title>Accueil Tipsoco</title>
