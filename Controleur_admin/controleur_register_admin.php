@@ -28,7 +28,8 @@ if(isset($_POST['confirm-button']))
 				{
 					if($password == $confirmpassword)
 					{
-						$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
+
+						$updateadmin = $bdd->prepare("INSERT INTO administrator(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?) WHERE adminkey = ?");
 						$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
 						$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
 						sleep(2);
