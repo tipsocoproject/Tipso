@@ -243,7 +243,6 @@ section{
     border: 1px solid black;
     text-decoration: none;
     width: 16vh;
-    bottom: 5vh;
 }
 
 .container-functions{
@@ -264,9 +263,16 @@ section{
     height: 33%;
 }
 
+#calendar-text{
+    position: relative;
+    left: 137vh;
 
+}
 
-
+a{
+    text-decoration: none;
+    color: black;
+}
 
 
 
