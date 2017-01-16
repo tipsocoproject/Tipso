@@ -7,9 +7,9 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 	$requser->execute(array($getid));
 	$userinfo = $requser->fetch();
 
-	$reqrooms = $bdd->prepare('SELECT * FROM rooms WHERE id=?');
-	$reqrooms->execute(array($getid));
-	$userrooms = $reqrooms->fetch();
+	$reqhome = $bdd->prepare('SELECT * FROM home WHERE idc=?');
+	$reqhome->execute(array($getid));
+	$userhome = $reqhome->fetch();
 
 }
 else

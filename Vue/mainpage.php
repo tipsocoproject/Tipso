@@ -26,10 +26,10 @@
 						</div>
 
 							<section class="container-main"> <!-- container droite -->
-								<a href=""><div class="calendar">
-									<div class="container-calendar"></div>
-									<label id="calendar-text">Programmer un évenement</label>
-								</div></a>
+								<div class="calendar">
+									<a href=""><div class="container-calendar"></div>
+									<label id="calendar-text">Programmer un évenement</label></a>
+								</div>
 								<div class="container-functions">
 									<table>
 										<tr>

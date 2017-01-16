@@ -11,7 +11,6 @@ if(isset($_POST['confirm-button']))
 	$typeclient = 0;
 
 
-
 	if(!empty($_POST['last-name']) AND !empty($_POST['first-name']) AND !empty($_POST['mail']) AND !empty($_POST['password']) AND !empty($_POST['confirm-password']) AND !empty($_POST['serialnumber']))
 	{
 		if(filter_var($mail, FILTER_VALIDATE_EMAIL))
@@ -27,11 +26,16 @@ if(isset($_POST['confirm-button']))
 				$serialexist = $reqserial->rowCount();
 
 				if($serialexist == 1)
-				{
+				{	
+
 					if($password == $confirmpassword)
 					{
+						$updatesens1 = $bdd->prepare("UPDATE sensors SET mail = ? WHERE  sensorserial = ?");
+						$updatesens1->execute(array($mail, $serialnumber));
+
 						$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
 						$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
+
 						$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
 						sleep(2);
 						header("Location: ../Vue/login.php");

@@ -19,23 +19,18 @@ if(isset($_POST['confirm-button']))
 			$_SESSION['lastname'] = $userinfo['lastname'];
 			$_SESSION['firstname'] = $userinfo['firstname']; 
 			$_SESSION['mail'] = $userinfo['mail'];
-			$_SESSION['postcode'] = $userinfo['postcode'];
 			$_SESSION['mobilenumber'] = $userinfo['mobilenumber'];
 
 
 
 			//ajouter id à sensoriel sensors
 
-			if($userrooms['dimension'] == "")
-			{
-				// header("Location: mainpage.php?id=".$_SESSION['id']);
-				// redirect to first time login mainpage
-			}
-			else
-			{
-				header("Location: mainpage.php?id=".$_SESSION['id']);
+			$insertidc = $bdd->prepare("UPDATE sensors SET idc = ? WHERE mail = ?");
+			$insertidc->execute(array($userinfo['id'], $mail));
 
-			}
+			
+			// redirect to first time login mainpage
+			// finalisation de l'espace membre - Dimension / Ajout des capteurs / Ajout des pièces
 		}
 		else
 		{
