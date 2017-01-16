@@ -26,9 +26,16 @@ if(isset($_POST['confirm-button']))
 
 			//ajouter id à sensoriel sensors
 
-			
-			header("Location: home-config.php?id=".$_SESSION['id']);
+			if($userrooms['dimension'] == "")
+			{
+				// header("Location: mainpage.php?id=".$_SESSION['id']);
+				// redirect to first time login mainpage
+			}
+			else
+			{
+				header("Location: mainpage.php?id=".$_SESSION['id']);
 
+			}
 		}
 		else
 		{

@@ -7,6 +7,7 @@
 			<head>
 				<link rel="stylesheet" type="text/css" href="../Styles/style_acc_blue.css">
 				<link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="../Styles/style_acc_blue_mob.css">
+				<link rel="stylesheet" type="text/css" href="../Styles/dycalendar.min.css">
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 				<title>Accueil Tipsoco</title>
@@ -17,11 +18,19 @@
 		?>
 				<body>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
-						<div class="etat">
-					
+						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
+							<tr>
+								<td> Etat </td> <!-- Carré de différentes couleurs pour les états : Rouge / Orange / Vers (/ Gris si pas paramètré) -->
+								<td> Capteurs </td>
+							</tr>
 						</div>
-							<section>
-								<div class="div_top">
+
+							<section class="container-main"> <!-- container droite -->
+								<div class="calendar">
+									<h3> Programmer un évènement </h3>
+									<a href=""><div class="container-calendar"></div></a>
+								</div>
+								<div class="container-functions">
 									<table>
 										<tr>
 											<td>Fonction / Agir </td>
@@ -58,21 +67,28 @@
 									
 								</div>
 
-								<div class="div_mid">
+								<div class="container-rooms">
 									
 								<h1> C'est en chantier PAS BESOIN DE VENIR ME PETER LES COUILLES PARCE QUE C'EST MOCHE / parce contre si vous avez des suggestions sur la disposition je suis dispo !</h1>
 
 								</div>
 
-								<div class="div_bot">
+								<div class="container-logs">
 									
-
-
 								</div>
 
 						
 
 							</section>
+
+							<script src="../Javascript/js_calendar/dycalendar.min.js"></script>
+							<script>
+								dycalendar.draw({
+									target : ".container-calendar",
+									type: "month",
+									targettime: true,
+								});
+							</script>
 					</body>
 				<?php
 

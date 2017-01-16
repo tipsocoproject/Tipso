@@ -3,7 +3,7 @@
 //refaire la liaison avec base de données
 
 
-if($userrooms['numroom'] == ''){
+if($userrooms['dimension'] == ''){
 	
 	if(isset($_POST['confirm-button']))
 

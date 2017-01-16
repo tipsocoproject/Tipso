@@ -216,7 +216,7 @@ footer{
 
 
 
-.etat{
+.container-sensors{
     background-color: #EAF1F8;
     border: 1px black solid;
     width: 30vh;
@@ -237,27 +237,32 @@ section{
     box-sizing: border-box;
 }
 
+.dycalendar-month-container{
+    position: relative;
+    left: 1350px;
+    border: 1px solid black;
+    text-decoration: none;
+    width: 16vh;
+    bottom: 5vh;
+}
 
-
-.div_top{
+.container-functions{
     border: 1px black solid;
     width: 100%;
     height: 33%;
 }
 
-.div_mid{
+.container-rooms{
     border: 1px black solid;
     width: 100%;
     height: 33%;
 }
 
-.div_bot{
+.container-log{
     border: 1px black solid;
     width: 100%;
     height: 33%;
 }
-
-
 
 
 
