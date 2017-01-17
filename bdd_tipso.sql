@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 17 Janvier 2017 à 18:43
+-- Généré le :  Mar 17 Janvier 2017 à 21:48
 -- Version du serveur :  10.1.16-MariaDB
--- Version de PHP :  5.6.24
+-- Version de PHP :  5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -68,7 +68,6 @@ INSERT INTO `client` (`id`, `lastname`, `firstname`, `mail`, `password`, `type`,
 (2, 'Ruyer', 'Jorel', 'jorel@live.ovh', '8603a129b920fa5714e29a1c0ce697de9992e2b6', 0, 0),
 (7, 'Feng', 'David', 'fyhdavid@gmail.com', '4f92cea32512d6dbb18dc47a6f2f37596d82ee53', 0, 0),
 (9, 'Lucas', 'Pierre', 'pierrelucas75@hotmail.fr', '50f243b21e3a8cb1a39b1c6714c355104f2e82a4', 0, 0),
-(10, 'Philippick', 'Andrew', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 0, 0),
 (11, 'Stephlu', 'Stephlu', 'stephlu@gmail.com', 'b4fe22a219b2750de840cc89e58de90235715a70', 0, 0),
 (12, 'tibi', 'tibi', 'tibi@gmail.com', '200d14be5ee62ba601782157630e5ca8753f0559', 0, 0),
 (13, 'kipi', 'kipi', 'kipi@gmail.com', '3c01253c24783ac54d2496d7548084c1abb71403', 0, 0),
@@ -79,7 +78,8 @@ INSERT INTO `client` (`id`, `lastname`, `firstname`, `mail`, `password`, `type`,
 (21, 'pirch', 'pirch', 'ab81caaa920e32f75829f39fb0da3b2c41d03592', 'pirch@gmail.com', 0, 0),
 (22, 'rolol', 'rolol', 'rolol@gmail.com', '5272decf1f143902094d4fe2d896bb941073a4fc', 0, 0),
 (23, 'Andrew', 'Philippick', 'philippick@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 0, 0),
-(30, 'test', 'test', 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 0, 0);
+(30, 'test', 'test', 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 0, 0),
+(38, 'Philippick', 'Andrew', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -196,7 +196,7 @@ INSERT INTO `sensors` (`sensorserial`, `idsens`, `idc`, `idroom`, `mail`, `senso
 ('1000115', 11, 0, 0, '', 'Lumière'),
 ('1000116', 12, 0, 0, '', 'Couleur'),
 ('1000117', 13, 30, 0, 'test@gmail.com', 'Présence'),
-('1000118', 14, 0, 0, '', 'Lumière - 2'),
+('1000118', 14, 38, 0, 'philippick.a@gmail.com', 'Lumière - 2'),
 ('1000119', 15, 0, 0, '', 'Mouvement'),
 ('1000121', 16, 0, 0, '', 'Distance - 1 '),
 ('1000122', 17, 0, 0, '', 'Distance - 2 '),
@@ -301,7 +301,7 @@ ALTER TABLE `administrator`
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT pour la table `messages`
 --
