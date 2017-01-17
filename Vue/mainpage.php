@@ -31,17 +31,124 @@
 									<label id="calendar-text">Programmer un évenement</label></a>
 								</div>
 								<div class="container-functions">
-									<table>
-										<tr>
-											<td>Fonction / Agir </td>
-											<td>Luminosité</td>
-											<td>Sécurité</td>
-											<td>Aération</td>
-											<td>Température</td>
-											<td>Qualité de l'air</td>
-										</tr>
+									
+										<!--	<th>Fonction / Agir </th> -->
+										
+											
+												<p class="lum-text">Luminosité</p>
+												<p class="sec-text">Sécurité</p>
+												<p class="aera-text">Aération</p>
+												<p class="temp-text">Température</p>
+												<p class="co2-text">CO2</p>
+									
+												<div class="menu-bar" id="luminosite">
+												  <ul>
+												    <li class="">
+												      <img src="../icon/brightness.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html">Capteur</a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html">Actionneur</a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div> 
+											
 
-										<tr>
+										
+
+										
+											<div class="menu-bar" id="securite">
+												  <ul>
+												    <li class="">
+												     <img src="../icon/Camera.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html">Capteur</a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html">Actionneur</a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+									
+
+									
+
+										
+											<div class="menu-bar" id="aeration">
+												  <ul>
+												    <li class="">
+												      <img src="../icon/brightness.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html">Capteur</a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html">Actionneur</a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+											
+
+									
+											<div class="menu-bar" id="temperature">
+												  <ul>
+												    <li class="">
+												 		<img src="../icon/temperature.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html">Capteur</a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html">Actionneur</a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+											
+									
+										
+											<div class="menu-bar" id="co2">
+												  <ul>
+												    <li class="">
+												      <img src="../icon/CO2.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html">Capteur</a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html">Actionneur</a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+											
+
+										
+
+									
+
+										<!--<tr>
 											<td>Capteur</td>
 											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Capteur luminosité </a></td>
 											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Caméra </a></td>
@@ -59,15 +166,17 @@
 											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Mouvement </a></td>
 										</tr>
 
-										
-									</table>
+										 a effacer dans un futur proche ! -->
 
-									<h1>ça va changer la disposition du tableau est mauvaise et pas esthétique</h1>
+										
+					
+
+								
 
 									
 								</div>
 
-								<div class="container-rooms">
+								<!--<div class="container-rooms">
 									
 								<h1> C'est en chantier PAS BESOIN DE VENIR ME PETER LES COUILLES PARCE QUE C'EST MOCHE / parce contre si vous avez des suggestions sur la disposition je suis dispo !</h1>
 
@@ -75,7 +184,7 @@
 
 								<div class="container-logs">
 									
-								</div>
+								</div> -->
 
 						
 

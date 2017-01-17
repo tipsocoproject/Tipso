@@ -151,15 +151,17 @@ body{
   bottom: 0px;
 }
 
+
+
 footer{
-    position: absolute;
+    position: relative;
     background-color: #627890;
     height: 75px;
     bottom: 0px;
     width: 100%;
  }
 
-  #boxbottom{
+ #boxbottom{
     position: absolute;
     bottom: : 0.5vh;
     right: 5%;
@@ -169,8 +171,8 @@ footer{
  }
 .bouton_bot_footer_cgu{
     position: absolute;
-    bottom: 1px;
-    right: 0vh;
+    bottom: 1vh;
+    right: 40vh;
     color: #EAF1F8;
     padding: 15px 32px;
     text-align: center;
@@ -190,8 +192,8 @@ footer{
 
 .bouton_bot_footer_confi{
     position: absolute;
-    bottom: 4vh;
-    right: 1vh;
+    bottom: 1vh;
+    right: 120vh;
     color: #EAF1F8;
     padding: 15px 32px;
     text-align: center;
@@ -208,6 +210,10 @@ footer{
     display: inline-block;
     cursor: pointer;
 }
+
+
+
+
 
 
 /*----------------------------------------------------------- 13/01/17 ----------------------------------------------------------------------------------*/
@@ -274,11 +280,108 @@ a{
     color: black;
 }
 
+img{
+    width: 15vh;
+    height: 15vh;
+}
+
+div.menu-bar ul ul {
+  display: none;
+}
+
+div.menu-bar li:hover > ul {
+  display: block;
+}
+
+ul {
+list-style:none;
+margin-left:0;
+padding-left:0;
+}
+
+li {
+margin-bottom:15px;/* à adapter */
+}
 
 
 
+th{
+    width: 200px;
+    height: 200px;
+}
 
+#luminosite{
+    position: absolute;
+    top: 25vh;
+    left: 15vh;
+}
 
+#securite{
+    position: absolute;
+    left: 40vh;
+    top: 25vh;
+}
+
+#aeration{
+    position: absolute;
+    top: 25vh;
+    left: 65vh;
+
+}
+
+#temperature{
+    position: absolute;
+    top: 25vh;
+    left: 90vh;
+}
+
+#co2{
+    position: absolute;
+    top: 25vh;
+    left: 115vh;
+}
+
+.align{
+    position: relative;
+    left: 4vh;
+}
+
+table{
+    position: relative;
+    left: 18vh;
+    width: 115vh;
+
+}
+
+.lum-text{
+    position: absolute;
+    top: 22vh;
+    left: 18vh;
+}
+
+.sec-text{
+    position: absolute;
+    top: 22vh;
+    left: 44vh;
+}
+
+.aera-text{
+    position: absolute;
+    top: 22vh;
+    left: 69vh;
+}
+
+.temp-text{
+    position: absolute;
+    top: 22vh;
+    left: 92.5vh;
+}
+
+.co2-text{
+    position: absolute;
+    top: 22vh;
+    left: 121vh;
+}
 
 
 
