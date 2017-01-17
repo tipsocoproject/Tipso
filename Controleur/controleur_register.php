@@ -25,30 +25,36 @@ if(isset($_POST['confirm-button']))
 				$reqserial->execute(array($serialnumber));
 				$serialexist = $reqserial->rowCount();
 
-				if($serialexist == 1)
-				{	
+				if($serialexist['idc'] != 0)
+				{
+					if($serialexist == 1)
+					{	
+						if($password == $confirmpassword)
+						{
+							$updatesens1 = $bdd->prepare("UPDATE sensors SET mail = ? WHERE  sensorserial = ?");
+							$updatesens1->execute(array($mail, $serialnumber));
 
-					if($password == $confirmpassword)
-					{
-						$updatesens1 = $bdd->prepare("UPDATE sensors SET mail = ? WHERE  sensorserial = ?");
-						$updatesens1->execute(array($mail, $serialnumber));
+							$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
+							$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
 
-						$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
-						$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
-
-						$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
-						sleep(2);
-						header("Location: ../Vue/login.php");
+							$error = "Merci de vous être inscrit ! Veuillez vous connecter  pour continuer !"; 
+							sleep(2);
+							header("Location: ../Vue/login.php");
+						}
+						else
+						{
+							$error = "Mots de passes non correspondant !";
+						}
 					}
-
 					else
 					{
-						$error = "Mots de passes non correspondant !";
+						$error = "Ce numéro de série n'existe pas !";
 					}
 				}
 				else
 				{
-					$error = "Ce numéro de série n'existe pas !";
+					$error = "Objet déjà enregistré !";
+
 				}
 			}
 			else

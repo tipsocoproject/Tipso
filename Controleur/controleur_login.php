@@ -14,12 +14,6 @@ if(isset($_POST['confirm-button']))
 
 		if($userexist == 1)
 		{
-			$userinfo = $requser->fetch();
-			$_SESSION['id'] = $userinfo['id'];
-			$_SESSION['lastname'] = $userinfo['lastname'];
-			$_SESSION['firstname'] = $userinfo['firstname']; 
-			$_SESSION['mail'] = $userinfo['mail'];
-			$_SESSION['mobilenumber'] = $userinfo['mobilenumber'];
 
 
 
@@ -28,7 +22,6 @@ if(isset($_POST['confirm-button']))
 			$insertidc = $bdd->prepare("UPDATE sensors SET idc = ? WHERE mail = ?");
 			$insertidc->execute(array($userinfo['id'], $mail));
 
-			
 			// redirect to first time login mainpage
 			// finalisation de l'espace membre - Dimension / Ajout des capteurs / Ajout des pièces
 		}
