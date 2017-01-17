@@ -1,5 +1,6 @@
 <?php
 
+
 if(isset($_POST['confirm-button']))
 {
 
@@ -24,6 +25,9 @@ if(isset($_POST['confirm-button']))
 
 			$insertidc = $bdd->prepare("UPDATE sensors SET idc = ? WHERE mail = ?");
 			$insertidc->execute(array($userinfo['id'], $mail));
+
+			header("Location: ../Vue/mainpage.php?id=".$_SESSION['id']);
+
 
 			// redirect to first time login mainpage
 			// finalisation de l'espace membre - Dimension / Ajout des capteurs / Ajout des pièces

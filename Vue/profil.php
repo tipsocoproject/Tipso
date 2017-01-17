@@ -2,8 +2,7 @@
 session_start();
 
 require ("../Modele/connexion.php");
-
-include ("../Controleur/controleur_profil.php");
+include("../Controleur/controleur_profil.php");
 
 ?>
 

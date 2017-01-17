@@ -23,9 +23,10 @@ if(isset($_POST['confirm-button']))
 			{
 				$reqserial = $bdd->prepare("SELECT * FROM sensors WHERE sensorserial = ?");
 				$reqserial->execute(array($serialnumber));
+				$serialidc = $reqserial->fetch();
 				$serialexist = $reqserial->rowCount();
 
-				if($serialexist['idc'] != 0)
+				if($serialidc['idc'] == 0)
 				{
 					if($serialexist == 1)
 					{	
