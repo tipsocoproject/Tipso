@@ -2,6 +2,8 @@
 	session_start();
 	require("../Modele/connexion.php");
 
+
+
 ?>
 		<html>
 			<head>
@@ -27,24 +29,25 @@
 
 							<section class="container-main"> <!-- container droite -->
 								<div class="calendar">
-									<a href=""><div class="container-calendar"></div>
-									<label id="calendar-text">Programmer un évenement</label></a>
+									<div class="container-calendar"></div>
+									<a href=""><label id="calendar-text">Programmer un évenement</label></a>
 								</div>
 								<div class="container-functions">
 									
 										<!--	<th>Fonction / Agir </th> -->
 										
-											
-												<p class="lum-text">Luminosité</p>
-												<p class="sec-text">Sécurité</p>
-												<p class="aera-text">Aération</p>
-												<p class="temp-text">Température</p>
-												<p class="co2-text">CO2</p>
-									
+												<div class="function-text">
+													<p class="lum-text">Luminosité</p>
+													<p class="sec-text">Sécurité</p>
+													<p class="aera-text">Aération</p>
+													<p class="temp-text">Température</p>
+													<p class="co2-text">CO2</p>
+												</div>
+
 												<div class="menu-bar" id="luminosite">
 												  <ul>
 												    <li class="">
-												      <img src="../icon/brightness.png">
+												      <img class="function"src="../icon/brightness.png">
 												      <ul>
 												        <li class="align">
 												          <a href="example.html">Capteur</a>
@@ -66,7 +69,7 @@
 											<div class="menu-bar" id="securite">
 												  <ul>
 												    <li class="">
-												     <img src="../icon/Camera.png">
+												     <img class="function"src="../icon/Camera.png">
 												      <ul>
 												        <li class="align">
 												          <a href="example.html">Capteur</a>
@@ -88,7 +91,7 @@
 											<div class="menu-bar" id="aeration">
 												  <ul>
 												    <li class="">
-												      <img src="../icon/brightness.png">
+												      <img class="function"src="../icon/brightness.png">
 												      <ul>
 												        <li class="align">
 												          <a href="example.html">Capteur</a>
@@ -108,7 +111,7 @@
 											<div class="menu-bar" id="temperature">
 												  <ul>
 												    <li class="">
-												 		<img src="../icon/temperature.png">
+												 		<img class="function"src="../icon/temperature.png">
 												      <ul>
 												        <li class="align">
 												          <a href="example.html">Capteur</a>
@@ -128,7 +131,7 @@
 											<div class="menu-bar" id="co2">
 												  <ul>
 												    <li class="">
-												      <img src="../icon/CO2.png">
+												      <img class="function"src="../icon/CO2.png">
 												      <ul>
 												        <li class="align">
 												          <a href="example.html">Capteur</a>
@@ -195,7 +198,7 @@
 								dycalendar.draw({
 									target : ".container-calendar",
 									type: "month",
-									targettime: true,
+									highlighttoday: true,
 								});
 							</script>
 					</body>

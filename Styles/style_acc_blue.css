@@ -52,7 +52,11 @@
 }
 
 
+footer{
+    position: relative;
+    top: 4.8vh;
 
+}
 
 
 .content_section{
@@ -243,12 +247,18 @@ section{
     box-sizing: border-box;
 }
 
+/* ------------------ Calendar ---------------*/ 
+
 .dycalendar-month-container{
     position: relative;
-    left: 1350px;
+    left: 138.5vh;
     border: 1px solid black;
     text-decoration: none;
     width: 16vh;
+}
+
+.container-calendar{
+
 }
 
 .container-functions{
@@ -272,8 +282,17 @@ section{
 #calendar-text{
     position: relative;
     left: 137vh;
+    cursor: pointer;
 
 }
+
+#calendar-text:hover{
+    position: relative;
+    left: 137vh;
+    cursor: pointer;
+
+}
+
 
 a{
     text-decoration: none;
@@ -291,6 +310,7 @@ div.menu-bar ul ul {
 
 div.menu-bar li:hover > ul {
   display: block;
+
 }
 
 ul {
@@ -346,12 +366,12 @@ th{
     left: 4vh;
 }
 
-table{
+.align:hover{
     position: relative;
-    left: 18vh;
-    width: 115vh;
-
+    left: 4vh;
+    text-decoration: underline;
 }
+
 
 .lum-text{
     position: absolute;
@@ -368,7 +388,7 @@ table{
 .aera-text{
     position: absolute;
     top: 22vh;
-    left: 69vh;
+    left: 69.5vh;
 }
 
 .temp-text{
@@ -383,8 +403,10 @@ table{
     left: 121vh;
 }
 
+.function-text{
 
-
+    font-weight: bold;
+}
 
 
 
