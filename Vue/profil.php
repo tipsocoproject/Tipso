@@ -1,8 +1,9 @@
 <?php
+session_start();
 
 require ("../Modele/connexion.php");
 
-include ("../Controleur/controleur_inscription.php");
+include ("../Controleur/controleur_profil.php");
 
 ?>
 
@@ -11,8 +12,8 @@ include ("../Controleur/controleur_inscription.php");
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../Styles/inscription.css">
-	<title>Inscription</title>
+	<link rel="stylesheet" type="text/css" href="../Styles/profil.css">
+	<title>Mon Compte</title>
 
 </head>
 <header>
