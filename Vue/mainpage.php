@@ -1,9 +1,8 @@
 <?php
 	session_start();
 	require("../Modele/connexion.php");
-	include("../Controleur/controleur_connexion.php")
-
-
+	if(isset($_SESSION['id']))
+	{
 
 ?>
 		<html>
@@ -183,6 +182,7 @@
 								</div>
 
 								<div class="container-rooms">
+<<<<<<< HEAD
 									
 								<div class="function-text">
 													<p class="bath-text">Bathroom</p>
@@ -234,6 +234,8 @@
 												</div>
 									
 
+=======
+>>>>>>> origin/master
 									
 
 										
@@ -314,10 +316,13 @@
 												</div>
 								</div>
 
+<<<<<<< HEAD
 								<div class="container-logs">
 									
 								</div>
 
+=======
+>>>>>>> origin/master
 						
 
 							</section>
@@ -330,6 +335,9 @@
 									highlighttoday: true,
 								});
 							</script>
+							<canvas id="lineChart" height="400" width="400"></canvas>
+							<script scr="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+							<script type="text/javascript" src="../Javascript/main.js"></script>
 					</body>
 				<?php
 
@@ -337,7 +345,13 @@
 
 				?>
 		</html>
-
+<?php
+	}
+	else
+	{
+		header("Location: login.php");
+	}
+?>
 
 
 		<!--<a href="a_définir" alt="bouton qui renvoit vers la Témpérature" class="bouton_left_nav" <input type="bouton" name="Témpérature" value="Température"> Température</a>
