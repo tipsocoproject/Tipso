@@ -29,8 +29,10 @@
 						</div>
 
 							<section class="container-main"> <!-- container droite -->
+
 								<div class="calendar">
-									<div class="container-calendar"></div>
+									<div class="container-calendar"></div>	
+
 									<a href=""><label id="calendar-text">Programmer un évenement</label></a>
 								</div>
 								<div class="container-functions">
@@ -45,16 +47,16 @@
 													<p class="co2-text">CO2</p>
 												</div>
 
-												<div class="menu-bar" id="luminosite">
+												<div class="menu-bar-function" id="luminosite">
 												  <ul>
 												    <li class="">
 												      <img class="function"src="../icon/brightness.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html">Capteur</a>
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
-												          <a href="example.html">Actionneur</a>
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
 												          <ul>
 												          </ul>
 												        </li>
@@ -67,16 +69,16 @@
 										
 
 										
-											<div class="menu-bar" id="securite">
+											<div class="menu-bar-function" id="securite">
 												  <ul>
 												    <li class="">
 												     <img class="function"src="../icon/Camera.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html">Capteur</a>
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
-												          <a href="example.html">Actionneur</a>
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
 												          <ul>
 												          </ul>
 												        </li>
@@ -89,16 +91,16 @@
 									
 
 										
-											<div class="menu-bar" id="aeration">
+											<div class="menu-bar-function" id="aeration">
 												  <ul>
 												    <li class="">
 												      <img class="function"src="../icon/brightness.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html">Capteur</a>
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
-												          <a href="example.html">Actionneur</a>
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
 												          <ul>
 												          </ul>
 												        </li>
@@ -109,16 +111,16 @@
 											
 
 									
-											<div class="menu-bar" id="temperature">
+											<div class="menu-bar-function" id="temperature">
 												  <ul>
 												    <li class="">
 												 		<img class="function"src="../icon/temperature.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html">Capteur</a>
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
-												          <a href="example.html">Actionneur</a>
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
 												          <ul>
 												          </ul>
 												        </li>
@@ -129,16 +131,16 @@
 											
 									
 										
-											<div class="menu-bar" id="co2">
+											<div class="menu-bar-function" id="co2">
 												  <ul>
 												    <li class="">
 												      <img class="function"src="../icon/CO2.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html">Capteur</a>
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
-												          <a href="example.html">Actionneur</a>
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
 												          <ul>
 												          </ul>
 												        </li>
@@ -180,15 +182,141 @@
 									
 								</div>
 
-								<!--<div class="container-rooms">
+								<div class="container-rooms">
 									
-								<h1> C'est en chantier PAS BESOIN DE VENIR ME PETER LES COUILLES PARCE QUE C'EST MOCHE / parce contre si vous avez des suggestions sur la disposition je suis dispo !</h1>
+								<div class="function-text">
+													<p class="bath-text">Bathroom</p>
+													<p class="bed-text">Bedroom</p>
+													<p class="kitchen-text">Kitchen</p>
+													<p class="laundry-text">Laundryroom</p>
+													<p class="living-text">Livingroom</p>
+													<p class="office-text">Office</p>
+												</div>
 
+												<div class="menu-bar-room" id="bathroom">
+												  <ul>
+												    <li class="">
+												      <img class="function"src="../icon/bathroom.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div> 
+											
+
+										
+
+										
+											<div class="menu-bar-room" id="bedroom">
+												  <ul>
+												    <li class="">
+												     <img class="function"src="../icon/bedroom.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+									
+
+									
+
+										
+											<div class="menu-bar-room" id="kitchen">
+												  <ul>
+												    <li class="">
+												      <img class="function"src="../icon/kitchen.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+											
+
+									
+											<div class="menu-bar-room" id="laundryroom">
+												  <ul>
+												    <li class="">
+												 		<img class="function"src="../icon/laundryroom.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+
+												<div class="menu-bar-room" id="livingroom">
+												  <ul>
+												    <li class="">
+												 		<img class="function"src="../icon/livingroom.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
+											
+									
+										
+											<div class="menu-bar-room" id="office">
+												  <ul>
+												    <li class="">
+												      <img class="function"src="../icon/office.png">
+												      <ul>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												        </li>
+												        <li class="align">
+												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
+												          <ul>
+												          </ul>
+												        </li>
+												      </ul>
+												    </li>
+												  </ul>
+												</div>
 								</div>
 
 								<div class="container-logs">
 									
-								</div> -->
+								</div>
 
 						
 

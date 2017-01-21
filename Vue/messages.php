@@ -46,7 +46,7 @@ include("../Controleur/controleur_messages.php");
 
 						<span class="error" align="center">
 							<?php
-								include ("/../Modele/error.php");
+								include ("../Modele/error.php");
 							?>
 
 
