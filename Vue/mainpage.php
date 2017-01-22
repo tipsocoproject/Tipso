@@ -116,7 +116,7 @@
 												 		<img class="function"src="../icon/temperature.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												          <a href="temperature.php"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
 												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
