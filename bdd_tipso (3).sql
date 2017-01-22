@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 17 Janvier 2017 à 21:48
+-- Généré le :  Dim 22 Janvier 2017 à 23:09
 -- Version du serveur :  10.1.16-MariaDB
 -- Version de PHP :  5.5.38
 
@@ -151,7 +151,10 @@ INSERT INTO `messages` (`idm`, `idc`, `nom`, `email`, `subject`, `comment`) VALU
 
 CREATE TABLE `rooms` (
   `idroom` int(11) NOT NULL,
-  `roomname` text NOT NULL,
+  `idc` int(11) NOT NULL,
+  `roomname` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `idsens` int(11) NOT NULL,
   `iddom` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -159,15 +162,10 @@ CREATE TABLE `rooms` (
 -- Contenu de la table `rooms`
 --
 
-INSERT INTO `rooms` (`idroom`, `roomname`, `iddom`) VALUES
-(0, '0', 0),
-(10, '0', 0),
-(11, '0', 1),
-(12, '0', 0),
-(13, '0', 0),
-(14, '0', 0),
-(15, '0', 0),
-(16, '0', 0);
+INSERT INTO `rooms` (`idroom`, `idc`, `roomname`, `type`, `idsens`, `iddom`) VALUES
+(2, 38, 'Salon principale', 'Salon', 8, 0),
+(3, 38, 'Salon jeux', 'Salon', 9, 0),
+(4, 38, 'Chambre Andrew', 'Chambre', 10, 0);
 
 -- --------------------------------------------------------
 
@@ -189,10 +187,9 @@ CREATE TABLE `sensors` (
 --
 
 INSERT INTO `sensors` (`sensorserial`, `idsens`, `idc`, `idroom`, `mail`, `sensortype`) VALUES
-('1000111', 7, 0, 0, '', 'Distance - 1 '),
-('1000112', 8, 0, 0, '', 'Distance - 2 '),
-('1000113', 9, 0, 0, '', 'Température'),
-('1000114', 10, 0, 0, '', 'Humidité'),
+('1000112', 8, 38, 0, 'philippick.a@gmail.com', 'Distance - 2 '),
+('1000113', 9, 38, 0, 'philippick.a@gmail.com', 'Température'),
+('1000114', 10, 38, 0, 'philippick.a@gmail.com', 'Humidité'),
 ('1000115', 11, 0, 0, '', 'Lumière'),
 ('1000116', 12, 0, 0, '', 'Couleur'),
 ('1000117', 13, 30, 0, 'test@gmail.com', 'Présence'),
@@ -307,6 +304,11 @@ ALTER TABLE `client`
 --
 ALTER TABLE `messages`
   MODIFY `idm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT pour la table `rooms`
+--
+ALTER TABLE `rooms`
+  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `sensors`
 --
