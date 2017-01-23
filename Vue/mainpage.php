@@ -83,17 +83,7 @@
 												<label style=display:none name="function">caméra</label>
 												  <ul>
 												    <li class="">
-												     <img class="function"src="../icon/Camera.png">
-												      <ul>
-												        <li class="align">
-												          <a href="sensorparam.php?val=camera"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												     <img class="function"src="../icon/Camera.png"> <a href="sensorparam.php?val=camera"></a>
 												    </li>
 												  </ul>
 												</div>

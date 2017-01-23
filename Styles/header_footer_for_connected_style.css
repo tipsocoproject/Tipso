@@ -152,7 +152,7 @@ nav > ul {
   padding: 0;
   margin: 0;
   display: inline-block;
-  background: #EAF1F8;
+  background: #627890;
   border-radius: 5px;
 }
 nav > ul > li {
@@ -163,12 +163,13 @@ nav > ul > li {
   position: relative;
   text-transform: uppercase;
   font-size: 14px;
-  color: #627890;
+  color: #EAF1F8;
   cursor: pointer;
 }
 nav > ul > li:hover {
-  background: #ccd9ff;
-  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #b3d1ff;
+      box-shadow: 0 0 5px #b3d1ff;
+  border-radius: 2px;
 }
 
 ul.drop-menu {
