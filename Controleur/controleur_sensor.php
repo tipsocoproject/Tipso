@@ -24,7 +24,6 @@ if(isset($_SESSION['id']))
             $idsens = $serialidc['idsens'];
 
 
-
             if($serialidc['idc'] == 0)
             {
                 if($serialexist == 1)

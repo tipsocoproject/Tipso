@@ -2,7 +2,7 @@
 session_start();
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
-include("../Controleur/controleur_temperature.php");
+include("../Controleur/controleur_sensorparam.php");
 
 ?>
 
@@ -22,10 +22,10 @@ include("../Controleur/controleur_temperature.php");
 	    <div class="form" align="center">
 	    	<br>
 	    	<br>
-			<h2 class="main-text">Température</h2>
 			<br>
 			<br>
-			<form method="POST" action="">
+			<form method="POST" action="">			
+				<h2 class="main-text" name="title"><?php echo $title?></h2>
 				<table>
 					<tr>
 						<td><br><label class="text-input" for="last-name" name="capteur">Capteurs</label></td>	
@@ -33,12 +33,7 @@ include("../Controleur/controleur_temperature.php");
 						<td><br><label class="text-input" for="last-name" name="capteur">Etat</label></td>	
 						<td><br><label class="text-input" for="last-name" name="room">Modification</label></td>	
 					</tr>
-					<tr>
-						<td><br><input class="input-box" type="text" name="state" value="" disabled></td>
-						<td><br><input class="input-box" type="text" name="modification" value="" disabled></td>
-						<td><br><input class="input-box" type="text" name="state" value=""></td>
-						<td><br><input class="input-box" type="text" name="modification" value=""></td>
-					</tr>
+						<?php include("../Controleur/test_php.php") ?>
 					<tr>
 						<td><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>

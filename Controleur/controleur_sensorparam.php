@@ -1,17 +1,22 @@
 <?php 
 
-
-
 	if(isset($_SESSION['id']))
 	{
 
+
 		$idc = $_SESSION['id'];
+		$title = $_GET['val'];
+		$reqsens = $bdd->prepare('SELECT idsens FROM sensors WHERE idc=? AND sensortype=?');
+		$reqsens->execute(array($idc, $title));
 
-
-		$reqsens = $bdd->prepare('SELECT * FROM sensors WHERE idc=?');
-		$reqsens->execute(array($idc));
 		$senscount = $reqsens->rowCount();
-		$sensinfo = $reqsens->fetch();
+		
+		if($senscount != 0)
+
+		{
+
+			$array = $reqsens->fetchAll(PDO::FETCH_COLUMN);
+
 
 		//$idsens = $sensinfo['idsens'];
 
@@ -28,6 +33,11 @@
 						echo '<td><br><label class="text-input" for="last-name" name="room">Modification</label></td>';	
 					echo "</tr>"
 		*/
+		}
+		else
+		{
+			header("Location: ../Vue/sensor.php");
+		}
 
 	}
 	else

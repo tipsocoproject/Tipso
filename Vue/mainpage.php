@@ -41,18 +41,19 @@
 												<div class="function-text">
 													<p class="lum-text">Luminosité</p>
 													<p class="sec-text">Sécurité</p>
-													<p class="aera-text">Aération</p>
+													<p class="aera-text">Mouvement</p>
 													<p class="temp-text">Température</p>
 													<p class="co2-text">CO2</p>
 												</div>
 
-												<div class="menu-bar-function" id="luminosite">
+											<div class="menu-bar-function" id="luminosite">
+												<label style=display:none name="function">Luminosité</label>
 												  <ul>
 												    <li class="">
 												      <img class="function"src="../icon/brightness.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												          <a href="sensorparam.php?val=lumiere"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
 												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
@@ -69,12 +70,13 @@
 
 										
 											<div class="menu-bar-function" id="securite">
+												<label style=display:none name="function">caméra</label>
 												  <ul>
 												    <li class="">
 												     <img class="function"src="../icon/Camera.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												          <a href="sensorparam.php?val=camera"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
 												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
@@ -90,13 +92,14 @@
 									
 
 										
-											<div class="menu-bar-function" id="aeration">
+											<div class="menu-bar-function" id="aeration"> <!--changer id en mouvement -->
+												<label style=display:none name="function">Mouvement</label>
 												  <ul>
 												    <li class="">
-												      <img class="function"src="../icon/brightness.png">
+												      <img class="function"src="../icon/motion.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												          <a href="sensorparam.php?val=presence"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
 												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
@@ -111,12 +114,13 @@
 
 									
 											<div class="menu-bar-function" id="temperature">
+												<label style=display:none name="function">Température</label>
 												  <ul>
 												    <li class="">
 												 		<img class="function"src="../icon/temperature.png">
 												      <ul>
 												        <li class="align">
-												          <a href="temperature.php"><span class="hover-text-list">Capteur</span></a>
+												          <a href="sensorparam.php?val=temperature"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
 												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
@@ -131,12 +135,13 @@
 									
 										
 											<div class="menu-bar-function" id="co2">
+												<label style=display:none name="function">CO2</label>
 												  <ul>
 												    <li class="">
 												      <img class="function"src="../icon/CO2.png">
 												      <ul>
 												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
+												          <a href="sensorparam.php?val=humidite"><span class="hover-text-list">Capteur</span></a>
 												        </li>
 												        <li class="align">
 												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
