@@ -28,24 +28,27 @@ include("header.html");
                 <body>
                     <div class="sensors-select" align="center">
                         <form method="POST" action="">
-                            <img src="http://www.icone-png.com/png/30/29916.png" id="plus">
-                            <script>
+                            <img src="../icon/plusbutton.png" id="plus">
+                            <div class="script">
+                                <script>
 
-                            var counter = 0;
+                                var counter = 0;
 
-                            /* When the document is charged the function begins.*/
+                                /* When the document is charged the function begins.*/
 
-                            $(document).ready(function() {
+                                $(document).ready(function() {
 
-                                $('#plus').click(function() {
-                                    counter++;
-                                    $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" required/><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Autres</option></select><input type="text" name="room[]" required/></div>');
-                                });
-                            })
+                                    $('#plus').click(function() {
+                                        counter++;
+                                        $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" required/><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Autres</option></select><input type="text" name="room[]" required/></div>');
+                                    });
+                                })
 
 
 
-                        </script>
+                            </script>                        
+
+                        </div>                            
                         <input class="button" type="submit" name="confirm-button">
                         </form>
                         <span class="error">

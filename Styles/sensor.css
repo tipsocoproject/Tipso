@@ -12,6 +12,8 @@ img {
     border-width: 1px;
     height: 50px;
     width: 50px;
+    top: 3.8vh;
+    right: 20vh;
     margin-top: 40px;
     margin-left: 30px;
     margin-right: 30px; 
@@ -24,7 +26,15 @@ input {
     margin-bottom: 20px;
 	width: 300px;
 }
+.button{
+    width: 20px;
+    cursor: pointer;
+    width: 105px;
+    height: 25px;
+    border-radius: 2px;
+}
 
+}
 .clear{
     position: relative;
     top: 65vh;
@@ -35,12 +45,30 @@ body{
 }
 
 footer{
-    float: bottom;
+    overflow: hidden;
+    position: relative;
+    top: 40.1vh;
 }
 
 .sensors-select{
+    overflow: auto;
     position: relative;
-    top: 28vh;
+    top: 12vh;
+    left: 43vh;
+    height: 400px;
+    width: 1100px;
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+    box-shadow: 2px 2px 10px 3px #bfbfbf;
+
+
+}
+
+
+
+.image{
+    position: relative;
+    top: 5vh;
 }
 
 

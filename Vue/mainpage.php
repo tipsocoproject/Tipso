@@ -22,6 +22,8 @@
 		?>
 				<body>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
+						<div class="circle"></div>
+
 						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
 				 			<h2> Etats des capteurs </h2>
 				 			<table>
@@ -36,6 +38,8 @@
 							 		}	
 							 	?>
 							</table>
+						
+						
 						</div>
 
 							<section class="container-main"> <!-- container droite -->
@@ -52,15 +56,15 @@
 												<div class="function-text">
 													<p class="lum-text">Luminosité</p>
 													<p class="sec-text">Sécurité</p>
-													<p class="aera-text">Aération</p>
+													<p class="aera-text">Mouvement</p>
 													<p class="temp-text">Température</p>
-													<p class="co2-text">CO2</p>
+													<p class="co2-text">Humidité</p>
 												</div>
 
 												<div class="menu-bar-function" id="luminosite">
 												  <ul>
 												    <li class="">
-												      <a href="example.html" class="lien"><img class="function"src="../icon/brightness.png"></a>
+												      <a href="sensorparam.php?val=lumiere" class="lien"><img class="function"src="../icon/brightness.png"></a>
 												    </li>
 												  </ul>
 												</div> 
@@ -72,7 +76,7 @@
 											<div class="menu-bar-function" id="securite">
 												  <ul>
 												    <li class="">
-												    <a href="example.html"> <img class="function"src="../icon/Camera.png"></a>
+												    <a href="sensorparam.php?val=camera"> <img class="function"src="../icon/Camera.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -84,7 +88,7 @@
 											<div class="menu-bar-function" id="aeration">
 												  <ul>
 												    <li class="">
-												     <a href="example.html"> <img class="function"src="../icon/brightness.png"></a>
+												     <a href="sensorparam.php?val=mouvement"> <img class="function"src="../icon/motion.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -94,7 +98,7 @@
 											<div class="menu-bar-function" id="temperature">
 												  <ul>
 												    <li class="">
-												 		<a href="example.html"><img class="function"src="../icon/temperature.png"></a>
+												 		<a href="sensorparam.php?val=temperature"><img class="function"src="../icon/temperature.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -104,7 +108,7 @@
 											<div class="menu-bar-function" id="co2">
 												  <ul>
 												    <li class="">
-												     <a href="example.html"> <img class="function"src="../icon/CO2.png"></a>
+												     <a href="sensorparam.php?val=humidite"> <img class="function"src="../icon/CO2.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -141,7 +145,6 @@
 
 									
 								</div>
-
 								<div class="container-rooms">
 
 									
@@ -157,7 +160,7 @@
 												<div class="menu-bar-room" id="bathroom">
 												  <ul>
 												    <li class="">
-												     <a href="example.html"> <img class="function"src="../icon/bathroom.png"></a>
+												     <a href="roomparam.php?val=bathroom"> <img class="function"src="../icon/bathroom.png"></a>
 												    </li>
 												  </ul>
 												</div> 
@@ -169,7 +172,7 @@
 											<div class="menu-bar-room" id="bedroom">
 												  <ul>
 												    <li class="">
-												   <a href="example.html">  <img class="function"src="../icon/bedroom.png"></a>
+												   <a href="roomparam.php?val=chambre">  <img class="function"src="../icon/bedroom.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -181,7 +184,7 @@
 											<div class="menu-bar-room" id="kitchen">
 												  <ul>
 												    <li class="">
-												    <a href="example.html">  <img class="function"src="../icon/kitchen.png"></a>
+												    <a href="roomparam.php?val=cuisine">  <img class="function"src="../icon/kitchen.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -199,7 +202,7 @@
 												<div class="menu-bar-room" id="livingroom">
 												  <ul>
 												    <li class="">
-												 		<a href="example.html"><img class="function"src="../icon/livingroom.png"></a>
+												 		<a href="roomparam.php?val=salon"><img class="function"src="../icon/livingroom.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -209,7 +212,7 @@
 											<div class="menu-bar-room" id="office">
 												  <ul>
 												    <li class="">
-												     <a href="example.html"> <img class="function"src="../icon/office.png"></a>
+												     <a href="roomparam.php?val=bureau"> <img class="function"src="../icon/office.png"></a>
 												    </li>
 												  </ul>
 												</div>
