@@ -23,6 +23,7 @@
 				<body>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
 						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
+				 			<h2> Etats des capteurs </h2>
 				 			<table>
 								<?php 
 

@@ -26,7 +26,6 @@ include ("../Controleur/controleur_etat.php");
 			 			echo '<td><label>'.$array[$i].'</label></td>';
 			 			echo '<td><label><img src="../icon/greenbutton.png"></label></td>';
 			 		echo '</tr>';
-
 		 		}	
 		 	?>
 		</table>

@@ -10,7 +10,6 @@
 		$senscount = $reqsens->rowCount();
 
 		$array = $reqsens->fetchAll(PDO::FETCH_COLUMN);
-
 	}
 	else
 	{

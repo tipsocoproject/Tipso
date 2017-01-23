@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 22 Janvier 2017 à 23:09
+-- Généré le :  Lun 23 Janvier 2017 à 14:34
 -- Version du serveur :  10.1.16-MariaDB
--- Version de PHP :  5.5.38
+-- Version de PHP :  5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -165,7 +165,11 @@ CREATE TABLE `rooms` (
 INSERT INTO `rooms` (`idroom`, `idc`, `roomname`, `type`, `idsens`, `iddom`) VALUES
 (2, 38, 'Salon principale', 'Salon', 8, 0),
 (3, 38, 'Salon jeux', 'Salon', 9, 0),
-(4, 38, 'Chambre Andrew', 'Chambre', 10, 0);
+(4, 38, 'Chambre Andrew', 'Chambre', 10, 0),
+(5, 38, 'Chambre Andrew', 'Chambre', 19, 0),
+(6, 38, 'Petit salon -1', 'Salon', 29, 0),
+(7, 38, 'Entrée principale', 'Entrée', 30, 0),
+(8, 38, 'Terrasse chambre Papa', 'Terrasse', 21, 0);
 
 -- --------------------------------------------------------
 
@@ -198,9 +202,9 @@ INSERT INTO `sensors` (`sensorserial`, `idsens`, `idc`, `idroom`, `mail`, `senso
 ('1000121', 16, 0, 0, '', 'Distance - 1 '),
 ('1000122', 17, 0, 0, '', 'Distance - 2 '),
 ('1000124', 18, 0, 0, '', 'Humidité'),
-('1000123', 19, 0, 0, '', 'Température'),
+('1000123', 19, 38, 0, 'philippick.a@gmail.com', 'Température'),
 ('1000124', 20, 0, 0, '', 'Humidité'),
-('1000125', 21, 0, 0, '', 'Lumière'),
+('1000125', 21, 38, 0, 'philippick.a@gmail.com', 'Lumière'),
 ('1000126', 22, 0, 0, '', 'Couleur'),
 ('1000127', 23, 0, 0, '', 'Présence'),
 ('1000128', 24, 0, 0, '', 'Lumière - 2'),
@@ -208,8 +212,8 @@ INSERT INTO `sensors` (`sensorserial`, `idsens`, `idc`, `idroom`, `mail`, `senso
 ('1000131', 26, 0, 0, '', 'Distance - 1 '),
 ('1000132', 27, 0, 0, '', 'Distance - 2 '),
 ('1000133', 28, 0, 0, '', 'Température'),
-('1000134', 29, 0, 0, '', 'Humidité'),
-('1000135', 30, 0, 0, '', 'Lumière'),
+('1000134', 29, 38, 0, 'philippick.a@gmail.com', 'Humidité'),
+('1000135', 30, 38, 0, 'philippick.a@gmail.com', 'Lumière'),
 ('1000137', 32, 0, 0, '', 'Présence'),
 ('1000138', 33, 0, 0, '', 'Lumière - 2'),
 ('1000139', 34, 0, 0, '', 'Mouvement'),
@@ -308,7 +312,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT pour la table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `sensors`
 --
