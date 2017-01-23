@@ -29,6 +29,7 @@ textarea {
 	left: 6vh;
 	margin: 2vh;
 	margin-top: 1vh;
+	height: 60%;
 	width: 80%;
 	resize : none;
 }
@@ -43,7 +44,7 @@ textarea {
 
 .gauche {
 	position: relative;
-	top: 0px;
+	top: 10vh;
 	left: 0%;
 
 }
@@ -111,7 +112,7 @@ nav a:hover{
 			box-shadow: 0 0 50px #C5C6D6;
 	margin-top:  -2vh;
 	position: relative;
-	top: 24vh;
+	top: 18vh;
 	left: 55vh;
 }
 
@@ -126,7 +127,7 @@ strong{
 
 .votre_message{
 	position: absolute;
-	top: 12vh;
+	top: 2vh;
 	text-decoration: underline;
 	left: 75vh
 }
@@ -164,20 +165,20 @@ strong{
 
 .Tel{
 	position: absolute;
-	left:5vh;
-	top: -50vh;
+	left:30vh;
+	top: -22vh;
 }
 
 .Fax{
 	position: absolute;
-	left: 5vh;
-	top: -40vh;
+	left: 80vh;
+	top: -22vh;
 }
 
 .Email{
 	position: absolute;
-	left: 5vh;
-	top: -60vh;
+	left: 125vh;
+	top: -22vh;
 }
 
 

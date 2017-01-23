@@ -31,10 +31,6 @@ include("../Controleur/controleur_messages.php");
 						<form method="POST" action="">
 							<table>
 								<tr>
-									<td><label class="input-text">Email</label></td>
-									<td><input type="email" name="email" size="40" maxlength="50" id="email" placeholder="   Votre mail:  exemple : ***@gmail.com"></td>
-								</tr>
-								<tr>
 									<td><label class="input-text">Sujet</label></td>
 									<td><input type="sujet" name="sujet" size="40" maxlength="50" id="sujet" placeholder="   Le sujet de votre requête"></td>
 								</tr>
