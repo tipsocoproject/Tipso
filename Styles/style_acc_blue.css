@@ -689,4 +689,9 @@ div.menu-bar-room li:hover > ul {
     text-decoration: underline;
 }
 
+.function{
+  cursor: pointer;
+}
+
+
 
