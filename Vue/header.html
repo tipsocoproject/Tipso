@@ -5,15 +5,22 @@
 <header>
 
 
-	<div class="menu_dér">
+	<!--<div class="menu_dér">
 			<select class="menu_dér_in" onchange="location = this.value;">
 					<option value="">Connecté</option>
-					<option value=" ../Vue/profil.php">Espace Client</option>					
 					<option value="../Modele/deconnexion.php">Se Déconnecter</option>
 			</select>
-	</div>
+	</div>-->
 
-
+<nav class="menu_der">
+  <ul>
+    <li> Connecté
+      <ul class="drop-menu menu_der">
+       <li><a href="../Modele/deconnexion.php" > déconnecté </a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 	<nav>
   <ul>

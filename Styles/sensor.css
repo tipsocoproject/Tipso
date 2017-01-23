@@ -1,17 +1,46 @@
 
+*{
+    font-family: calibri;
+
+}
+
+
+
 img {
+    position: relative;
     cursor: pointer;
     border-width: 1px;
     height: 50px;
     width: 50px;
+    margin-top: 40px;
     margin-left: 30px;
     margin-right: 30px; 
 }
 
 input {
+    position: relative;
 	margin-left: 20px;
 	margin-right: 20px;
     margin-bottom: 20px;
 	width: 300px;
 }
+
+.clear{
+    position: relative;
+    top: 65vh;
+}
+
+body{
+    height: 100px;
+}
+
+footer{
+    float: bottom;
+}
+
+.sensors-select{
+    position: relative;
+    top: 28vh;
+}
+
 

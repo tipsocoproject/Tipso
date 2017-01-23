@@ -84,17 +84,7 @@
 											<div class="menu-bar-function" id="aeration">
 												  <ul>
 												    <li class="">
-												      <img class="function"src="../icon/brightness.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												     <a href="example.html"> <img class="function"src="../icon/brightness.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -104,17 +94,7 @@
 											<div class="menu-bar-function" id="temperature">
 												  <ul>
 												    <li class="">
-												 		<img class="function"src="../icon/temperature.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												 		<a href="example.html"><img class="function"src="../icon/temperature.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -124,17 +104,7 @@
 											<div class="menu-bar-function" id="co2">
 												  <ul>
 												    <li class="">
-												      <img class="function"src="../icon/CO2.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												     <a href="example.html"> <img class="function"src="../icon/CO2.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -187,17 +157,7 @@
 												<div class="menu-bar-room" id="bathroom">
 												  <ul>
 												    <li class="">
-												      <img class="function"src="../icon/bathroom.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												     <a href="example.html"> <img class="function"src="../icon/bathroom.png"></a>
 												    </li>
 												  </ul>
 												</div> 
@@ -209,17 +169,7 @@
 											<div class="menu-bar-room" id="bedroom">
 												  <ul>
 												    <li class="">
-												     <img class="function"src="../icon/bedroom.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												   <a href="example.html">  <img class="function"src="../icon/bedroom.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -231,17 +181,7 @@
 											<div class="menu-bar-room" id="kitchen">
 												  <ul>
 												    <li class="">
-												      <img class="function"src="../icon/kitchen.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												    <a href="example.html">  <img class="function"src="../icon/kitchen.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -251,17 +191,7 @@
 											<div class="menu-bar-room" id="laundryroom">
 												  <ul>
 												    <li class="">
-												 		<img class="function"src="../icon/laundryroom.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												 		 <a href="example.html"><img class="function"src="../icon/laundryroom.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -269,17 +199,7 @@
 												<div class="menu-bar-room" id="livingroom">
 												  <ul>
 												    <li class="">
-												 		<img class="function"src="../icon/livingroom.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												 		<a href="example.html"><img class="function"src="../icon/livingroom.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -289,17 +209,7 @@
 											<div class="menu-bar-room" id="office">
 												  <ul>
 												    <li class="">
-												      <img class="function"src="../icon/office.png">
-												      <ul>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Capteur</span></a>
-												        </li>
-												        <li class="align">
-												          <a href="example.html"><span class="hover-text-list">Actionneur</span></a>
-												          <ul>
-												          </ul>
-												        </li>
-												      </ul>
+												     <a href="example.html"> <img class="function"src="../icon/office.png"></a>
 												    </li>
 												  </ul>
 												</div>
