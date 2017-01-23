@@ -1,8 +1,10 @@
 <?php
 	session_start();
 	require("../Modele/connexion.php");
+	include("../Controleur/controleur_etat.php");
 	if(isset($_SESSION['id']))
 	{
+
 
 ?>
 		<html>
@@ -21,10 +23,18 @@
 				<body>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
 						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
-							<tr>
-								<td> Etat </td> <!-- Carré de différentes couleurs pour les états : Rouge / Orange / Vers (/ Gris si pas paramètré) -->
-								<td> Capteurs </td>
-							</tr>
+				 			<table>
+								<?php 
+
+									for($i=0; $i<= $senscount-1; $i++)
+									{
+								 		echo '<tr>';
+								 			echo '<td><label>'.$array[$i].'</label></td>';
+								 			echo '<td><label><img class="sensor" src="../icon/greenbutton.png"></label></td>';
+								 		echo '</tr>';
+							 		}	
+							 	?>
+							</table>
 						</div>
 
 							<section class="container-main"> <!-- container droite -->

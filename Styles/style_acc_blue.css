@@ -468,6 +468,12 @@ img{
     height: 15vh;
 }
 
+img.sensor{
+
+    width: 2vh;
+    height: 2vh;
+}
+
 div.menu-bar-function ul ul {
   display: none;
 }

@@ -1,6 +1,7 @@
 <?php
+session_start();
 require ("../Modele/connexion.php");
-//include ("../Controle/controleur_etat_capteur.php");
+include ("../Controleur/controleur_etat.php");
 ?>
 
  <html>
@@ -14,15 +15,27 @@ require ("../Modele/connexion.php");
  	
  	<div id="etat">
  		<form method="POST" action="">
-		 	Capteur
-		 	<select id="selecteur" name="selecteur" onchange="majImage()">
-		 		<option value="0">-</option>
-		 		<option value="1">marche</option>
-		 		<option value="2">en cours</option>
-		 		<option value="3">arrêt</option>
-		 	</select>
 
-		 	<img id="monimage" src="" alt="">
+ 		<table>
+			<?php 
+
+				for($i=0; $i<= $senscount-1; $i++)
+				{
+
+			 		echo '<tr>';
+			 			echo '<td><label>'.$array[$i].'</label></td>';
+			 			echo '<td><label><img src="../icon/greenbutton.png"></label></td>';
+			 		echo '</tr>';
+
+		 		}	
+		 	?>
+		</table>
+		 <!--	<select id="selecteur" name="selecteur" onchange="majImage()">
+		 		<option value="0">-</option>
+		 		<option value="1">Marche</option>
+		 		<option value="2">Maintenance</option>
+		 		<option value="3">Arrêt</option>
+		 	</select> -->
 		 </form>
 	 </div>
 
