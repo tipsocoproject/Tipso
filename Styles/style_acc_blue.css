@@ -333,8 +333,12 @@ body{
 
 
 footer{
-    overflow: hidden;
-    position: relative;
+    z-index: 15;
+    position: fixed;
+    background-color: #627890;
+    height: 75px;
+    bottom: 0px;
+    width: 100%;
  }
 
  #boxbottom{
