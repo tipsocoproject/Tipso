@@ -2,10 +2,7 @@
     font-family: "Calibri";
 }
 
-body {
-	background: rgb(223,223,223);
 
-}
 
 label {
 	display: block;
@@ -14,6 +11,7 @@ label {
 }
 
 input{
+	background-color: #f4f5fb;
 	border: 1px black solid;
 	border-radius: 0px;
 	margin-top: 4vh;
@@ -24,6 +22,7 @@ input{
 
 
 textarea {
+ 	background-color: #f4f5fb;
 	position: relative;
 	top: 4vh;
 	left: 6vh;
@@ -107,7 +106,6 @@ nav a:hover{
 .message_box{
 	height: 50vh;
 	width: 65vh;
-	background-color: white;
 	-webkit-box-shadow: 0 0 50px #C5C6D6;
 			box-shadow: 0 0 50px #C5C6D6;
 	margin-top:  -2vh;
