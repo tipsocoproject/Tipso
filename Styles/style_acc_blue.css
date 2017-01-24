@@ -484,9 +484,9 @@ img:hover{
   -webkit-box-shadow: 0 0 5px 1px #a6a6a6;
   -moz-box-shadow: 0 0 5px 1px #a6a6a6;
   box-shadow: 0 0 5px 1px #a6a6a6; 
-  transition: all 0.15s ease-in-out;
-  /*width: 16vh;
-  height: 16vh;*/
+  transition: all 0.1s ease-in-out;
+  width: 15.5vh;
+  height: 15.5vh;
 
 }
 
