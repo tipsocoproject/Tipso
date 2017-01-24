@@ -1,3 +1,4 @@
+
 header{
     height: 13vh;
     width: 100%;
@@ -76,9 +77,9 @@ body{
 
 
 footer{
-    position: relative;
+    position: absolute;
     background-color: #627890;
-    height: 75px;
+    height: 100px;
     bottom: 0px;
     width: 100%;
  }

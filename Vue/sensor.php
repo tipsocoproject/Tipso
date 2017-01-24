@@ -40,9 +40,12 @@ include("header.html");
 
                                     $('#plus').click(function() {
                                         counter++;
-                                        $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" required/><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Autres</option></select><input type="text" name="room[]" required/></div>');
+                                        $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" required/><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Autres</option></select><input type="text" name="room[]" required/><p id="remove" name="remove[]">Remove</p></div>');
+                                        $('p').click(function(){
+                                            $(this).parent().remove();
+                                        });
                                     });
-                                })
+                                });
 
 
 
@@ -60,12 +63,12 @@ include("header.html");
                 </body>
 
                 </div>
- <div class="clear" style="clear:both">
+ 
 <?php
 
 include("footer.html")
 
 ?>
-  </div>
+
 </html>
 

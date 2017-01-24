@@ -6,6 +6,38 @@
 
 		$idc = $_SESSION['id'];
 		$title = $_GET['val'];
+
+		if($title=="lumiere")
+		{
+			$title="Lumière";
+		}
+
+		if($title=="camera")
+		{
+			$title="Caméra";
+		}
+
+		if($title=="mouvement")
+		{
+			$title="Mouvement";
+		}
+
+		if($title=="temperature")
+		{
+			$title="Température";
+		}
+
+		if($title=="humidite")
+		{
+			$title="Humidité";
+		}
+
+
+
+
+
+
+
 		$reqsens = $bdd->prepare('SELECT idsens FROM sensors WHERE idc=? AND sensortype=?');
 		$reqsens->execute(array($idc, $title));
 

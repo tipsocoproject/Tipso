@@ -194,7 +194,7 @@
 											<div class="menu-bar-room" id="laundryroom">
 												  <ul>
 												    <li class="">
-												 		 <a href="example.html"><img class="function"src="../icon/laundryroom.png"></a>
+												 		 <a href="roomparam.php?val=buanderie"><img class="function"src="../icon/laundryroom.png"></a>
 												    </li>
 												  </ul>
 												</div>
@@ -208,7 +208,7 @@
 												</div>
 											
 									
-										
+									
 											<div class="menu-bar-room" id="office">
 												  <ul>
 												    <li class="">

@@ -4,7 +4,9 @@
 
 }
 
-
+body{
+    overflow: auto;
+}
 
 img {
     position: relative;
@@ -35,10 +37,7 @@ input {
 }
 
 }
-.clear{
-    position: relative;
-    top: 65vh;
-}
+
 
 body{
     height: 100px;
@@ -47,8 +46,6 @@ body{
 
 footer{
     overflow: hidden;
-    position: relative;
-    top: 40.1vh;
 }
 
 .sensors-select{
@@ -58,8 +55,13 @@ footer{
     overflow: auto;
     position: relative;
     top: 12vh;
+<<<<<<< HEAD
     left: 25vh;
     height: 49vh;
+=======
+    left: 43vh;
+    height: 550px;
+>>>>>>> origin/master
     width: 1100px;
     border: 1px solid #bfbfbf;
     border-radius: 2px;
