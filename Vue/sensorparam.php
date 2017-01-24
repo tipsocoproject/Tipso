@@ -12,12 +12,17 @@ include("../Controleur/controleur_sensorparam.php");
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/temperature.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
 
 	<title>Température</title>
 
 </head>
-<header>
-</header>
+
+		<?php
+
+		include("header.html");
+		?>
+
 	<body>
 	    <div class="form" align="center">
 	    	<br>
@@ -46,6 +51,11 @@ include("../Controleur/controleur_sensorparam.php");
 			</form>
 			<br>
 	</body>
-	<footer>
-	</footer>
+
+	<?php 
+
+include("footer.html")
+
+ ?>
+
 </html>
