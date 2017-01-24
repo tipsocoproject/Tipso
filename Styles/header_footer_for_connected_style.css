@@ -58,6 +58,15 @@ header{
    -webkit-appearance: none;
 }*/
 
+
+*{
+  font-family: calibri;
+
+}
+
+
+
+
 body{
     margin: 0%;
     background-color: #EAF1F8;
