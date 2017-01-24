@@ -571,7 +571,7 @@ th{
 .aera-text{
     position: absolute;
     top: 22vh;
-    left: 69.5vh;
+    left: 68vh;
 }
 
 .temp-text{
@@ -583,7 +583,7 @@ th{
 .co2-text{
     position: absolute;
     top: 22vh;
-    left: 121vh;
+    left: 118.5vh;
 }
 
 .function-text{
@@ -775,4 +775,19 @@ li:hover > ul.drop-menu.menu_der li {
 
 .menu_der > ul.drop-menu li{
   height: 30px;
+}
+
+------------------circle--------------------
+
+div.circle { 
+  position: relative;
+  background: red;
+  height: 1000px;
+  width: 20px;
+  border-radius: 50px;
+  left: 20vh;
+  bottom: 20vh;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1); 
 }
