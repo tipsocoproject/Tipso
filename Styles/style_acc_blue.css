@@ -481,12 +481,12 @@ img{
 
 img:hover{
   border-radius: 100vh;
-  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1);
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1); 
-  transition: all 0.5s ease-in-out;
-  width: 16vh;
-  height: 16vh;
+  -webkit-box-shadow: 0 0 5px 1px #a6a6a6;
+  -moz-box-shadow: 0 0 5px 1px #a6a6a6;
+  box-shadow: 0 0 5px 1px #a6a6a6; 
+  transition: all 0.15s ease-in-out;
+  /*width: 16vh;
+  height: 16vh;*/
 }
 
 img.sensor{
@@ -783,20 +783,7 @@ li:hover > ul.drop-menu.menu_der li {
   height: 30px;
 }
 
-------------------circle--------------------
 
-div.circle { 
-  position: relative;
-  background: red;
-  height: 1000px;
-  width: 20px;
-  border-radius: 50px;
-
-  left: 20vh;
-  bottom: 20vh;
-  -webkit-box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 1); 
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
