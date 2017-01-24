@@ -77,9 +77,10 @@ body{
 
 
 footer{
-    position: absolute;
+    z-index: 15;
+    position: fixed;
     background-color: #627890;
-    height: 100px;
+    height: 75px;
     bottom: 0px;
     width: 100%;
  }
