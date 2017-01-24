@@ -7,6 +7,36 @@
 		$idc = $_SESSION['id'];
 		$title = $_GET['val'];
 
+		if($title=="chambre")
+		{
+			$title="Chambre";
+		}
+
+		if($title=="bathroom")
+		{
+			$title="Salle de Bain";
+		}
+
+		if($title=="cuisine")
+		{
+			$title="Cuisine";
+		}
+
+		if($title=="buanderie")
+		{
+			$title="Buanderie";
+		}
+
+		if($title=="salon")
+		{
+			$title="Salon";
+		}
+
+		if($title=="bureau")
+		{
+			$title="Bureau";
+		}
+
 		$reqroomname = $bdd->prepare('SELECT roomname FROM rooms WHERE idc=? AND type=?');
 		$reqroomname->execute(array($idc, $title));
 
@@ -40,7 +70,7 @@
 		}
 		else
 		{
-			//header("Location: ../Vue/sensor.php");
+			header("Location: ../Vue/sensor.php");
 		}
 
 	}
