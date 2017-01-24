@@ -75,15 +75,15 @@
 /* TEST */
 
 header{
-    height: 12vh;
+    height: 75px;
     width: 100%;
+    top: 0px;
     background-color: #627890;
-    margin-top: -20px;
 }
 
 nav {
   position: relative;
-  top: -3vh;
+  top: -5vh;
   padding: 50px;
   text-align: center;
   z-index: 5;
@@ -100,7 +100,7 @@ nav > ul {
 nav > ul > li {
   float: left;
   width: 150px;
-  height: 65px;
+  height: 50px;
   line-height: 65px;
   position: relative;
   text-transform: uppercase;
@@ -481,9 +481,9 @@ img{
 
 img:hover{
   border-radius: 100vh;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1); 
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1); 
   transition: all 0.5s ease-in-out;
   width: 16vh;
   height: 16vh;
@@ -776,7 +776,7 @@ li:hover > ul.drop-menu.menu_der li {
 
 .menu_der > ul > li{
   width: 100px;
-  height: 50px;
+  height: 45px;
 }
 
 .menu_der > ul.drop-menu li{
@@ -791,14 +791,13 @@ div.circle {
   height: 1000px;
   width: 20px;
   border-radius: 50px;
-<<<<<<< HEAD
+
   left: 20vh;
   bottom: 20vh;
   -webkit-box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 1);
   -moz-box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 5px 0
-  px rgba(0, 0, 0, 1); 
-}
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 1); 
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -809,15 +808,3 @@ div.circle {
 
 
 
-
-
-
-
-
-
-=======
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1); 
-}
->>>>>>> origin/master
