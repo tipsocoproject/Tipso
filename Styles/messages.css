@@ -11,7 +11,7 @@ label {
 }
 
 input{
-	background-color: #f4f5fb;
+	background-color: #f8fcff;
 	border: 1px black solid;
 	border-radius: 0px;
 	margin-top: 4vh;
@@ -20,9 +20,8 @@ input{
 	margin-left: 2vh;
 }
 
-
 textarea {
- 	background-color: #f4f5fb;
+ 	background-color: #f8fcff;
 	position: relative;
 	top: 4vh;
 	left: 6vh;
@@ -104,6 +103,7 @@ nav a:hover{
 }
 
 .message_box{
+	background-color: #f5fbff;
 	height: 50vh;
 	width: 65vh;
 	-webkit-box-shadow: 0 0 50px #C5C6D6;

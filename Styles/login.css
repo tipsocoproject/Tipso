@@ -33,6 +33,7 @@ input.input-box{
 	width: 100%;
 	margin-left: 10%;
 	font-size: 90%;
+	background-color: #f8fcff;
 }
 
 #checkbox-text{
@@ -102,7 +103,7 @@ footer{
 }
 
 form{
-	background-color: white;
+	background-color: #f5fbff;
 	width: 550px;	
 	height: 360px;
 	-webkit-box-shadow: 0 0 50px #C5C6D6;
