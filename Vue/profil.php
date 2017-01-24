@@ -12,11 +12,14 @@ include("../Controleur/controleur_profil.php");
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/profil.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
 	<title>Mon Compte</title>
 
 </head>
-<header>
-</header>
+	<?php
+
+		include("header.html");
+		?>
 	<body>
 	    <div class="form" align="center">
 	    	<br>
@@ -335,6 +338,9 @@ include("../Controleur/controleur_profil.php");
 		?>
 		</span>
 	</body>
-	<footer>
-	</footer>
+<?php 
+
+include("footer.html")
+
+ ?>
 </html>
