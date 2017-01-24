@@ -18,6 +18,7 @@ img {
     margin-top: 40px;
     margin-left: 30px;
     margin-right: 30px; 
+    border-radius: 100vh;
 }
 
 input {
@@ -28,13 +29,20 @@ input {
     width: 300px;
 }
 .button{
+    position: relative;
     width: 20px;
     cursor: pointer;
     width: 105px;
     height: 25px;
     border-radius: 2px;
+    left: 20vh;
 }
 
+.button:hover{
+  -webkit-box-shadow: 0 0 4px 1px #a6a6a6;
+  -moz-box-shadow: 0 0 4px 1px #a6a6a6;
+  box-shadow: 0 0 4px 1px #a6a6a6; 
+  transition: all 0.15s ease-in-out;
 }
 
 
@@ -47,14 +55,18 @@ footer{
     overflow: hidden;
 }
 
+h2{
+    position: relative;
+    top:3vh;
+}
 .sensors-select{
 
     width: 80%;
     max-height: 65vh;
     overflow: auto;
     position: relative;
-    top: 12vh;
-    left: 43vh;
+    top: 7vh;
+    left: 44vh;
     height: 550px;
     width: 1100px;
     border: 1px solid #bfbfbf;
@@ -65,10 +77,35 @@ footer{
 }
 
 
-
 .image{
     position: relative;
     top: 5vh;
+    left: 5vh;
+    height: 7vh;
+    margin-bottom: 20px;
+    width: 100vh;
+
 }
 
+
+
+img:hover{
+  border-radius: 100vh;
+  -webkit-box-shadow: 0 0 5px 1px #a6a6a6;
+  -moz-box-shadow: 0 0 5px 1px #a6a6a6;
+  box-shadow: 0 0 5px 1px #a6a6a6; 
+  transition: all 0.15s ease-in-out;
+
+}
+
+img.plus{
+
+}
+
+img#minus{
+
+    position: relative;
+    right: 2vh;
+    top: 2vh;
+}
 

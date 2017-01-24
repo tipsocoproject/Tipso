@@ -25,7 +25,10 @@ include("header.html");
 
 ?>
 
-                <body>
+                <body>                        
+
+                    <h2 style="text-decoration:underline" align="center">Ajouter un nouveau capteur</h2>
+
                     <div class="sensors-select" align="center">
                         <form method="POST" action="">
                             <img src="../icon/plusbutton.png" id="plus">
@@ -40,8 +43,8 @@ include("header.html");
 
                                     $('#plus').click(function() {
                                         counter++;
-                                        $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" required/><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Autres</option></select><input type="text" name="room[]" required/><p id="remove" name="remove[]">Remove</p></div>');
-                                        $('p').click(function(){
+                                        $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" placeholder="  Numéro de série du capteur"required><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Autres</option></select><input type="text" name="room[]" required placeholder="  Nom attributé (i.e Chambre parentale)"><img name="minus[]" src="../icon/minusbutton.png" id="minus"></div>');
+                                        $('img#minus').click(function(){
                                             $(this).parent().remove();
                                         });
                                     });
