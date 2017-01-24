@@ -13,6 +13,7 @@ include("../Controleur/controleur_sensorparam.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/temperature.css">
 	<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/sensorparam.style.css">
 
 	<title>Température</title>
 
@@ -40,6 +41,9 @@ include("../Controleur/controleur_sensorparam.php");
 					</tr>
 						<?php include("../Controleur/test_php.php") ?>
 					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>

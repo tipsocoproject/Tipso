@@ -483,6 +483,15 @@ img{
     height: 15vh;
 }
 
+img:hover{
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1); 
+  transition: all 0.5s ease-in-out;
+  width: 16vh;
+  height: 16vh;
+}
+
 img.sensor{
 
     width: 2vh;
@@ -787,7 +796,24 @@ div.circle {
   border-radius: 50px;
   left: 20vh;
   bottom: 20vh;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1); 
+  -webkit-box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 5px 0
+  px rgba(0, 0, 0, 1); 
 }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+

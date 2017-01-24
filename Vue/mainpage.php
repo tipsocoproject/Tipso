@@ -54,11 +54,11 @@
 										<!--	<th>Fonction / Agir </th> -->
 										
 												<div class="function-text">
-													<p class="lum-text">Luminosité</p>
-													<p class="sec-text">Sécurité</p>
-													<p class="aera-text">Mouvement</p>
-													<p class="temp-text">Température</p>
-													<p class="co2-text">Humidité</p>
+													<p class="lum-text" class="function">Luminosité</p>
+													<p class="sec-text" class="function">Sécurité</p>
+													<p class="aera-text" class="function">Mouvement</p>
+													<p class="temp-text" class="function">Température</p>
+													<p class="co2-text" class="function">Humidité</p>
 												</div>
 
 												<div class="menu-bar-function" id="luminosite">

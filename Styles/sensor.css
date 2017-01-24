@@ -42,6 +42,7 @@ input {
 
 body{
     height: 100px;
+    margin: 0%;
 }
 
 footer{
@@ -52,13 +53,13 @@ footer{
 
 .sensors-select{
 
-    width: 100%;
-    max-height: 650px;
+    width: 80%;
+    max-height: 65vh;
     overflow: auto;
     position: relative;
     top: 12vh;
-    left: 43vh;
-    height: 400px;
+    left: 25vh;
+    height: 49vh;
     width: 1100px;
     border: 1px solid #bfbfbf;
     border-radius: 2px;
