@@ -129,7 +129,7 @@ ul.drop-menu li:hover {
   background: #5980a6;
 }
 ul.drop-menu li:last-child {
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 2px 2px;
 }
 
 ul.drop-menu li {

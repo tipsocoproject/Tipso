@@ -6,7 +6,7 @@ if(isset($_SESSION['id']))
 
     if(isset($_POST['confirm-button']))
     {   
-        if(isset($counter))
+        if(isset($_POST['serialnumber']))
         {              
             $counter = count($_POST['serialnumber']);
         }
@@ -15,7 +15,7 @@ if(isset($_SESSION['id']))
             $counter = 0;
         }
 
-        if($counter!==0)
+        if($counter != 0)
         {
 
             for ($i = 0; $i <= $counter-1; $i++) {
