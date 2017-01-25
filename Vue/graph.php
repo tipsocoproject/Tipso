@@ -1,38 +1,39 @@
 <?php
 require('../Modele/connexion.php');
 //query to get data from the table
+if (isset($_POST['confirm-button'])){
+	$idsens = intval($_POST['capteur']);
+	$date = htmlspecialchars($_POST['date']);
 
-$idsens = intval($_POST['capteur']);
-$date = htmlspecialchars($_POST['date']);
-
-$querydatasent = $bdd->prepare(sprintf("SELECT  datasent FROM data WHERE idsens=? AND date=? ORDER BY date,time ASC"));
-$querytime = $bdd->prepare(sprintf("SELECT time FROM data WHERE idsens=? AND date=? ORDER BY date,time ASC"));
+	$querydatasent = $bdd->prepare(sprintf("SELECT  datasent FROM data WHERE idsens=? AND date=? ORDER BY date,time ASC"));
+	$querytime = $bdd->prepare(sprintf("SELECT time FROM data WHERE idsens=? AND date=? ORDER BY date,time ASC"));
 
 
-//execute query
-$querydatasent->execute(array($idsens, $date));
-$querytime->execute(array($idsens, $date));
+	//execute query
+	$querydatasent->execute(array($idsens, $date));
+	$querytime->execute(array($idsens, $date));
 
-$resultdatasent = $querydatasent->fetchAll(PDO::FETCH_COLUMN);
-$resulttime = $querytime->fetchAll(PDO::FETCH_COLUMN);
+	$resultdatasent = $querydatasent->fetchAll(PDO::FETCH_COLUMN);
+	$resulttime = $querytime->fetchAll(PDO::FETCH_COLUMN);
 
-//loop through the returned data
-$data = array();
-$datatime = array();
+	//loop through the returned data
+	$data = array();
+	$datatime = array();
 
-for ($i=0; $i < count($resultdatasent) ; $i++)
-{
-	$data[$i] = $resultdatasent[$i];
+	for ($i=0; $i < count($resultdatasent) ; $i++)
+	{
+		$data[$i] = $resultdatasent[$i];
+	}
+
+	for ($j=0; $j < count($resulttime); $j++)
+	{
+		$datatime[$j] = $resulttime[$j];
+	}
+
+	//close connection
+	$querytime->closeCursor();
+	$querydatasent->closeCursor();
 }
-
-for ($j=0; $j < count($resulttime); $j++)
-{
-	$datatime[$j] = $resulttime[$j];
-}
-
-//close connection
-$querytime->closeCursor();
-$querydatasent->closeCursor();
 ?>
 
 <html>
