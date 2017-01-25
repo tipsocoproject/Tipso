@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 23 Janvier 2017 à 14:34
+-- Généré le :  Mer 25 Janvier 2017 à 10:37
 -- Version du serveur :  10.1.16-MariaDB
 -- Version de PHP :  5.6.24
 
@@ -41,8 +41,7 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`idadmin`, `firstname`, `lastname`, `mail`, `password`, `type`, `adminkey`) VALUES
-(2, 'Andrew', 'Philippick', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 1, 'doud'),
-(3, 'David', 'Feng', 'fyhdavid@gmail.com', '847df59f7b32f8c32be21b40e9fcead2da431b78', 1, 'feng');
+(2, 'Andrew', 'Philippick', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 1, 'doud');
 
 -- --------------------------------------------------------
 
@@ -196,7 +195,8 @@ INSERT INTO `rooms` (`idroom`, `idc`, `roomname`, `type`, `idsens`, `iddom`) VAL
 (5, 38, 'Chambre Andrew', 'Chambre', 19, 0),
 (6, 38, 'Petit salon -1', 'Salon', 29, 0),
 (7, 38, 'Entrée principale', 'Entrée', 30, 0),
-(8, 38, 'Terrasse chambre Papa', 'Terrasse', 21, 0);
+(8, 38, 'Terrasse chambre Papa', 'Terrasse', 21, 0),
+(9, 38, 'Chambre Olivier', 'Chambre', 17, 0);
 
 -- --------------------------------------------------------
 
@@ -227,9 +227,8 @@ INSERT INTO `sensors` (`sensorserial`, `idsens`, `idc`, `idroom`, `mail`, `senso
 ('1000118', 14, 38, 0, 'philippick.a@gmail.com', 'Lumière - 2'),
 ('1000119', 15, 0, 0, '', 'Mouvement'),
 ('1000121', 16, 0, 0, '', 'Distance - 1 '),
-('1000122', 17, 0, 0, '', 'Distance - 2 '),
-('1000124', 18, 0, 0, '', 'Humidité'),
-('1000123', 19, 38, 0, 'philippick.a@gmail.com', 'Température'),
+('1000122', 17, 38, 0, 'philippick.a@gmail.com', 'Distance - 2 '),
+('1000123', 18, 38, 0, 'philippick.a@gmail.com', 'Température'),
 ('1000124', 20, 0, 0, '', 'Humidité'),
 ('1000125', 21, 38, 0, 'philippick.a@gmail.com', 'Lumière'),
 ('1000126', 22, 0, 0, '', 'Couleur'),
@@ -331,6 +330,11 @@ ALTER TABLE `administrator`
 ALTER TABLE `client`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
+-- AUTO_INCREMENT pour la table `data`
+--
+ALTER TABLE `data`
+  MODIFY `iddata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
@@ -339,7 +343,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT pour la table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `sensors`
 --
