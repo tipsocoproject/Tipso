@@ -83,8 +83,6 @@ header{
 
 nav {
   position: relative;
-  top: -5vh;
-  padding: 50px;
   text-align: center;
   z-index: 5;
 }
@@ -771,8 +769,7 @@ li:hover > ul.drop-menu.menu_der li {
 .menu_der{
   z-index: 10;
   position: absolute;
-  left: 147vh;
-  top: -5vh;
+  left: 85%;
 }
 
 .menu_der > ul > li{
@@ -783,6 +780,9 @@ li:hover > ul.drop-menu.menu_der li {
 .menu_der > ul.drop-menu li{
   height: 30px;
 }
+
+
+
 
 
 

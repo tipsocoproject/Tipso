@@ -57,18 +57,17 @@ footer{
 
 h2{
     position: relative;
-    top:3vh;
+    top:5%;
 }
 .sensors-select{
 
-    width: 80%;
+    width: 70%;
     max-height: 65vh;
     overflow: auto;
     position: relative;
-    top: 7vh;
-    left: 44vh;
-    height: 550px;
-    width: 1100px;
+    top: 25%;
+    left: 15%;
+    height: 1000%;
     border: 1px solid #bfbfbf;
     border-radius: 2px;
     box-shadow: 2px 2px 10px 3px #bfbfbf;
