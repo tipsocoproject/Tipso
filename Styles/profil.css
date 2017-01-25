@@ -43,14 +43,6 @@ select {
 	font-size: 90%;
 }
 
-.button {
-
-	height: 70%;
-	width: 20%;
-	font-size: 80%;
-	font-weight: bold;
-
-}
 
 header {
     height: 10%;
@@ -74,11 +66,22 @@ footer {
 	background-color: #ecf0f1;
 }
 
-.button {
-	width: 315px;
+input.edit{
+	position: relative;
+	left: 20vh;
+	width: 150px;
 	height: 25px;
 	background-color: #ecf0f1;
-	border-radius: 12px;
+	border-radius: 2px;
+	font-size: 80%;
+	font-weight: bold;	
+}
+
+.button{
+	width: 150px;
+	height: 25px;
+	background-color: #ecf0f1;
+	border-radius: 2px;
 	font-size: 80%;
 	font-weight: bold;
 

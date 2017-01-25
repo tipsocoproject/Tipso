@@ -34,10 +34,6 @@
 
 
 
-
-
-
-
 		$reqsens = $bdd->prepare('SELECT idsens FROM sensors WHERE idc=? AND sensortype=?');
 		$reqsens->execute(array($idc, $title));
 

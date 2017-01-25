@@ -2,7 +2,9 @@
 session_start();
 
 require ("../Modele/connexion.php");
+include("../fonction/function_uninjection_sql.php");
 include("../Controleur/controleur_profil.php");
+$blank = "";
 
 ?>
 
@@ -14,49 +16,109 @@ include("../Controleur/controleur_profil.php");
 	<link rel="stylesheet" type="text/css" href="../Styles/profil.css">
 	<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
 	<title>Mon Compte</title>
-
 </head>
+
+
 	<?php
 
 		include("header.html");
-		?>
+	?>
 	<body>
 	    <div class="form" align="center">
 	    	<br>
 	    	<br>
-			<h2 class="main-text">Editer votre profil !</h2>
+			<h2 class="main-text">Votre profil !</h2>
 			<br>
 			<form method="POST" action="">
 				<table>
+					<!-- ajouter photo -->
 					<tr>
 						<td><br><label for="last-name">Nom</label></td>	
-						<td><br><input class="input-box" type="text" name="last-name" placeholder="  Nom" value=<?php if(isset($lastname)) { echo $lastname;} ?>></td>
-					</tr>
+						<?php 
+						if(isset($_POST["confirm-edit"]))
+						{	
+							if($lastname != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" value='.$lastname.'></td>';
+							}
+						}
+						else
+						{
+							if($lastname != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" disabled value='.$lastname.'></td>';
+							}						
+						}
+						?>
 					<tr>
 						<td><br><label for="first-name">Prénom</label></td>	
-						<td><br><input class="input-box" type="text" name="first-name" placeholder="  Prénom" value=<?php if(isset($firstname)) { echo $firstname;} ?>></td>
-					</tr>
+						<?php 
+						if(isset($_POST["confirm-edit"]))
+						{	
+							if($firstname != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" value='.$firstname.'></td>';
+							}
+						}
+						else
+						{
+							if($firstname != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" disabled value='.$firstname.'></td>';
+							}						
+						}
+						?>
 					<tr>
 						<td><br><label for="mail">E-mail</label></td>	
-						<td><br><input class="input-box" type="email" name="mail" placeholder="  E-mail" value=<?php if(isset($mail)) { echo $mail;} ?>></td>
-					</tr>
-					<tr>
-						<td><br><label for="username">Identifiant</label></td>	
-						<td><br><input class="input-box" type="text" name="username" placeholder="  Identifiant" value=<?php if(isset($username)) { echo $username;} ?>></td>
-					</tr>				
-					<tr>
-						<td><br><label for="password">Mot de passe</label></td>	
-						<td><br><input class="input-box" type="password" name="password" placeholder="  Mot de passe"></td>
-					</tr>
-					<tr>
-						<td><br><label for="confirm-password">Confirmez mot de passe</label></td>	
-						<td><br><input class="input-box" type="password" name="confirm-password" placeholder="  Confirmez votre mot de passe"></td>
-					</tr>
+						<?php 
+						if(isset($_POST["confirm-edit"]))
+						{	
+							if($mail != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="email" name="mail" placeholder="" value='.$mail.'></td>';
+							}
+						}
+						else
+						{
+							if($mail != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="email" name="mail" placeholder="" disabled value='.$mail.'></td>';
+							}						
+						}
+						?>
+					</tr>			
 					<tr>
 						<td><br><label for="country">Pays</label></td>
 						<td><br>
-							<select class="select" name="country">
-								<option value="blank"></option>
+						<?php 
+						if(isset($_POST["confirm-edit"]))
+						{	
+							echo '<select style="text-decoration:none; font-weight: bold;" class="select" name="country" >';
+							
+							if($country != "")
+							{
+								echo '<option selected="selected">'.$country.'</option>'; 
+							}
+							else
+							{
+								echo '<option selected="selected" value="blank"></option>';
+							}
+						}
+						else
+						{
+							echo '<select style="text-decoration:none; font-weight: bold;" class="select" name="country" disabled >';
+							
+							if($country != "")
+							{
+								echo '<option selected="selected">'.$country.'</option>'; 
+							}
+							else
+							{
+								echo '<option selected="selected" value="blank"></option>';
+
+							}
+						}
+							?>
 								<option value="AF">Afghanistan</option>
 								<option value="AX">Åland Islands</option>
 								<option value="AL">Albania</option>
@@ -305,29 +367,118 @@ include("../Controleur/controleur_profil.php");
 								<option value="EH">Western Sahara</option>
 								<option value="YE">Yemen</option>
 								<option value="ZM">Zambia</option>
-								<option value="ZW">Zimbabwe</option>
-							</select>
+								<option value="ZW">Zimbabwe</option></select>
+				
 						</td>
 					</tr>
 					<tr>
-						<td><br><label for="address">Adresse</label></td>	
-						<td><br><input class="input-box" type="text" name="address" placeholder="  Adresse" value=<?php if(isset($address)) { echo $address;} ?>></td>
-					</tr>
-					<tr>
 						<td><br><label for="post-code">Code Postal</label></td>	
-						<td><br><input class="input-box" type="text" name="postcode" placeholder="  Code Postal" value=<?php if(isset($postcode)) { echo $postcode;} ?>></td>
-					</tr>
+						<?php 
+						if(isset($_POST["confirm-edit"]))
+						{	
+							if($postcode != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="postcode" placeholder="" value='.$postcode.'></td>';
+							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="postcode" placeholder="" ></td>';
+							}
+						}
+						else
+						{
+							if($postcode != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="postcode" placeholder="" disabled value='.$postcode.'></td>';
+							}		
+							else
+							{
+								echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="postcode" placeholder="" disabled value='.$postcode.'></td>';
+							}					
+						}
+						?>
 					<tr>
 						<td><br><label for="city">Ville</label></td>	
-						<td><br><input class="input-box" type="text" name="city" placeholder="  Ville" value=<?php if(isset($postcode)) { echo $postcode;} ?>></td>
-					</tr>
+						<?php 
+						if(isset($_POST["confirm-edit"]))
+						{	
+							if($mail != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="city" placeholder="" value='.$city.'></td>';
+							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="city" placeholder="" ></td>';
+							}
+						}
+						else
+						{
+							if($city != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="city" placeholder="" disabled value='.$city.'></td>';
+							}
+							else
+							{
+								echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="city" placeholder="" disabled value='.$city.'></td>';
+							}						
+						}
+						?>
+					<tr>
+						<td><br><label for="city">Adresse</label></td>	
+						<?php 
+						if(isset($_POST["confirm-edit"]))
+						{	
+							if($adresse != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" value='.$adresse.'></td>';
+							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder=""></td>';
+	
+							}
+						}
+						else
+						{
+							if($adresse != "")
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" disabled value='.$adresse.'></td>';
+							}
+							else
+							{
+								echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" disabled value='.$adresse.'></td>';
+							}							
+						}
+						?>
 					<tr>
 						<td><br><label for="mobile-number">Numéro de mobile</label></td>	
-						<td><br><input class="input-box" type="text" name="mobile-number" placeholder="  Numéro de mobile" value=<?php if(isset($mobilenumber)) { echo $mobilenumber;} ?>></td>
-					</tr>
+						<?php
+						if(isset($_POST["confirm-edit"]))
+						{	
+							if($nummobile != 0)
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="nummobile" placeholder="" value='.$nummobile.'></td>';
+							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="nummobile" placeholder=""></td>';
+							}
+						}
+						else
+						{
+							if($nummobile != 0)
+							{
+								echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="nummobile" placeholder="" disabled value='.$nummobile.'></td>';
+							}
+							else
+							{
+								echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="nummobile" placeholder="" disabled></td>';
+							}						
+						}
+						?>
 					<tr>
-						<td></td>
-						<td><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
+						<td><br><br><input class="edit" type="submit" name="confirm-edit" value="Editer"></td>
+						<td><br><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>	
 			</form>
