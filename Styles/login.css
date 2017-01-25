@@ -130,6 +130,7 @@ table{
 	font-weight: bold;
 	background-color: #ecf0f1;
 	border-radius: 2px;
+	cursor: pointer;
 }
 
 .noaccount{

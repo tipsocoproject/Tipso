@@ -125,9 +125,9 @@ strong{
 
 .votre_message{
 	position: absolute;
-	top: 2vh;
+	top: 5%;
 	text-decoration: underline;
-	left: 75vh
+	left: 45%;
 }
 
 #button {

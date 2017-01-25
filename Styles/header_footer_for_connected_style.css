@@ -504,8 +504,8 @@ li:hover > ul.drop-menu.menu_der li {
 }
 
 .menu_der > ul > li{
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 65px;
 }
 
 .menu_der > ul.drop-menu li{

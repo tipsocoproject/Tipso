@@ -474,13 +474,13 @@ section{
 }
 
 
-img{
+img.function{
   border-radius: 100vh;
     width: 14vh;
     height: 14vh;
 }
 
-img:hover{
+img.function:hover{
   border-radius: 100vh;
   -webkit-box-shadow: 0 0 5px 1px #a6a6a6;
   -moz-box-shadow: 0 0 5px 1px #a6a6a6;
@@ -567,31 +567,31 @@ th{
 .lum-text{
     position: absolute;
     top: 22vh;
-    left: 18vh;
+    left: 18.8vh;
 }
 
 .sec-text{
     position: absolute;
     top: 22vh;
-    left: 44vh;
+    left: 44.5vh;
 }
 
 .aera-text{
     position: absolute;
     top: 22vh;
-    left: 68vh;
+    left: 68.4vh;
 }
 
 .temp-text{
     position: absolute;
     top: 22vh;
-    left: 92.5vh;
+    left: 93vh;
 }
 
 .co2-text{
     position: absolute;
     top: 22vh;
-    left: 118.5vh;
+    left: 119vh;
 }
 
 .function-text{
@@ -655,37 +655,37 @@ div.menu-bar-room li:hover > ul {
 .bath-text{
     position: absolute;
     top: 49vh;
-    left: 8vh;
+    left: 9.2vh;
 }
 
 .bed-text{
     position: absolute;
     top: 49vh;
-    left: 31.5vh;
+    left: 32.4vh;
 }
 
 .kitchen-text{
     position: absolute;
     top: 49vh;
-    left: 55vh;
+    left: 55.8vh;
 }
 
 .laundry-text{
     position: absolute;
     top: 49vh;
-    left: 76.3vh;
+    left: 77vh;
 }
 
 .living-text{
     position: absolute;
     top: 49vh;
-    left: 100vh;
+    left: 100.5vh;
 }
 
 .office-text{
     position: absolute;
     top: 49vh;
-    left: 125vh;
+    left: 125.3vh;
 }
 
 .hover-text-list{
@@ -770,15 +770,15 @@ li:hover > ul.drop-menu.menu_der li {
 }
 
 .menu_der{
-  z-index: 100;
+  z-index: 10;
   position: absolute;
   left: 147vh;
   top: -5vh;
 }
 
 .menu_der > ul > li{
-  width: 100px;
-  height: 45px;
+  width: 150px;
+  height: 65px;
 }
 
 .menu_der > ul.drop-menu li{

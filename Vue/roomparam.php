@@ -71,6 +71,10 @@ include("../Controleur/controleur_roomparam.php");
 
 
 					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>
