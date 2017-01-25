@@ -10,7 +10,7 @@
 			include("header.html")
 		?>
 			<body>
-				<h1 disabled>Condition général d'utilisation</h1>
+				<h1 disabled>Conditions générales d'utilisation</h1>
 				<br>
 				<br>
 				<br>
