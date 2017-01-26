@@ -562,35 +562,45 @@ th{
 
 
 .lum-text{
-    font-size: 2vh;
+    color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.5vh;
     position: absolute;
     top: 21vh;
-    left: 17.6vh;
+    left: 16.9vh;
 }
 
 .sec-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 21vh;
-    left: 43.8vh;
+    left: 43.4vh;
 }
 
 .aera-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 21vh;
-    left: 67.4vh;
+    left: 67vh;
 }
 
 .temp-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 21vh;
-    left: 92.3vh;
+    left: 91.7vh;
 }
 
 .co2-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 21vh;
     left: 118.3vh;
@@ -655,42 +665,54 @@ div.menu-bar-room li:hover > ul {
 
 }
 .bath-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 48vh;
-    left: 8vh;
+    left: 7.9vh;
 }
 
 .bed-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 48vh;
-    left: 31.5vh;
+    left: 31.3vh;
 }
 
 .kitchen-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 48vh;
-    left: 55vh;
+    left: 54.8vh;
 }
 
 .laundry-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 48vh;
-    left: 76vh;
+    left: 75.5vh;
 }
 
 .living-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 48vh;
-    left: 99.8vh;
+    left: 99.5vh;
 }
 
 .office-text{
-    font-size: 2vh;
+   color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.2vh;
     position: absolute;
     top: 48vh;
     left: 124.6vh;
