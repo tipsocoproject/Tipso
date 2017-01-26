@@ -39,6 +39,14 @@ include("../Controleur/controleur_messages.php");
 								<input class ="button" type="submit" value="Envoyer" name="confirm-button" id="button"/>
 						</form>
 
+						<div>
+					<table>
+						<p>Téléphone : </p>
+						<p>Email : </p>
+						<p>Fax : </p>
+					</table>
+						</div>
+
 
 						<span class="error" align="center">
 							<?php
@@ -49,11 +57,10 @@ include("../Controleur/controleur_messages.php");
 						</span>
 					</div>
 				</div>
-			<div class="gauche">
-
-					<p> <span class="Tel"><strong>Téléphone : </strong> 08 ** ** ** ** </span></p>
-					<p> <span class="Fax"> <strong>Fax : </strong> 08 ** ** ** ** </span></p>
-					<p> <span class="Email"><strong>Email : </strong>  ******@gmail.com</span> </p>
+			<div>
+					<table>
+						<p>Coucou</p>
+					</table>
 			</div>
 
 </body>
