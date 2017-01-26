@@ -40,7 +40,7 @@ $blank = "";
 						{	
 							if($lastname != "")
 							{
-							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" value='.$lastname.'></td>';
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" required value='.$lastname.'></td>';
 							}
 						}
 						else
@@ -58,7 +58,7 @@ $blank = "";
 						{	
 							if($firstname != "")
 							{
-							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" value='.$firstname.'></td>';
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" required value='.$firstname.'></td>';
 							}
 						}
 						else
@@ -76,7 +76,7 @@ $blank = "";
 						{	
 							if($mail != "")
 							{
-							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="email" name="mail" placeholder="" value='.$mail.'></td>';
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="email" name="mail" placeholder="" required value='.$mail.'></td>';
 							}
 						}
 						else

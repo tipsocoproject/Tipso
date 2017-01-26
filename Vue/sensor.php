@@ -5,7 +5,6 @@ include("../fonction/function_uninjection_sql.php");
 include("../Controleur/controleur_sensor.php");
 
 
-
 ?>
 
 <html>
@@ -27,18 +26,15 @@ include("header.html");
 
                 <body>                        
 
-                    <h2 style="text-decoration:underline" align="center">Ajouter un nouveau capteur</h2>
+                    <h2 style="text-decoration:none" align="center">Ajouter un nouveau capteur</h2>
 
                     <div class="sensors-select" align="center">
                         <form method="POST" action="">
                             <img src="../icon/plusbutton.png" id="plus">
                             <div class="script">
                                 <script>
-
                                 var counter = 0;
-
                                 /* When the document is charged the function begins.*/
-
                                 $(document).ready(function() {
 
                                     $('#plus').click(function() {
@@ -49,11 +45,7 @@ include("header.html");
                                         });
                                     });
                                 });
-
-
-
-                            </script>                        
-
+                                </script>
                         </div>                            
                         <input class="button" type="submit" name="confirm-button">
                         </form>

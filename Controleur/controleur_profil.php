@@ -5,6 +5,7 @@
 if(isset($_SESSION['id']))
 {
 	$idc = $_SESSION['id'];
+
 	$reqclient = $bdd->prepare('SELECT * FROM client WHERE id=?');
 	$reqclient->execute(array($idc));
 	$clientfetch = $reqclient->fetch();
@@ -26,7 +27,6 @@ if(isset($_SESSION['id']))
 	$city = $clientfetch['city'];
 	$postcode = $clientfetch['postcode'];
 	$adresse = $clientfetch['adresse'];
-
 
 
 	if(isset($_POST['confirm-button']))

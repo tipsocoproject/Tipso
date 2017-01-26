@@ -1,0 +1,21 @@
+Bold & sharp 
+
+
+.div_text_shadow 
+{
+color: rgb(217, 217, 217);
+font-size: 50px;
+background-color: rgb(186, 186, 186);
+text-shadow: rgb(46, 46, 46) 0px 4px 5px;
+}
+
+
+Simple Emboss
+
+.div_text_shadow 
+{
+color: rgba(0, 0, 0, 0.6);
+font-size: 50px;
+background-color: rgb(110, 110, 110);
+text-shadow: rgba(255, 255, 255, 0.2) 3px 2px 3px;
+}
