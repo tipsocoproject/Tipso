@@ -13,8 +13,6 @@
 }
 
 
-
-
 .logo{
     min-width: 160px;
     max-width: 220px;
@@ -423,54 +421,15 @@ section{
 
 /* ------------------ Calendar ---------------*/ 
 
-.dycalendar-month-container{
-    position: relative;
-    left: 70%;
-    border: 1px solid black;
-    text-decoration: none;
-    width: 20vh;
+div.hasDatepicker{
+  position: relative;
+  left: 125vh;
 }
 
-
-.container-calendar{
-    width: 20vh;
-    position: relative;
-    left: 75%;
+.ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all
+{
+  width: 20px;
 }
-
-.container-functions{
-    border: 1px black solid;
-    width: 100%;
-    height: 33%;
-}
-
-.container-rooms{
-    border: 1px black solid;
-    width: 100%;
-    height: 33%;
-}
-
-.container-log{
-    border: 1px black solid;
-    width: 100%;
-    height: 33%;
-}
-
-#calendar-text{
-    position: relative;
-    left: 84%;
-    cursor: pointer;
-
-}
-
-#calendar-text:hover{
-    position: relative;
-    left: 84%;
-    cursor: pointer;
-
-}
-
-
 img.function{
   border-radius: 100vh;
     width: 14vh;

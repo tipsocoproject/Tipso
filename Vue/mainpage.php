@@ -14,16 +14,28 @@
 				<link rel="stylesheet" type="text/css" href="../Styles/dycalendar.min.css">
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+				<link rel="stylesheet" href="/resources/demos/style.css">
+				<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+				<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+				<script>
+					$( function() {
+						$('#calendar').datepicker({
+				    		onSelect: function(dateText, inst) {
+				       			window.location = 'eventplanner.php?val=' + dateText;
+				    		},
+						});
+					});
+				</script>
+			</head>
 				<title>Accueil Tipsoco</title>
-		<?php
+				<?php
 
-		include("header.html");
+				include("header.html");
 
-		?>
+				?>
 				<body>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
-						<div class="circle"></div>
-
 						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
 				 			<h2> Etats des capteurs </h2>
 				 			<table>
@@ -38,14 +50,9 @@
 							 		}	
 							 	?>
 							</table>
-						
-						
 						</div>
 
-							<section class="container-main"> <!-- container droite -->
 
-								<div class="calendar">
-									<div class="container-calendar"></div>	
 
 									<a href=""><label id="calendar-text">Programmer un évenement</label></a>
 								</div>
@@ -227,15 +234,6 @@
 						
 
 							</section>
-
-							<script src="../Javascript/js_calendar/dycalendar.min.js"></script>
-							<script>
-								dycalendar.draw({
-									target : ".container-calendar",
-									type: "month",
-									highlighttoday: true,
-								});
-							</script>
 							<canvas id="lineChart" height="1" width="1"></canvas>
 							<script scr="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
 							<script type="text/javascript" src="../Javascript/main.js"></script>
