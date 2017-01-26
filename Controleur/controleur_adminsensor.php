@@ -5,7 +5,7 @@
 	if(isset($_POST['confirm-button']))
 	{
 
-		$array = array("0", "Distance - 1 ", "Distance - 2 ", "Température", "Humidité", "Lumière", "Couleur", "Présence", "Lumière - 2", "Mouvement");
+		$array = array("0", "Température", "Humidité", "Lumière", "Mouvement");
 
 
 		$serialnumber = uninjection_sql(htmlspecialchars($_POST["serialnumber"]));

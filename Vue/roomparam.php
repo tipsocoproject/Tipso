@@ -25,7 +25,7 @@ include("../Controleur/controleur_roomparam.php");
 
 		include("header.html");
 
-		?>
+	?>
 
 	<body>
 	    <div class="form" align="center">

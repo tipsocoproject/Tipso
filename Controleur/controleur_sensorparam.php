@@ -71,6 +71,10 @@
 		header("Location: ../Vue/login.php");
 	}
 
+if(isset($_POST['confirm-alert']))
+{
 
+	// header("Location :contact.php?val="capteur");
 
+}
 ?>
