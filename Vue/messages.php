@@ -40,11 +40,11 @@ include("../Controleur/controleur_messages.php");
 						</form>
 
 						<div>
-					<table>
-						<p>Téléphone : </p>
-						<p>Email : </p>
-						<p>Fax : </p>
-					</table>
+							<table class="donnees">
+								<tr><td><label class="coordo"> Nos coordonnées : </label></td></tr>
+								<tr><td><label>Téléphone : 06 54 67 98 78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td></tr>
+								<tr><td><label>Email : Tipso@gmail.com</label></td></tr>
+							</table>
 						</div>
 
 

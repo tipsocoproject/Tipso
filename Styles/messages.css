@@ -27,8 +27,8 @@ textarea {
 	left: 6vh;
 	margin: 2vh;
 	margin-top: 1vh;
-	height: 60%;
-	width: 80%;
+	height: 65%;
+	width: 85%;
 	resize : none;
 }
 
@@ -104,14 +104,13 @@ nav a:hover{
 
 .message_box{
 	background-color: #f5fbff;
-	height: 50vh;
-	width: 65vh;
+	height: 60%;
+	width: 55%;
 	-webkit-box-shadow: 0 0 50px #C5C6D6;
 			box-shadow: 0 0 50px #C5C6D6;
-	margin-top:  -2vh;
 	position: relative;
 	top: 15%;
-	left: 33%;
+	left: 20%;
 }
 
 #logo {
@@ -131,8 +130,8 @@ strong{
 }
 
 #button {
-	top: 2vh;
-	left: 46vh;
+	top: -1vh;
+	left: 75.5vh;
 	position: relative;
 	cursor: pointer;
 	text-align: center;
@@ -182,7 +181,29 @@ strong{
 
 
 table{
-
 	position: relative;
 	left: 6vh;
+}
+
+table.donnees {
+	font-size: 2.5vh;
+	background-color: #f5fbff;
+	-webkit-box-shadow: 0 0 50px #C5C6D6;
+			box-shadow: 0 0 50px #C5C6D6;
+	padding-bottom:  3vh;
+	padding-right: 5px;
+	border-radius: 10px;
+	position: absolute;
+	left: -30%;
+	top: 0px;
+	height: 10%;
+}
+
+label {
+		color: #627890;
+		font-size: 2vh;
+}
+
+.coordo {
+	text-decoration: underline;
 }

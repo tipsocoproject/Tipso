@@ -1,9 +1,10 @@
 
 textarea{
 	position: relative;
-	left: 22%;
-	width: 57%;
+	left: 15%;
+	width: 75%;
 	height: 100vh;
+	margin-bottom :20vh;
 }
 
 h1{
@@ -17,3 +18,10 @@ body{
 	margin: 0%;
 }
 
+label {
+	width: 60vh;
+	font-size: 3vh;
+	position: absolute;
+	right: 50vh;
+	bottom: -35vh;
+}
