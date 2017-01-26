@@ -12,13 +12,27 @@ body {
 }
  
 h2 {
-
+	position: relative;
+	top: 3vh;
 	font-size: 200%;
 	text-decoration: underline;
 }
 
+
+.formulaire {
+	position: relative;
+	top: 5vh;
+	width: 650px;
+	height: 650px;
+	-webkit-box-shadow: 0 0 50px #C5C6D6;
+			box-shadow: 0 0 50px #C5C6D6;
+	background-color: #f5fbff;
+
+}
+
 table {
-	left: -12vh;
+	top: 20%;
+	left: -5%;
 	position: relative;
 	height: 600px;
 	width: 600px;
@@ -33,7 +47,7 @@ input.input-box {
 	margin-left: 10%;
 	font-size: 90%;
 	text-decoration: underline;
-	background-color: #ecf0f1;
+	background-color: #f8fcff;
 }
 
 select {
@@ -41,6 +55,7 @@ select {
 	height: 65%;
 	width: 80%;
 	font-size: 90%;
+	background-color: #f8fcff;
 }
 
 
@@ -63,7 +78,7 @@ footer {
 }
 
 .select {
-	background-color: #ecf0f1;
+	background-color: #f8fcff;
 }
 
 input.edit{

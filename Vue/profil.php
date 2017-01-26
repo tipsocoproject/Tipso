@@ -29,6 +29,7 @@ $blank = "";
 	    	<br>
 			<h2 class="main-text">Votre profil !</h2>
 			<br>
+			<div class="formulaire">
 			<form method="POST" action="">
 				<table>
 					<!-- ajouter photo -->
@@ -482,6 +483,7 @@ $blank = "";
 					</tr>
 				</table>	
 			</form>
+			</div>
 			<br>
 		<span class="error">
 		<?php
