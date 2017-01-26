@@ -562,33 +562,38 @@ th{
 
 
 .lum-text{
+    font-size: 2vh;
     position: absolute;
-    top: 22vh;
-    left: 18.8vh;
+    top: 21vh;
+    left: 17.6vh;
 }
 
 .sec-text{
+    font-size: 2vh;
     position: absolute;
-    top: 22vh;
-    left: 44.5vh;
+    top: 21vh;
+    left: 43.8vh;
 }
 
 .aera-text{
+    font-size: 2vh;
     position: absolute;
-    top: 22vh;
-    left: 68.4vh;
+    top: 21vh;
+    left: 67.4vh;
 }
 
 .temp-text{
+    font-size: 2vh;
     position: absolute;
-    top: 22vh;
-    left: 93vh;
+    top: 21vh;
+    left: 92.3vh;
 }
 
 .co2-text{
+    font-size: 2vh;
     position: absolute;
-    top: 22vh;
-    left: 119vh;
+    top: 21vh;
+    left: 118.3vh;
 }
 
 .function-text{
@@ -650,39 +655,45 @@ div.menu-bar-room li:hover > ul {
 
 }
 .bath-text{
+    font-size: 2vh;
     position: absolute;
-    top: 49vh;
-    left: 9.2vh;
+    top: 48vh;
+    left: 8vh;
 }
 
 .bed-text{
+    font-size: 2vh;
     position: absolute;
-    top: 49vh;
-    left: 32.4vh;
+    top: 48vh;
+    left: 31.5vh;
 }
 
 .kitchen-text{
+    font-size: 2vh;
     position: absolute;
-    top: 49vh;
-    left: 55.8vh;
+    top: 48vh;
+    left: 55vh;
 }
 
 .laundry-text{
+    font-size: 2vh;
     position: absolute;
-    top: 49vh;
-    left: 77vh;
+    top: 48vh;
+    left: 76vh;
 }
 
 .living-text{
+    font-size: 2vh;
     position: absolute;
-    top: 49vh;
-    left: 100.5vh;
+    top: 48vh;
+    left: 99.8vh;
 }
 
 .office-text{
+    font-size: 2vh;
     position: absolute;
-    top: 49vh;
-    left: 125.3vh;
+    top: 48vh;
+    left: 124.6vh;
 }
 
 .hover-text-list{
