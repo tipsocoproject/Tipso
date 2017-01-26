@@ -110,7 +110,7 @@ nav a:hover{
 			box-shadow: 0 0 50px #C5C6D6;
 	position: relative;
 	top: 15%;
-	left: 20%;
+	left: 25%;
 }
 
 #logo {
@@ -131,7 +131,7 @@ strong{
 
 #button {
 	top: -1vh;
-	left: 75.5vh;
+	left: 70%;
 	position: relative;
 	cursor: pointer;
 	text-align: center;
@@ -194,9 +194,10 @@ table.donnees {
 	padding-right: 5px;
 	border-radius: 10px;
 	position: absolute;
-	left: -30%;
+	left: -40%;
 	top: 0px;
 	height: 10%;
+	width: 30%;
 }
 
 label {
