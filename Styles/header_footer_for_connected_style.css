@@ -169,7 +169,7 @@ nav > ul > li {
   line-height: 65px;
   position: relative;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
   color: #EAF1F8;
   cursor: pointer;
 }
@@ -511,9 +511,36 @@ li:hover > ul.drop-menu.menu_der li {
 
 
 
+nav.footer {
+  position: relative;
+  text-align: center;
+  z-index: 5;
+}
 
+nav.footer > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: #627890;
+  border-radius: 5px;
+}
 
+nav.footer > ul > li {
+  float: left;
+  width: 250px;
+  height: 65px;
+  line-height: 65px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #EAF1F8;
+  cursor: pointer;
+}
 
+nav.footer > ul > li:hover {
+  box-shadow: 0px 0px 0px 0px;
+  }
 
 
 
