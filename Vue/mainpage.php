@@ -54,7 +54,6 @@
 						</div>
 						
 							<section class="container-main"> <!-- container droite -->
-									<a href=""><label id="calendar-text">Programmer un évenement</label></a>
 										<div id="datepicker"></div>
 								</div>
 
