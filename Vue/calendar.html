@@ -4,13 +4,17 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-	$( function() {
-		$('#datepicker').datepicker({
-    		onSelect: function(dateText, inst) {
-       			window.location = 'http://www.google.fr/' + dateText;
-    		},
-		});
+  $(function(){
+    $('#datepicker').datepicker({
+      inline: true,
+      showOtherMonths: true,
+      dayNamesMin: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+      monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+      onSelect: function(dateText, inst) {
+       	window.location = 'http://www.google.fr/' + dateText;
+      },
 	});
+  });
   </script>
 </head>
  
