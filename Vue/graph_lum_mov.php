@@ -3,6 +3,8 @@ require('../Modele/connexion.php');
 
 //query to get data from the table
 if (isset($_POST['confirm-button'])){
+	$selectdate=htmlspecialchars($_POST['date']);
+	$selectcapteur=htmlspecialchars($_POST['capteur']);
 	$idsens = intval($_POST['capteur']);
 	$date = htmlspecialchars($_POST['date']);
 	$capteur = htmlspecialchars($_POST['capteur']);
@@ -171,21 +173,35 @@ if (isset($_POST['confirm-button'])){
 			<canvas id="myChartlum" height="550" width="700"></canvas>
 
 			<select id="date" name="date">
-				<option value="0">-</option>
-				<?php 
+				<?php
+					if(isset($_POST['confirm-button']))
+					{
+						echo '<option select="selected">'.$selectdate.'</option>';
+					}
+					else
+					{
+						echo '<option select="selected">&nbsp;</option>';
+					}
 					for ($i=0; $i<count($listedate); $i++)
 					{
-						echo "<option value=".$listedate[$i]." select='selected'>".$listedate[$i]."</option>";
+						echo "<option value=".$listedate[$i].">".$listedate[$i]."</option>";
 					}
 				?>
 			</select>
 
 			<select id="capteur" name="capteur">
-				<option value="0">-</option>
-				<?php 
+				<?php
+					if(isset($_POST['confirm-button']))
+					{
+						echo '<option select="selected">'.$selectdate.'</option>';
+					}
+					else
+					{
+						echo '<option select="selected">&nbsp;</option>';
+					}
 					for ($i=0; $i<count($listecapteur); $i++)
 					{ 
-						echo "<option value=".$listecapteur[$i]." select='selected'>".$listecapteur[$i]."</option>";
+						echo "<option value=".$listecapteur[$i].">".$listecapteur[$i]."</option>";
 					}
 				?>
 			</select>
