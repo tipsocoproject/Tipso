@@ -20,7 +20,7 @@
 				<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 				<script>
 					$( function() {
-						$('#calendar').datepicker({
+						$('#datepicker').datepicker({
 				    		onSelect: function(dateText, inst) {
 				       			window.location = 'eventplanner.php?val=' + dateText;
 				    		},
@@ -39,6 +39,7 @@
 						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
 				 			<h2> Etats des capteurs </h2>
 				 			<table>
+
 								<?php 
 
 									for($i=0; $i<= $senscount-1; $i++)
@@ -53,9 +54,12 @@
 						</div>
 						
 							<section class="container-main"> <!-- container droite -->
-
 									<a href=""><label id="calendar-text">Programmer un évenement</label></a>
+										<div id="datepicker"></div>
 								</div>
+
+
+
 								<div class="container-functions">
 									
 										<!--	<th>Fonction / Agir </th> -->
