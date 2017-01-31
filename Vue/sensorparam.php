@@ -76,7 +76,6 @@ include("../Controleur/controleur_sensorparam.php");
 											else
 											{
 												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
-
 											}
 											echo '<td><br><input id="button-alert" type="submit" name="confirm-alert" value="Avertir"></td>';
 										echo '</tr>';
