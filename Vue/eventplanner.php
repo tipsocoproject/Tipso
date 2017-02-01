@@ -3,7 +3,6 @@ session_start();
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
 
-
 ?>
 
 <html>
@@ -80,15 +79,14 @@ include("header.html");
                             function year($x) {
                                 $day = substr($x, 6,7); 
                                 return $day;
-                            }
-
+                            }                            
                             if(day($newdurl) >= day($newdate) AND (year($newdurl) >= year($newdate)))
                             {
-                                include("eventplansection.php");
+                                include("../Controleur/controleur_eventplanner.php");
                             }
                             elseif(month($newdurl) > month($newdate) AND (year($newdurl) >= year($newdate)))
                             {
-                                include("eventplansection.php");
+                                include("../Controleur/controleur_eventplanner.php");
                             }
                             else
                             {
