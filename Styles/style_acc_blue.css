@@ -479,32 +479,32 @@ padding-left:0;
 
 #luminosite{
     position: absolute;
-    top: 25vh;
+    top: 35vh;
     left: 15vh;
 }
 
 #securite{
     position: absolute;
     left: 40vh;
-    top: 25vh;
+    top: 35vh;
 }
 
 #aeration{
     position: absolute;
-    top: 25vh;
+    top: 35vh;
     left: 65vh;
 
 }
 
 #temperature{
     position: absolute;
-    top: 25vh;
+    top: 35vh;
     left: 90vh;
 }
 
 #co2{
     position: absolute;
-    top: 25vh;
+    top: 35vh;
     left: 115vh;
 }
 
@@ -526,7 +526,7 @@ padding-left:0;
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.5vh;
     position: absolute;
-    top: 21vh;
+    top: 31vh;
     left: 16.9vh;
 }
 
@@ -535,7 +535,7 @@ padding-left:0;
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 21vh;
+    top: 31vh;
     left: 43.4vh;
 }
 
@@ -544,7 +544,7 @@ padding-left:0;
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 21vh;
+    top: 31vh;
     left: 67vh;
 }
 
@@ -553,7 +553,7 @@ padding-left:0;
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 21vh;
+    top: 31vh;
     left: 91.7vh;
 }
 
@@ -562,7 +562,7 @@ padding-left:0;
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 21vh;
+    top: 31vh;
     left: 118.3vh;
 }
 
@@ -574,40 +574,40 @@ padding-left:0;
 
 #bathroom{
     position: absolute;
-    top: 52vh;
+    top: 62vh;
     left: 5vh;
 }
 
 #bedroom{
     position: absolute;
     left: 28vh;
-    top: 52vh;
+    top: 62vh;
     
 }
 
 #kitchen{
     position: absolute;
     left: 51vh;
-    top: 52vh;
+    top: 62vh;
 
 }
 
 #laundryroom{
     position: absolute;
     left: 74vh;
-    top: 52vh;
+    top: 62vh;
 }
 
 #livingroom{
     position: absolute;
     left: 97vh;
-    top: 52vh;
+    top: 62vh;
 }
 
 #office{
     position: absolute;
     left: 120vh;
-    top: 52vh;
+    top: 62vh;
 }
 
 .menu-bar-room{
@@ -629,7 +629,7 @@ div.menu-bar-room li:hover > ul {
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 48vh;
+    top: 58vh;
     left: 7.9vh;
 }
 
@@ -638,7 +638,7 @@ div.menu-bar-room li:hover > ul {
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 48vh;
+    top: 58vh;
     left: 31.3vh;
 }
 
@@ -647,7 +647,7 @@ div.menu-bar-room li:hover > ul {
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 48vh;
+    top: 58vh;
     left: 54.8vh;
 }
 
@@ -656,7 +656,7 @@ div.menu-bar-room li:hover > ul {
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 48vh;
+    top: 58vh;
     left: 75.5vh;
 }
 
@@ -665,7 +665,7 @@ div.menu-bar-room li:hover > ul {
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 48vh;
+    top: 58vh;
     left: 99.5vh;
 }
 
@@ -674,7 +674,7 @@ div.menu-bar-room li:hover > ul {
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 2.2vh;
     position: absolute;
-    top: 48vh;
+    top: 58vh;
     left: 124.6vh;
 }
 
@@ -823,7 +823,13 @@ nav.footer > ul > li:hover {
 
 
 
-
+.container-recapitulatif-andrew {
+  position: absolute;
+  z-index: 6;
+  left: 51vh;
+  width: 65% ;
+  height: 200px ;
+}
 
 
 
