@@ -58,7 +58,7 @@
 						</div>
 						
 							<section class="container-main"> <!-- container droite -->
-										<div id="datepicker"></div>
+								<div id="datepicker"></div>
 								</div>
 
 

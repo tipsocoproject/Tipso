@@ -65,3 +65,36 @@ img.sens-img{
 	width: 7vh;
 	cursor: pointer;
 }
+
+.eventlog{
+	position: relative;
+	overflow: auto;
+	width: 1000px;
+	height: 400px;
+	top: 3vh;
+
+}
+
+.main-table{
+	text-align: center;
+	position: relative;
+	top: 2vh;
+	font-weight: bold;
+}
+
+#minus{
+	position: relative;
+	left: 0.5vh;
+	top: 2vh;
+}
+
+a.links{
+	height: 30px;
+	width: 10px;
+	position: relative;
+	bottom: 5vh;
+}
+.input-log{
+	position: relative;
+	left: 1vh;
+}
