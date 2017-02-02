@@ -410,7 +410,6 @@ footer{
 
 
 section{
-    border: 1px black solid;
     position: absolute;
     top: 10%;
     margin-left:53px;
@@ -817,12 +816,24 @@ nav.footer > ul > li:hover {
 
 
 
-.container-recapitulatif-andrew {
+div.eventlog {
+  overflow: auto;
   position: absolute;
   z-index: 6;
-  left: 51vh;
-  width: 65% ;
+  top: 13vh;
+  left: 55vh;
+  width: 50% ;
   height: 200px ;
+  -moz-box-shadow: inset 1px 1px 5px 0px #656565;
+       box-shadow: inset 1px 1px 5px 0px #656565;
+  -webkit-box-shadow: inset 1px 1px 5px 0px #656565;
+          box-shadow: inset 1px 1px 5px 0px #656565;
+
+  -o-box-shadow: inset 1px 1px 5px 0px #656565;
+     box-shadow: inset 1px 1px 5px 0px #656565;
+
+
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
 }
 
 
@@ -832,7 +843,26 @@ nav.footer > ul > li:hover {
 
 ----------------------ANDREW-----------------------------------------------------------------------------------------------------------------------------
 
+table.main-table{
+  position: relative;
+  top: 2vh;
+  left: 2vh;
+  font-weight: bold;
+}
 
+#minus{
+  position: relative;
+  left: 0.5vh;
+  top: 1.5vh;
+}
 
-
-
+a.links{
+  height: 30px;
+  width: 10px;
+  position: relative;
+  bottom: 6.1vh;
+}
+.input-log{
+  position: relative;
+  left: 1vh;
+}

@@ -280,7 +280,7 @@
 	<?php 
 	if(isset($mess))
 	{
-		echo '<h2 style="font-family:Calibri";>'.$mess.'</h2>';
+		echo '<h3 style="font-family:Calibri";>'.$mess.'</h3>';
 	}
 	?>
 

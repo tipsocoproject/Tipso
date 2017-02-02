@@ -70,16 +70,26 @@ img.sens-img{
 	position: relative;
 	overflow: auto;
 	width: 1000px;
-	height: 400px;
+	height: 500px;
 	top: 3vh;
+	-moz-box-shadow: inset 1px 1px 5px 0px #656565;
+       	box-shadow: inset 1px 1px 5px 0px #656565;
+  	-webkit-box-shadow: inset 1px 1px 5px 0px #656565;
+        box-shadow: inset 1px 1px 5px 0px #656565;
+
+  	-o-box-shadow: inset 1px 1px 5px 0px #656565;
+       box-shadow: inset 1px 1px 5px 0px #656565;
+
+
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+
 
 }
 
-.main-table{
+table.main-table{
 	text-align: center;
 	position: relative;
 	top: 2vh;
-	font-weight: bold;
 }
 
 #minus{
