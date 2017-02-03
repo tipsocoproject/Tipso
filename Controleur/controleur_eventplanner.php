@@ -9,7 +9,7 @@
 				<td><input class="input-box" type="text" name="date" value=<?php echo $_GET['val'];?>></input></td>
 				<td><select class="input-box" name="pieces" required>
 				<?php 
-				$select = htmlspecialchars($_POST['pieces']); //uninjection
+				$select = uninjection_sql(htmlspecialchars($_POST['pieces'])); //uninjection
 				$reqroom = $bdd->prepare('SELECT roomname FROM rooms WHERE idc=?');
 				$reqroom->execute(array($idc));
 				$roomcount = $reqroom->rowCount();
@@ -44,8 +44,8 @@
 				<?php
 				if(isset($_POST['type']))
 				{
-					$selecttype = htmlspecialchars($_POST['type']);
-					$selecttime = htmlspecialchars($_POST['heure']);
+					$selecttype = uninjection_sql(htmlspecialchars($_POST['type']));
+					$selecttime = uninjection_sql(htmlspecialchars($_POST['heure']));
 				}
 				else
 				{
@@ -77,8 +77,6 @@
 							$sensid = $arrayidsens[$y];
 							$reqidsens->execute(array($sensid));
 							$idsens = $reqidsens->fetch();
-
-
 							$arraytype[] = $idsens['sensortype'];
 							$arrayidsens[] = $sensid;
 
@@ -116,10 +114,10 @@
 							{
 
 							    $getdate = $_GET['val'];
-							    $postroom = htmlspecialchars($_POST['pieces']);
-							    $posttype = htmlspecialchars($_POST['type']);
-							    $posttime = htmlspecialchars($_POST['finaltime']);
-							    $postroom = htmlspecialchars($_POST['pieces']);
+							    $postroom = uninjection_sql(htmlspecialchars($_POST['pieces']));
+							    $posttype = uninjection_sql(htmlspecialchars($_POST['type']));
+							    $posttime = uninjection_sql(htmlspecialchars($_POST['finaltime']));
+							    $postroom = uninjection_sql(htmlspecialchars($_POST['pieces']));
 							    $value =  array_search($posttype, $arraytype);
 							    $insertidsens = $arrayidsens[$value];
 
@@ -143,7 +141,7 @@
 							    $insertevent->execute(array($idc, $insertidsens, $getdate, $posttime, $postroom, $valswitch));
 							    
 
-							   	//echo '<script> window.location.replace("../Vue/mainpage.php"); </script>';
+							   	echo '<script> window.location.replace("../Vue/mainpage.php"); </script>';
 							
 							}
 

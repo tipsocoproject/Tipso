@@ -3,6 +3,7 @@ session_start();
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
 include("../Controleur/controleur_sensorparam.php");
+include("../Controleur/controleur_chart.php");
 
 ?>
 
@@ -10,22 +11,85 @@ include("../Controleur/controleur_sensorparam.php");
 
 <head>
 	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
 	<link rel="stylesheet" type="text/css" href="../Styles/button.css">
 	<link rel="stylesheet" type="text/css" href="../Styles/sensorparam.style.css">
+	<script src="../Javascript/jquery.js"></script>
+	<script src="../Javascript/Chart.js"></script>
+	<script>
+		<?php 
+		if($title=="Lumière")
+		{
+			include("../Javascript/chart-script.js");
+		}
+		?>
 
-
-	<title>Température</title>
-
+		<title>Fonctions</title>
+	</script>
 </head>
-
 		<?php
 
 		include("header.html");
 		?>
 
 	<body>
+		<!--<div class="mychart">
+				<?php
+					if($title == "Lumière")
+					{
+						?>
+
+						<form method="POST" action="">
+							<canvas id="myChartlum" height="550" width="700"></canvas>
+							<select id="date" name="date">
+								<?php
+									if(isset($_POST['confirm-chart']))
+									{
+										echo '<option select="selected">'.$selectdate.'</option>';
+									}
+									else
+									{
+										echo '<option select="selected">&nbsp;</option>';
+									}
+									for ($i=0; $i<count($listedate); $i++)
+									{
+										echo "<option value=".$listedate[$i].">".$listedate[$i]."</option>";
+									}
+								?>
+							</select>
+
+							<select id="capteur" name="capteur">
+								<?php
+									if(isset($_POST['confirm-chart']))
+									{
+										echo '<option select="selected">'.$selectdate.'</option>';
+									}
+									else
+									{
+										echo '<option select="selected">&nbsp;</option>';
+									}
+									for ($i=0; $i<count($listecapteur); $i++)
+									{ 
+										echo "<option value=".$listecapteur[$i].">".$listecapteur[$i]."</option>";
+									}
+								?>
+							</select>
+							
+							<input type="submit" value="Valider" name="confirm-chart" id="confirm-button">
+						</form>
+						<?php
+					}
+
+
+
+				?>
+
+
+
+			</div>
+		-->
 	    <div class="form" align="center">
 	    	<br>
 	    	<br>

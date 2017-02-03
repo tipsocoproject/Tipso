@@ -138,7 +138,7 @@
 						</div>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
 						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
-				 			<h2> Etats des capteurs </h2>
+				 			<h2 style="color: #627890;"> Etats des capteurs </h2>
 				 			<table>
 
 								<?php 
@@ -146,7 +146,7 @@
 									for($i=0; $i<= $statecount-1; $i++)
 									{
 								 		echo '<tr>';
-								 			echo '<td><label>'.$arraystate[$i].'</label></td>';
+								 			echo '<td><a href="sensorparam.php?val='.$arraystate[$i].'""><label class="label-capteur">'.$arraystate[$i].'</label></a></td>';
 								 			echo '<td><label><img class="sensor" src="../icon/greenbutton.png"></label></td>';
 								 		echo '</tr>';
 							 		}	
@@ -221,38 +221,7 @@
 												    </li>
 												  </ul>
 												</div>
-											
 
-										
-
-									
-
-										<!--<tr>
-											<td>Capteur</td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Capteur luminosité </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Caméra </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement">  </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Mouvement </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Mouvement </a></td>
-										</tr>
-
-										<tr>
-											<td>Actionneur</td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Volets / Ampoules </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Alarme </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Mouvement </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Mouvement </a></td>
-											<td><a href="a_définir" alt="bouton qui renvoit vers le Mouvement" class="bouton_left_nav" <input type="bouton" name="Mouvement" value="Mouvement"> Mouvement </a></td>
-										</tr>
-
-										 a effacer dans un futur proche ! -->
-
-										
-					
-
-								
-
-									
 								</div>
 								<div class="container-rooms">
 

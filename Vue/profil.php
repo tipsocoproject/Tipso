@@ -27,7 +27,7 @@ $blank = "";
 	    <div class="form" align="center">
 	    	<br>
 	    	<br>
-			<h2 class="main-text">Votre profil !</h2>
+			<h2 class="main-text">Mon profil</h2>
 			<br>
 			<div class="formulaire">
 			<form method="POST" action="">

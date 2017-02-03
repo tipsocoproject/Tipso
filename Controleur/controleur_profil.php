@@ -38,10 +38,11 @@ if(isset($_SESSION['id']))
 		$postcodeinput = uninjection_sql(htmlspecialchars($_POST['postcode']));
 		$cityinput = uninjection_sql(htmlspecialchars($_POST['city']));
 		$adresseinput = uninjection_sql(htmlspecialchars($_POST['adresse']));
-		$mobilnumberinput = uninjection_sql(htmlspecialchars($_POST['nummobile']));
+		$mobilenumberinput = uninjection_sql(htmlspecialchars($_POST['nummobile']));
 
 		$reqclient = $bdd->prepare('UPDATE client SET lastname=?, firstname=?, mail=?, country=?, postcode=?, city=?, adresse=?, mobilenumber=?  WHERE id=?');
 		$reqclient->execute(array($lastnameinput, $firstnameinput, $mailinput, $countryinput, $postcodeinput, $cityinput, $adresseinput, $mobilenumberinput, $idc));
+		header('Location: profil.php');
 	}
 		
 }
