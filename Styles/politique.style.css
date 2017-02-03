@@ -6,11 +6,14 @@ textarea{
 	height: 100vh;
 }
 
-h1{
+h1 { 
 	top: 8vh;
 	width: 600px;
 	position: relative;
 	left: 40%;
+	color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 3vh;
 }
 
 body{

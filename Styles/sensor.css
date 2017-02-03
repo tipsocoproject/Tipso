@@ -108,3 +108,9 @@ img#minus{
     top: 2vh;
 }
 
+h2 {
+    color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 3vh;
+}
+
