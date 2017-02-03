@@ -69,9 +69,10 @@ img.sens-img{
 .eventlog{
 	position: relative;
 	overflow: auto;
-	width: 1000px;
-	height: 500px;
-	top: 3vh;
+	max-width: 50%;
+	min-width: 550px;
+	width: 80%;
+	height: 70%;
 
 	-moz-box-shadow: inset 1px 1px 5px 0px #656565;
        	box-shadow: inset 1px 1px 5px 0px #656565;
@@ -109,4 +110,11 @@ a.links{
 .input-log{
 	position: relative;
 	left: 1vh;
+}
+
+
+.main-text {
+	color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+    font-size: 2.5vh;
 }

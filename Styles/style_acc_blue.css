@@ -836,8 +836,8 @@ div.eventlog {
   overflow: auto;
   position: absolute;
   z-index: 1;
-  top: 13vh;
-  left: 55vh;
+  top: 11vh;
+  left: 50vh;
   width: 50% ;
   height: 200px ;
   -moz-box-shadow: inset 1px 1px 5px 0px #656565;
