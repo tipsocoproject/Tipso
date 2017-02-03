@@ -753,7 +753,7 @@ li:hover > ul.drop-menu.menu_der li {
 }
 
 .menu_der{
-  z-index: 10;
+  z-index: 100;
   position: absolute;
   left: 85%;
 }
@@ -819,7 +819,7 @@ nav.footer > ul > li:hover {
 div.eventlog {
   overflow: auto;
   position: absolute;
-  z-index: 6;
+  z-index: 1;
   top: 13vh;
   left: 55vh;
   width: 50% ;
