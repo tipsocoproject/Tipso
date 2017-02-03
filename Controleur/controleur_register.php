@@ -32,8 +32,7 @@ if(isset($_POST['confirm-button']))
 					{	
 						if($password == $confirmpassword)
 						{
-							$updatesens1 = $bdd->prepare("UPDATE sensors SET mail = ? WHERE  sensorserial = ?");
-							$updatesens1->execute(array($mail, $serialnumber));
+
 
 							$insertmbr = $bdd->prepare("INSERT INTO client(lastname, firstname, mail, password, type) VALUES(?,?,?,?,?)");
 							$insertmbr->execute(array($lastname, $firstname, $mail, $password, $typeclient));
