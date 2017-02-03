@@ -37,7 +37,6 @@
 
 				?>
 				<body>
-						<img class="logo" src="../icon/Logo.png">
 						<div class="eventlog">
 							<table style="font-weight: bold; position: relative; left: 4vh; text-align: center; border-collapse: collapse; border-spacing: 0;"class="main-table">
                                 <tr>
@@ -137,7 +136,9 @@
                         	</table>
 						</div>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
+						<img class="logo" src="../icon/Logo.png"/>
 						<div class="container-sensors" align="center"> <!-- apparition du nom des capteurs en fonction de ce que le client a -->
+
 				 			<h2 style="color: #627890;"> Etats des capteurs </h2>
 				 			<table>
 

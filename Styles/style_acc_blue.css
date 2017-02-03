@@ -9,15 +9,10 @@
 
 
 .logo {
-    min-width: 160px;
-    max-width: 220px;
     position: absolute;
-	  width: 20%;
-	 height: 75px;
-    margin-top: -10px;
+	 height: 100px;
 	left: 0px;
-    margin-left: 0px;
-    top: 10px;
+    top: 10vh;
 }
 
 
@@ -406,7 +401,7 @@ footer{
     width: 12%;
     height: 40%;
     position: relative;
-    top: 35px;
+    top: 155px;
     left: 20px;
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     -moz-box-shadow: inset 1px 1px 5px 0px #656565;

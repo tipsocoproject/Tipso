@@ -13,14 +13,14 @@ body {
  
 h2 {
 	position: relative;
-	top: 2.5vh;
+	top: 2vh;
 	font-size: 200%;
 }
 
 
 .formulaire {
 	position: relative;
-	top: 5vh;
+	top: 3vh;
 	width: 650px;
 	height: 650px;
 	-webkit-box-shadow: 0 0 50px #C5C6D6;

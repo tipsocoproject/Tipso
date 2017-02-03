@@ -16,7 +16,8 @@ include("../Modele/cookies.php");
 
 </head>
 <header>
-<img class="logo" src="../icon/Logo.png">
+			<img style="position: relative; height: 100px; left: 80vh; " class="logoicon" src="../icon/Logo.png">
+
 </header>
 
 <body>
@@ -58,7 +59,8 @@ include("../Modele/cookies.php");
 
 		<?php
 			include ("../Modele/error.php");
-		?>
+		?>		
+
 <footer>
 </footer>
 </body>

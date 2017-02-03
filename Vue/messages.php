@@ -23,7 +23,6 @@ include("../Controleur/controleur_messages.php");
 
 
 	<body>
-	<img src="#" id="logo">
 		<div class="global">
 
 					<h1 class="votre_message">Votre message</h1>
@@ -44,6 +43,7 @@ include("../Controleur/controleur_messages.php");
 								<tr><td><label class="coordo"> Nos&nbsp;coordonnées&nbsp;:</label></td></tr>
 								<tr><td><label>Téléphone : 06&nbsp;54&nbsp;67&nbsp;98&nbsp;78&nbsp;</label></td></tr>
 								<tr><td><label>Email : Tipso@gmail.com</label></td></tr>
+								<tr><td><label>Siège : 10 rue de Vanves, Issy-les-Moulineaux
 							</table>
 						</div>
 

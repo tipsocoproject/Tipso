@@ -1,10 +1,13 @@
 
+body{
+	margin: 0%;
+}
 textarea{
+	overflow: auto;
 	position: relative;
 	left: 15%;
 	width: 75%;
-	height: 100vh;
-	margin-bottom :20vh;
+	height: 50vh;
 }
 
 h1{
@@ -14,9 +17,6 @@ h1{
 	left: 40%;
 }
 
-body{
-	margin: 0%;
-}
 
 label {
 	width: 60vh;
@@ -24,4 +24,9 @@ label {
 	position: absolute;
 	right: 50vh;
 	bottom: -35vh;
+}
+
+a{
+	color: black;
+
 }

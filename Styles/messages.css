@@ -125,7 +125,6 @@ strong{
 .votre_message{
 	position: absolute;
 	top: 5%;
-	text-decoration: underline;
 	left: 45%;
 }
 
@@ -187,17 +186,29 @@ table{
 
 table.donnees {
 	font-size: 2.5vh;
-	background-color: #f5fbff;
-	-webkit-box-shadow: 0 0 50px #C5C6D6;
-			box-shadow: 0 0 50px #C5C6D6;
 	padding-bottom:  3vh;
+
+	background-color: #EAF1F8;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+
 	padding-right: 5px;
-	border-radius: 10px;
+	border-radius: 2px;
 	position: absolute;
 	left: -40%;
 	top: 0px;
-	height: 10%;
+	height: 20%;
 	width: 30%;
+    -moz-box-shadow: inset 1px 1px 5px 0px #656565;
+         box-shadow: inset 1px 1px 5px 0px #656565;
+    -webkit-box-shadow: inset 1px 1px 5px 0px #656565;
+            box-shadow: inset 1px 1px 5px 0px #656565;
+
+    -o-box-shadow: inset 1px 1px 5px 0px #656565;
+       box-shadow: inset 1px 1px 5px 0px #656565;
+
+
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+
 }
 
 label {
