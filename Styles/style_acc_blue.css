@@ -8,14 +8,16 @@
 }
 
 
-.logo{
+.logo {
     min-width: 160px;
     max-width: 220px;
-	width: 20%;
-	height: auto;
+    position: absolute;
+	  width: 20%;
+	 height: 75px;
     margin-top: -10px;
 	left: 0px;
     margin-left: 0px;
+    top: 10px;
 }
 
 

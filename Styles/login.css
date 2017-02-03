@@ -185,3 +185,18 @@ input:checked + .rounded:after{
     overflow: hidden;
     padding: 0 5px 0 0;
 }
+
+
+.logo {
+    min-width: 160px;
+    max-width: 220px;
+    max-height: 100px;
+    min-height: 30px;
+    position: absolute;
+	  width: 20%;
+	 height: 10%;
+    margin-top: -10px;
+	left: 44%;
+    margin-left: 0px;
+    top: 1vh;
+}

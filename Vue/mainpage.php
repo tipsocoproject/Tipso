@@ -37,6 +37,7 @@
 
 				?>
 				<body>
+						<img class="logo" src="../icon/Logo.png">
 						<div class="eventlog">
 							<table style="font-weight: bold; position: relative; left: 4vh; text-align: center; border-collapse: collapse; border-spacing: 0;"class="main-table">
                                 <tr>

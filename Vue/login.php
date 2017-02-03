@@ -16,6 +16,7 @@ include("../Modele/cookies.php");
 
 </head>
 <header>
+<img class="logo" src="../icon/Logo.png">
 </header>
 
 <body>
