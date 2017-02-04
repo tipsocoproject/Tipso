@@ -1,5 +1,7 @@
 <?php
 
+if(isset($_SESSION['type']) AND $_SESSION['type'] = 1)
+{
 	if(isset($_POST['confirm-button']))
 	{
 		$adminkey = uninjection_sql(htmlspecialchars($_POST["adminkey"]));
@@ -14,5 +16,9 @@
 			$error = "Champ(s) non complété(s)";
 		}
 	}
-
+}
+else
+{
+	header("Location: ../Vue/login.php");
+}
 ?>

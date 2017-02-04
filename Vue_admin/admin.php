@@ -3,6 +3,9 @@ session_start();
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
 include("../Controleur_admin/controleur_admin.php");
+if($_GET['admin']=="admin")
+{
+
 ?>
 
 <html>
@@ -53,3 +56,11 @@ include("../Controleur_admin/controleur_admin.php");
 </footer>
 </body>
 </html>
+<?php 
+
+}
+else
+{
+	header('Location: login.php');
+}
+?>

@@ -2,6 +2,8 @@
 session_start();
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
+if(isset($_SESSION['id']))
+{
 
 ?>
 
@@ -145,3 +147,10 @@ include("footer.html")
  ?>
 
 </html>
+<?php 
+}
+else
+{
+	header("Location: login.php");
+}
+?>
