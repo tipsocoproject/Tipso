@@ -14,9 +14,11 @@ body{
 h2{
 
 	font-size: 200%;
-	text-decoration: underline;
 	position: relative;
 	top: 20px;
+	color:#627890;
+    text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+
 }
 
 table{
@@ -97,7 +99,6 @@ form{
 }
 
 .text-input{
-	background-color: #f4f5fb;
 	position: relative;
 	right: 40px;
 	font-size: 90%;

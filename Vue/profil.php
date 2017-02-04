@@ -403,7 +403,7 @@ $blank = "";
 						<?php 
 						if(isset($_POST["confirm-edit"]))
 						{	
-							if($mail != "")
+							if($city != "")
 							{
 							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="city" placeholder="" value='.$city.'></td>';
 							}
@@ -425,13 +425,13 @@ $blank = "";
 						}
 						?>
 					<tr>
-						<td><br><label for="city">Adresse</label></td>	
+						<td><br><label for="adresse">Adresse</label></td>	
 						<?php 
 						if(isset($_POST["confirm-edit"]))
 						{	
 							if($adresse != "")
 							{
-							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" value='.$adresse.'></td>';
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" value="'.$adresse.'""></td>';
 							}
 							else
 							{
@@ -443,11 +443,11 @@ $blank = "";
 						{
 							if($adresse != "")
 							{
-							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" disabled value='.$adresse.'></td>';
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" disabled value="'.$adresse.'""></td>';
 							}
 							else
 							{
-								echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" disabled value='.$adresse.'></td>';
+								echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="adresse" placeholder="" disabled value="'.$adresse.'""></td>';
 							}							
 						}
 						?>

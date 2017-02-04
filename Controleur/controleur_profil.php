@@ -28,7 +28,6 @@ if(isset($_SESSION['id']))
 	$postcode = $clientfetch['postcode'];
 	$adresse = $clientfetch['adresse'];
 
-
 	if(isset($_POST['confirm-button']))
 	{
 		$lastnameinput = uninjection_sql(htmlspecialchars($_POST['lastname']));
