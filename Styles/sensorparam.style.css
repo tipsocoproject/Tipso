@@ -65,3 +65,33 @@ img.sens-img{
 	width: 7vh;
 	cursor: pointer;
 }
+
+.mychart{
+
+
+	position: relative; 
+	left: 60%; 
+	top: 15%;
+	height: 550px;
+	width: 600px;
+	-moz-box-shadow: inset 1px 1px 5px 0px #656565;
+       	box-shadow: inset 1px 1px 5px 0px #656565;
+  	-webkit-box-shadow: inset 1px 1px 5px 0px #656565;
+        box-shadow: inset 1px 1px 5px 0px #656565;
+
+  	-o-box-shadow: inset 1px 1px 5px 0px #656565;
+       box-shadow: inset 1px 1px 5px 0px #656565;
+
+
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+}
+
+.chart-input{
+	position: relative;
+	left: 35%;
+}
+
+.inside-chart{
+	position: relative;
+	top: 3vh;
+}
