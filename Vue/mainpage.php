@@ -39,6 +39,25 @@
 				?>
 				<body>
 						<div class="eventlog">
+						<?php
+                            $idc = $_SESSION['id'];
+                            $reqevent = $bdd->prepare('SELECT * FROM event WHERE idc=?');
+                            $reqevent->execute(array($idc));
+                            $eventcount = $reqevent->rowCount();
+
+                            $reqsensclient = $bdd->prepare('SELECT * FROM sensors WHERE idc=?');
+                            $reqsensclient->execute(array($idc));
+                            $clientcount = $reqsensclient->rowCount();
+
+
+                            if($clientcount != 0)
+                            {
+
+		                        if($eventcount != 0)
+		                        {  
+                            ?>
+
+
 							<table style="font-weight: bold; position: relative; left: 4vh; text-align: center; border-collapse: collapse; border-spacing: 0;"class="main-table">
                                 <tr>
                                     <td><br><label class="text-input" for="last-name" name="capteur">Date</label></td>  
@@ -48,14 +67,7 @@
                                     <td><br><label class="text-input" for="last-name" name="capteur">Action</label></td>    
                                 </tr>
                                 <?php
-
-                                $idc = $_SESSION['id'];
-                                $reqevent = $bdd->prepare('SELECT * FROM event WHERE idc=?');
-                                $reqevent->execute(array($idc));
-                                $eventcount = $reqevent->rowCount();
-
-                                if($eventcount != 0)
-                                {   
+ 
                                     $i = 0;
                                     while($fetch = $reqevent->fetch())
                                     {
@@ -133,8 +145,20 @@
                                                 echo '</tr>';
                                     */
                                     }
+                                    else
+                                    {
+                                    	echo '<h2 class="new-client"> Vous retrouverez ici les évènements que vous programmerez. <br><br>Pour cela cliquer sur une date du calendrier.</h2>';
+
+                                    }
                                 ?>  
                         	</table>
+                        <?php
+                    	}
+                    	else
+                    	{
+                    		echo '<h2 class="new-client"> Bienvenue sur le site de Domisep ! <br><br> Afin de pouvoir commencer nous vous invitons à ajouter vos produits.<br>Pour cela aller dans Mon Comptre > Ajouter Capteur. <br><br>Bonne continuation </h2>';
+                    	}
+                    	?>
 						</div>
 					<!--<img class="logo" src="../icon/Logo.png" alt="logo_tipsoco">-->
 						<img class="logo" src="../icon/Logo.png"/>

@@ -882,3 +882,16 @@ a.links{
   position: relative;
   left: 1vh;
 }
+
+h2.new-client{
+  font-size: 130%;
+  font-weight: bold;
+  position: relative;
+  left: 13%;
+  width: 700px;
+  height: 100px;
+  text-align: center;
+  color:#627890;
+  text-shadow: rgb(224, 234, 255) 0px 2px 5px;
+
+}
