@@ -187,7 +187,7 @@ else
 							<?php
 							}
 							?>
-						?>
+		
 					</select>
 					<input type="submit" value="Valider" name="confirm-chart" id="confirm-button" class="chart-input">
 			
