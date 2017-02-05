@@ -12,11 +12,20 @@ include('../Controleur_admin/controleur_admin_modif.php');
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/admin_modif.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/header-footer-admin.style.css">
 	<script src="../Javascript/admin_modif.js"></script>
 	<title>admin modif</title>
 </head>
 
+<?php
+
+include("header-admin.html");
+
+?>
+
 <body>
+
+
 
 	<form method="POST" action="">
 
@@ -70,5 +79,11 @@ include('../Controleur_admin/controleur_admin_modif.php');
 	</form>
 
 </body>
+
+<?php
+
+include("footer-admin.html");
+
+?>
 
 </html>

@@ -32,3 +32,13 @@
 #client tr.header, #client tr:hover {
   background-color: #f1f1f1;
 }
+
+body {
+  margin: 0%;
+  background-color: #fafafa
+}
+
+
+ a {
+  color: black
+ }
