@@ -79,17 +79,13 @@
 					{
 						for ($i = 0; $i <= $switchcount-1; $i++)
 						{
-							if(isset($_POST['switch'][$i]))
+							if(isset($_POST['switch']))
 							{
 								$valueswitch = 1;
-								echo 'im switch n°';
 								echo $i;
 							}
-							elseif(!isset($_POST['switch'][$i]))
-							{
-								$valueswitch = 0;
-								echo $i;
-							}
+
+
 						}
 
 
