@@ -161,8 +161,11 @@ if($title == "Lumière" || $title="Mouvement")
 								$fetchroom = $reqroomchart->fetch();
 
 								echo '<option value="'.$fetchroom['roomname'].'">'.$fetchroom['roomname'].'</option>';
-								//echo '<input type="hidden" name="'.$fetchroom['roomname'].'" value="'.$listidsens.'">';
-								
+								$roomnamestrip = str_replace(' ', '', $fetchroom['roomname']);
+								?>
+
+								<input type="hidden" name=<?php echo '"'.$roomnamestrip.'"'; ?> value=<?php echo $listidsens;?>>
+								<?php 
 							}
 						?>
 					</select>
