@@ -156,6 +156,8 @@ else
 							{
 								echo '<option select="selected">&nbsp;</option>';
 							}
+
+
 							for ($i=0; $i<count($listecapteur); $i++)
 							{ 
 
@@ -165,12 +167,26 @@ else
 								$fetchroom = $reqroomchart->fetch();
 
 								echo '<option value="'.$fetchroom['roomname'].'">'.$fetchroom['roomname'].'</option>';
-								$roomnamestrip = str_replace(' ', '', $fetchroom['roomname']);
-								?>
 
-								<input type="hidden" name=<?php echo '"'.$roomnamestrip.'"'; ?> value=<?php echo $listidsens;?>>
-								<?php 
 							}
+							?>
+							<?php 
+
+							for ($t=0; $t<count($listecapteur); $t++)
+							{
+							
+
+								$listidsens = $listecapteur[$t];
+					        	$reqroomchart = $bdd->prepare('SELECT * FROM rooms WHERE idsens=?');
+								$reqroomchart->execute(array($listidsens));
+								$fetchroom = $reqroomchart->fetch();
+
+								$roomnamestrip = str_replace(' ', '', $fetchroom['roomname']);
+							?>
+								<input type="hidden" name=<?php echo '"'.$roomnamestrip.'"'; ?> value=<?php echo $listidsens;?>>
+							<?php
+							}
+							?>
 						?>
 					</select>
 					<input type="submit" value="Valider" name="confirm-chart" id="confirm-button" class="chart-input">
@@ -228,7 +244,7 @@ else
 											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'"></td>';
 											if($onval == 0)
 											{
-												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" value="none"><div class=""></div></label></td>';
+												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" value="'.$array[$i].'"><div class=""></div></label></td>';
 											}
 											else
 											{

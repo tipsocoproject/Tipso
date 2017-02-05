@@ -42,6 +42,7 @@
 		if($senscount != 0)
 		{
 			$array = $reqsens->fetchAll(PDO::FETCH_COLUMN);
+			$sortarray = $array;
 
 
 		//$idsens = $sensinfo['idsens'];
@@ -64,33 +65,57 @@
 				{
 
                 	date_default_timezone_set("Europe/Paris");
-                    $date = date('d/m/Y');
+
+                    $date = date('Y/m/d');
+					$time = date('H:i:s');
 
 	            	$switchcount = count($_POST['sensor']);
-	            	echo $switchcount;
-
-  
-                    echo $date;
-					/*$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
-					$insertdata->execute(array($lastname, $firstname, $valuesent, $password, $typeclient));
-					*/
+	            	
 
 					if($title=="Lumière")
 					{
+						$onarray = array();
+
 						for ($i = 0; $i <= $switchcount-1; $i++)
 						{
-							if(isset($_POST['switch']))
+							if(isset($_POST['switch'][$i]))
 							{
-								$valueswitch = 1;
-								echo $i;
+								$valueon = $_POST['switch'][$i];
+								$onarray[] = $valueon;
 							}
-
-
+							
 						}
 
 
 					}
 
+					for ($y = 0; $y <= count($onarray)-1; $y++)
+					{
+						if (($key = array_search($onarray[$y], $sortarray)) !== false) 
+						{
+						    unset($sortarray[$key]);
+						}
+
+					}
+
+					$offaray = array_values($sortarray);
+
+
+					for($x=0; $x <= count($onarray)-1; $x++)
+					{
+						$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+						$insertdata->execute(array($onarray[$x], 5, 1, $time, $date));
+
+					}
+
+					for($w=0; $w <= count($offaray)-1; $w++)
+					{
+						$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+						$insertdata->execute(array($offaray[$w], 5, 0, $time, $date));
+
+					}
+
+					
 				}
 		}
 		else

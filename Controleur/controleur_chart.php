@@ -73,4 +73,5 @@ if (isset($_POST['confirm-chart']))
 	}
 
 	$reqcapteur->closeCursor();
+
 ?>
