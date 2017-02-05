@@ -4,14 +4,14 @@
 if (isset($_POST['confirm-chart']))
 {
 	$selectdate=htmlspecialchars($_POST['date']);
-	$selectcapteur=htmlspecialchars($_POST['capteur']);
-	$idsens = intval($_POST['capteur']);
+	$selectroomname = htmlspecialchars($_POST['roomname']);
+	$selectcapteur= htmlspecialchars($_POST[$selectroomname]);
+	$idsens = htmlspecialchars($_POST[$selectroomname]);
 	$date = htmlspecialchars($_POST['date']);
-	$capteur = htmlspecialchars($_POST['capteur']);
+	$capteur = htmlspecialchars($_POST[$selectroomname]);
 
 	$querydatasent = $bdd->prepare(sprintf("SELECT datasent FROM data WHERE idsens=? AND date=? ORDER BY date,time ASC"));
 	$querytime = $bdd->prepare(sprintf("SELECT time FROM data WHERE idsens=? AND date=? ORDER BY date,time ASC"));
-
 
 	//execute query
 	$querydatasent->execute(array($idsens, $date));

@@ -142,11 +142,11 @@ if($title == "Lumière" || $title="Mouvement")
 						?>
 					</select>
 
-					<select id="capteur" name="capteur" class="chart-input">
+					<select id="capteur" name="roomname" class="chart-input">
 						<?php
 							if(isset($_POST['confirm-chart']))
 							{
-								echo '<option select="selected">'.$selectcapteur.'</option>';
+								echo '<option select="selected">'.$selectroomname.'</option>';
 							}
 							else
 							{
@@ -154,7 +154,15 @@ if($title == "Lumière" || $title="Mouvement")
 							}
 							for ($i=0; $i<count($listecapteur); $i++)
 							{ 
-								echo "<option value=".$listecapteur[$i].">".$listecapteur[$i]."</option>";
+
+								$listidsens = $listecapteur[$i];
+					        	$reqroomchart = $bdd->prepare('SELECT * FROM rooms WHERE idsens=?');
+								$reqroomchart->execute(array($listidsens));
+								$fetchroom = $reqroomchart->fetch();
+
+								echo '<option value="'.$fetchroom['roomname'].'">'.$fetchroom['roomname'].'</option>';
+								//echo '<input type="hidden" name="'.$fetchroom['roomname'].'" value="'.$listidsens.'">';
+								
 							}
 						?>
 					</select>
