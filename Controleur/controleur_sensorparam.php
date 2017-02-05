@@ -87,34 +87,51 @@
 						}
 
 
-					}
 
-					for ($y = 0; $y <= count($onarray)-1; $y++)
-					{
-						if (($key = array_search($onarray[$y], $sortarray)) !== false) 
+
+						for ($y = 0; $y <= count($onarray)-1; $y++)
 						{
-						    unset($sortarray[$key]);
+							if (($key = array_search($onarray[$y], $sortarray)) !== false) 
+							{
+							    unset($sortarray[$key]);
+							}
+
 						}
 
+						$offaray = array_values($sortarray);
+
+
+						for($x=0; $x <= count($onarray)-1; $x++)
+						{
+							$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+							$insertdata->execute(array($onarray[$x], 5, 1, $time, $date));
+
+						}
+
+						for($w=0; $w <= count($offaray)-1; $w++)
+						{
+							$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+							$insertdata->execute(array($offaray[$w], 5, 0, $time, $date));
+						}
 					}
-
-					$offaray = array_values($sortarray);
-
-
-					for($x=0; $x <= count($onarray)-1; $x++)
+/*
+					if($title=="Mouvement")
 					{
-						$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
-						$insertdata->execute(array($onarray[$x], 5, 1, $time, $date));
-
+						$onarray = array();
+						$roomstate = htmlspecialchars($_POST['state']);
+						$idsenscorres = htmlspecialchars($_POST['titlesens']);
+						if($roomstate == "Disponible")
+						{
+							$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+							$insertdata->execute(array($onarray[$x], 4, 0, $time, $date));
+						}
+						else
+						{
+							$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+							$insertdata->execute(array($onarray[$x], 4, 1, $time, $date));
+						}
 					}
-
-					for($w=0; $w <= count($offaray)-1; $w++)
-					{
-						$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
-						$insertdata->execute(array($offaray[$w], 5, 0, $time, $date));
-
-					}
-
+*/
 					
 				}
 		}

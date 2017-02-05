@@ -18,7 +18,7 @@ include("../Controleur/controleur_chart.php");
 	<link rel="stylesheet" type="text/css" href="../Styles/sensorparam.style.css">
 	<title>Fonctions</title>
 <?php 
-if($title == "Lumière" || $title=="Mouvement")
+if($title == "Lumière")
 {
 	?>
 	<script src="../Javascript/jquery.js"></script>
@@ -120,7 +120,7 @@ else
 	<body>		
 		<?php
 
-		if($title == "Lumière" || $title == "Mouvement")
+		if($title == "Lumière")
 		{		
 			?>
 			<div class="mychart">
@@ -203,7 +203,7 @@ else
 		}
 		?>			
 
-	    <div class="form" align="center" <?php if($title=="Lumière" || $title=="Mouvement")
+	    <div class="form" align="center" <?php if($title=="Lumière")
 	    {
 	    	echo 'style="position: relative; bottom: 45%; right: 18%"';
 	    }?>>
@@ -266,14 +266,16 @@ else
 									{
 										echo '<tr>';
 											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
-											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'" readonly></td>';
+											echo '<input name="titlesens" type="hidden" value='.$array[$i].'>';
+
 											if($movval == 0)
 											{
-												echo '<td><br><input class="input-box" type="text" name="state" value="" placeholder="  Vide"></td>';
+												echo '<td><br><select class="input-box" type="text" name="state"><option selected="selected">Disponible</option><option>Occupée</option></select></td>';
 											}
 											else
 											{
-												echo '<td><br><input class="input-box" type="text" name="state" value="" placeholder=" Occupé"></td>';
+												echo '<td><br><select class="input-box" type="text" name="state"><option>Disponible</option><option selected="selected">Occupée</option></select></td>';
 
 											}
 											if($state == 1)
@@ -283,7 +285,6 @@ else
 											else
 											{
 												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
-
 											}
 											echo '<td><br><input id="button-alert" type="submit" name="confirm-alert" value="Avertir"></td>';
 										echo '</tr>';
@@ -299,7 +300,7 @@ else
 											}
 											else
 											{
-												echo '<td><br><select class="input-box" name="modification" disabled><option selected="selected">&nbsp</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option></select></td>';
+												echo '<td><br><select class="input-box" name="modification" readonly><option selected="selected">&nbsp</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option></select></td>';
 											}
 											if($state == 1)
 											{
@@ -317,7 +318,7 @@ else
 									{
 										echo '<tr>';
 											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
-											echo '<td><br><input class="input-box" type="text" name="modification" value="" disabled placeholder="  '.$array_room['roomname'].'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'" readonly></td>';
 											if($humval != 0)
 											{
 												echo '<td><br><input class="input-box" type="text" name="state" value="'.$humval."%".'"></td>';
