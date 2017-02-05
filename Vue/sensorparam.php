@@ -18,7 +18,7 @@ include("../Controleur/controleur_chart.php");
 	<link rel="stylesheet" type="text/css" href="../Styles/sensorparam.style.css">
 	<title>Fonctions</title>
 <?php 
-if($title == "Lumière" || $title="Mouvement")
+if($title == "Lumière" || $title=="Mouvement")
 {
 	?>
 	<script src="../Javascript/jquery.js"></script>
@@ -107,19 +107,23 @@ if($title == "Lumière" || $title="Mouvement")
 	</script>
 <?php
 }
+else
+{
+
+}
 ?>
 </head>
 		<?php
-
 		include("header.html");
 		?>
 
-	<body>
-		<div class="mychart">
+	<body>		
 		<?php
-		if($title == "Lumière" || $title=="Mouvement")
-		{
+
+		if($title == "Lumière" || $title == "Mouvement")
+		{		
 			?>
+			<div class="mychart">
 			<div class="inside-chart">
 				<form method="POST" action="">
 					<canvas id="myChartlum" height="450" width="450" style="position: relative; left: 13%;"></canvas>
@@ -172,19 +176,27 @@ if($title == "Lumière" || $title="Mouvement")
 					<input type="submit" value="Valider" name="confirm-chart" id="confirm-button" class="chart-input">
 			
 				</form>
-			</div>
+			</div>		
+		</div>
+
 		<?php
 		}
-		?>
-			</div>
-		
-	    <div class="form" align="center" <?php if($title=="Lumière" || $title=="Mouvement"){
+		else
+		{
+			//chart for others 
+		}
+		?>			
+
+	    <div class="form" align="center" <?php if($title=="Lumière" || $title=="Mouvement")
+	    {
 	    	echo 'style="position: relative; bottom: 45%; right: 18%"';
 	    }?>>
 	    	<br>
 	    	<br>
 			<br>
 			<br>
+
+
 			<form method="POST" action="">			
 				<h2 class="main-text" name="title"><?php echo $title?></h2>
 				<table class="main-table">
@@ -200,7 +212,7 @@ if($title == "Lumière" || $title="Mouvement")
 
 							     {
 						        	$reqroom = $bdd->prepare('SELECT * FROM rooms WHERE idsens=?');
-									$reqroom->execute(array($array[$i]));
+									$reqroom->execute(array($array[$i])); //array is idsens
 
 									$array_room = $reqroom->fetch();
 									$onval = 0;
@@ -212,15 +224,15 @@ if($title == "Lumière" || $title="Mouvement")
 									if($title == "Lumière")
 									{
 										echo '<tr>';
-											echo '<td><br><input class="input-box" type="text" name="sensor" value="" disabled placeholder="  '.$title.'"></td>';
-											echo '<td><br><input class="input-box" type="text" name="room" value="" disabled placeholder="  '.$array_room['roomname'].'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
+											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'"></td>';
 											if($onval == 0)
 											{
-												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox"/><div class=""></div></label></td>';
+												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" value="none"><div class=""></div></label></td>';
 											}
 											else
 											{
-												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" checked="checked"/><div class=""></div></label></td>';
+												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" checked="checked"><div class=""></div></label></td>';
 
 											}
 											if($state == 1)
@@ -237,8 +249,8 @@ if($title == "Lumière" || $title="Mouvement")
 									elseif ($title == "Mouvement") 
 									{
 										echo '<tr>';
-											echo '<td><br><input class="input-box" type="text" name="sensor" value="" disabled placeholder="  '.$title.'"></td>';
-											echo '<td><br><input class="input-box" type="text" name="room" value="" disabled placeholder="  '.$array_room['roomname'].'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
+											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'"></td>';
 											if($movval == 0)
 											{
 												echo '<td><br><input class="input-box" type="text" name="state" value="" placeholder="  Vide"></td>';
@@ -263,8 +275,8 @@ if($title == "Lumière" || $title="Mouvement")
 									elseif ($title == "Température") 
 									{
 										echo '<tr>';
-											echo '<td><br><input class="input-box" type="text" name="state" value="" disabled placeholder="  '.$title.'"></td>';
-											echo '<td><br><input class="input-box" type="text" name="modification" value="" disabled placeholder="  '.$array_room['roomname'].'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
+											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'"></td>';
 											if($tempval != 0)
 											{
 												echo '<td><br><select class="input-box" name="modification"><option selected="selected">'.$tempval."°C".'</option><option>15°C</option><option>16°C</option><option>17°C</option><option>18°C</option><option>19°C</option><option>20°C</option><option>21°C</option><option>22°C</option><option>23°C</option><option>24°C</option><option>25°C</option><option>26°C</option><option>27°C</option><option>28°C</option><option>29°C</option><option>30°C</option></select></td>';
@@ -288,11 +300,11 @@ if($title == "Lumière" || $title="Mouvement")
 									else
 									{
 										echo '<tr>';
-											echo '<td><br><input class="input-box" type="text" name="state" value="" disabled placeholder="  '.$title.'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
 											echo '<td><br><input class="input-box" type="text" name="modification" value="" disabled placeholder="  '.$array_room['roomname'].'"></td>';
 											if($humval != 0)
 											{
-												echo '<td><br><input class="input-box" type="text" name="state" value="" placeholder="  '.$humval."%".'"></td>';
+												echo '<td><br><input class="input-box" type="text" name="state" value="'.$humval."%".'"></td>';
 											}
 											else
 											{

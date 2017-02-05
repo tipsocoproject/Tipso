@@ -58,7 +58,44 @@
 						echo '<td><br><label class="text-input" for="last-name" name="capteur">Etat</label></td>';	
 						echo '<td><br><label class="text-input" for="last-name" name="room">Modification</label></td>';	
 					echo "</tr>"
+
 		*/
+				if(isset($_POST['confirm-button']))
+				{
+
+                	date_default_timezone_set("Europe/Paris");
+                    $date = date('d/m/Y');
+
+	            	$switchcount = count($_POST['sensor']);
+	            	echo $switchcount;
+
+  
+                    echo $date;
+					/*$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+					$insertdata->execute(array($lastname, $firstname, $valuesent, $password, $typeclient));
+					*/
+
+					if($title=="Lumière")
+					{
+						for ($i = 0; $i <= $switchcount-1; $i++)
+						{
+							if(isset($_POST['switch'][$i]))
+							{
+								$valueswitch = 1;
+								echo 'im switch n°';
+								echo $i;
+							}
+							elseif(!isset($_POST['switch'][$i]))
+							{
+								$valueswitch = 0;
+								echo $i;
+							}
+						}
+
+
+					}
+
+				}
 		}
 		else
 		{
