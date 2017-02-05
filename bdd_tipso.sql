@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 02 Février 2017 à 14:45
+-- Généré le :  Dim 05 Février 2017 à 12:24
 -- Version du serveur :  10.1.16-MariaDB
 -- Version de PHP :  5.5.38
 
@@ -41,7 +41,8 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`idadmin`, `firstname`, `lastname`, `mail`, `password`, `type`, `adminkey`) VALUES
-(2, 'Andrew', 'Philippick', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 1, 'doud');
+(3, 'Andrew', 'Philippick', 'philippick.a@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'superuser'),
+(4, '', '', '', '', 0, 'superuser2');
 
 -- --------------------------------------------------------
 
@@ -69,21 +70,8 @@ CREATE TABLE `client` (
 
 INSERT INTO `client` (`id`, `lastname`, `firstname`, `mail`, `password`, `type`, `country`, `city`, `postcode`, `mobilenumber`, `adresse`) VALUES
 (1, 'Philippick', 'Andrew', 'philippick.isep@gmail.com', 'eeb29b724bc484bbc0e77f319178b3ac46628d5f', 0, '', '', '', '0', ''),
-(2, 'Ruyer', 'Jorel', 'jorel@live.ovh', '8603a129b920fa5714e29a1c0ce697de9992e2b6', 0, '', '', '', '0', ''),
-(7, 'Feng', 'David', 'fyhdavid@gmail.com', '4f92cea32512d6dbb18dc47a6f2f37596d82ee53', 0, '', '', '', '0', ''),
-(9, 'Lucas', 'Pierre', 'pierrelucas75@hotmail.fr', '50f243b21e3a8cb1a39b1c6714c355104f2e82a4', 0, '', '', '', '0', ''),
-(11, 'Stephlu', 'Stephlu', 'stephlu@gmail.com', 'b4fe22a219b2750de840cc89e58de90235715a70', 0, '', '', '', '0', ''),
-(12, 'tibi', 'tibi', 'tibi@gmail.com', '200d14be5ee62ba601782157630e5ca8753f0559', 0, '', '', '', '0', ''),
-(13, 'kipi', 'kipi', 'kipi@gmail.com', '3c01253c24783ac54d2496d7548084c1abb71403', 0, '', '', '', '0', ''),
-(14, 'Bone', 'Ken', 'kenbone@gmail.com', '345889cc3341f0d0a27ed537c434e461a3e266a4', 0, '', '', '', '0', ''),
-(15, 'Plucas', 'Plucas', 'plucas@gmail.com', 'b7d681d12e3fe553c37c48c5ecda689ae8912990', 0, '', '', '', '0', ''),
-(16, 'Bone', 'Ken', 'boneken@gmail.com', 'ffdf4ccbf050a0f315f056807b46fac95f616c6b', 0, '', '', '', '0', ''),
-(17, 'Feng', 'David', '27256e509c4df1bb795f8fd5fce61b94794f2db5', 'feng@gmail.com', 0, '', '', '', '0', ''),
-(21, 'pirch', 'pirch', 'ab81caaa920e32f75829f39fb0da3b2c41d03592', 'pirch@gmail.com', 0, '', '', '', '0', ''),
-(22, 'rolol', 'rolol', 'rolol@gmail.com', '5272decf1f143902094d4fe2d896bb941073a4fc', 0, '', '', '', '0', ''),
-(23, 'Andrew', 'Philippick', 'philippick@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 0, '', '', '', '0', ''),
-(30, 'test', 'test', 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 0, '', '', '', '0', ''),
-(38, 'Philippick', 'Andrew', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 0, 'France', 'Paris', '75016', '', '6');
+(38, 'Philippick', 'Andrew', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 0, 'France', 'Paris', '75016', '0638197527', '6 rue de la cure'),
+(41, 'Test', 'Test', 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 0, '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -225,10 +213,10 @@ CREATE TABLE `event` (
 
 INSERT INTO `event` (`idevent`, `idc`, `idsens`, `date`, `time`, `room`, `action`) VALUES
 (33, 38, 49, '02/17/2017', '11:11', 'Chambre Andrew', '0'),
-(34, 38, 49, '02/08/2017', '23:30', 'Chambre Andrew', '0'),
 (35, 38, 49, '02/18/2017', '22:30', 'Chambre Andrew', '1'),
-(39, 38, 29, '02/24/2017', '22:22', 'Petit salon -1', '31%'),
-(40, 38, 9, '02/10/2017', '03:40', 'Salon jeux', '18°C');
+(40, 38, 9, '02/10/2017', '03:40', 'Salon jeux', '18°C'),
+(41, 38, 30, '02/16/2017', '21:03', 'Entrée principale', '1'),
+(42, 38, 30, '02/16/2017', '21:03', 'Entrée principale', '1');
 
 -- --------------------------------------------------------
 
@@ -296,12 +284,11 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`idroom`, `idc`, `roomname`, `type`, `idsens`, `iddom`) VALUES
-(3, 38, 'Salon jeux', 'Salon', 9, 0),
 (4, 38, 'Chambre Andrew', 'Chambre', 10, 0),
-(6, 38, 'Petit salon -1', 'Salon', 29, 0),
 (7, 38, 'Entrée principale', 'Entrée', 30, 0),
 (10, 38, 'Bureau chambre Andrew', 'Bureau', 25, 0),
-(11, 38, 'Chambre Andrew', 'Chambre', 49, 0);
+(11, 38, 'Chambre Andrew', 'Chambre', 49, 0),
+(12, 41, 'Chambre Test', 'Chambre', 39, 0);
 
 -- --------------------------------------------------------
 
@@ -323,17 +310,17 @@ CREATE TABLE `sensors` (
 --
 
 INSERT INTO `sensors` (`sensorserial`, `idsens`, `idc`, `idroom`, `mail`, `sensortype`) VALUES
-('1000113', 9, 38, 0, 'philippick.a@gmail.com', 'Température'),
+('1000113', 9, 0, 0, '', 'Température'),
 ('1000114', 10, 38, 0, 'philippick.a@gmail.com', 'Humidité'),
 ('1000115', 11, 0, 0, '', 'Lumière'),
 ('1000119', 15, 0, 0, '', 'Mouvement'),
 ('1000124', 20, 0, 0, '', 'Humidité'),
 ('1000129', 25, 38, 0, 'philippick.a@gmail.com', 'Mouvement'),
-('1000134', 29, 38, 0, 'philippick.a@gmail.com', 'Humidité'),
+('1000134', 29, 0, 0, '', 'Humidité'),
 ('1000135', 30, 38, 0, 'philippick.a@gmail.com', 'Lumière'),
 ('1000139', 34, 0, 0, '', 'Mouvement'),
 ('1000139', 38, 0, 0, '', 'Mouvement'),
-('1000151', 39, 0, 0, '', 'Température'),
+('1000151', 39, 41, 0, 'test@gmail.com', 'Température'),
 ('1000152', 40, 0, 0, '', 'Humidité'),
 ('1000153', 41, 0, 0, '', 'Lumière'),
 ('1000154', 42, 0, 0, '', 'Mouvement'),
@@ -427,12 +414,12 @@ ALTER TABLE `userservice`
 -- AUTO_INCREMENT pour la table `administrator`
 --
 ALTER TABLE `administrator`
-  MODIFY `idadmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idadmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT pour la table `data`
 --
@@ -442,7 +429,7 @@ ALTER TABLE `data`
 -- AUTO_INCREMENT pour la table `event`
 --
 ALTER TABLE `event`
-  MODIFY `idevent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `idevent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT pour la table `messages`
 --
@@ -452,7 +439,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT pour la table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT pour la table `sensors`
 --
