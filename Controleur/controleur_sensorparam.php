@@ -3,7 +3,6 @@
 	if(isset($_SESSION['id']))
 	{
 
-
 		$idc = $_SESSION['id'];
 		$title = $_GET['val'];
 
@@ -32,6 +31,13 @@
 			$title="Humidité";
 		}
 
+		if(isset($_POST['confirm-alert']))
+		{
+
+			header("Location: ../Vue/messages.php?val=".$title);
+
+
+		}
 
 
 		$reqsens = $bdd->prepare('SELECT idsens FROM sensors WHERE idc=? AND sensortype=?');
@@ -146,10 +152,5 @@
 		header("Location: ../Vue/login.php");
 	}
 
-if(isset($_POST['confirm-alert']))
-{
 
-	// header("Location :contact.php?val="capteur");
-
-}
 ?>

@@ -25,14 +25,14 @@ include("../Controleur/controleur_register.php");
 			<br>
 			<form method="POST" action="">
 				<table>
-					<tr>
+					<!--<tr>
 						<td><br><label class="text-input" for="last-name">Nom</label></td>	
 						<td><br><input class="input-box" type="text" name="last-name" placeholder="  Nom" value=<?php if(isset($lastname)) { echo $lastname;} ?>></td>
 					</tr>
 					<tr>
 						<td><br><label class="text-input" for="first-name">Prénom</label></td>	
 						<td><br><input class="input-box" type="text" name="first-name" placeholder="  Prénom" value=<?php if(isset($firstname)) { echo $firstname;} ?>></td>
-					</tr>
+					</tr>-->
 					<tr>
 						<td><br><label class="text-input" for="mail">E-mail</label></td>	
 						<td><br><input class="input-box" type="email" name="mail" placeholder="  E-mail" value=<?php if(isset($mail)) { echo $mail;} ?>></td>

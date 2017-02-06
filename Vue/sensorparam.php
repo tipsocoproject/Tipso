@@ -327,11 +327,11 @@ else
 											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'" readonly></td>';
 											if($humval != 0)
 											{
-												echo '<td><br><input class="input-box" type="text" name="state" value="'.$humval."%".'"></td>';
+												echo '<td><br><input class="input-box" type="text" name="state" value="'.$humval."%".'" readonly></td>';
 											}
 											else
 											{
-												echo '<td><br><input class="input-box" type="text" name="state" value="" placeholder=" "></td>';
+												echo '<td><br><input class="input-box" type="text" name="state" value="" placeholder=" " readonly></td>';
 											}
 											if($state == 1)
 											{

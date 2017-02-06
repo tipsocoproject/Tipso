@@ -31,7 +31,7 @@ include("../Controleur/controleur_messages.php");
 							<table>
 								<tr>
 									<td><label class="input-text">Sujet</label></td>
-									<td><input type="sujet" name="sujet" size="40" maxlength="50" id="sujet" placeholder="   Le sujet de votre requête"></td>
+									<td><input type="sujet" name="sujet" size="40" maxlength="50" id="sujet" placeholder="   Le sujet de votre requête" <?php if(isset($_GET['val'])){ echo 'value=" Capteur '.$_GET['val'].'" readonly';} ?>></td>
 								</tr>
 							</table>
 								<textarea name="comments" id="comments" rows="10" cols="50" placeholder="   Postez votre message ici."></textarea>

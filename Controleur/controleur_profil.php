@@ -38,10 +38,30 @@ if(isset($_SESSION['id']))
 		$cityinput = uninjection_sql(htmlspecialchars($_POST['city']));
 		$adresseinput = uninjection_sql(htmlspecialchars($_POST['adresse']));
 		$mobilenumberinput = uninjection_sql(htmlspecialchars($_POST['nummobile']));
+		
+		if(filter_var($mail, FILTER_VALIDATE_EMAIL))
+		{
+			$reqmail = $bdd->prepare("SELECT * FROM client WHERE mail = ?");
+			$reqmail->execute(array($mailinput));
+			$mailexist = $reqmail->rowCount(); //change --> if serial exist
 
-		$reqclient = $bdd->prepare('UPDATE client SET lastname=?, firstname=?, mail=?, country=?, postcode=?, city=?, adresse=?, mobilenumber=?  WHERE id=?');
-		$reqclient->execute(array($lastnameinput, $firstnameinput, $mailinput, $countryinput, $postcodeinput, $cityinput, $adresseinput, $mobilenumberinput, $idc));
-		header('Location: profil.php');
+			if($mailexist == 0)
+			{
+				$reqclient = $bdd->prepare('UPDATE client SET lastname=?, firstname=?, mail=?, country=?, postcode=?, city=?, adresse=?, mobilenumber=?  WHERE id=?');
+				$reqclient->execute(array($lastnameinput, $firstnameinput, $mailinput, $countryinput, $postcodeinput, $cityinput, $adresseinput, $mobilenumberinput, $idc));
+				header('Location: profil.php');
+			}
+			elseif($_SESSION['mail'] == $mailinput)
+			{
+				$reqclient = $bdd->prepare('UPDATE client SET lastname=?, firstname=?, mail=?, country=?, postcode=?, city=?, adresse=?, mobilenumber=?  WHERE id=?');
+				$reqclient->execute(array($lastnameinput, $firstnameinput, $mailinput, $countryinput, $postcodeinput, $cityinput, $adresseinput, $mobilenumberinput, $idc));
+				header('Location: profil.php');
+			}
+			else
+			{
+				$error = "Mail déjà existant !";
+			}
+		}
 	}
 		
 }

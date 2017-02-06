@@ -42,13 +42,22 @@ $blank = "";
 							{
 							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" required value='.$lastname.'></td>';
 							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" required value='.$lastname.'></td>';
+							}
 						}
 						else
 						{
 							if($lastname != "")
 							{
 							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" disabled value='.$lastname.'></td>';
-							}						
+							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="lastname" placeholder="" disabled value="" readonly></td>';
+
+							}					
 						}
 						?>
 					<tr>
@@ -60,13 +69,21 @@ $blank = "";
 							{
 							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" required value='.$firstname.'></td>';
 							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" required value='.$firstname.'></td>';
+							}
 						}
 						else
 						{
 							if($firstname != "")
 							{
 							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" disabled value='.$firstname.'></td>';
-							}						
+							}
+							else
+							{
+							echo '<td><br><input class="input-box" style="text-decoration:none; font-weight: bold;" type="text" name="firstname" placeholder="" required value="" readonly></td>';
+							}					
 						}
 						?>
 					<tr>
@@ -485,11 +502,11 @@ $blank = "";
 			</form>
 			</div>
 			<br>
-		<span class="error">
+		<div style="position: relative; top: 2vh;" class="error">
 		<?php
 			include ("../Modele/error.php");
 		?>
-		</span>
+		</div>
 	</body>
 <?php 
 
