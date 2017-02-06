@@ -6,15 +6,15 @@ if(isset($_SESSION['id']))
 	if(isset($_POST['confirm-button'])) 
 	{
 
-		$email = uninjection_sql(htmlspecialchars($_POST["email"]));
 		$comments = uninjection_sql(htmlspecialchars($_POST["comments"]));
 		$subject = uninjection_sql(htmlspecialchars($_POST["sujet"]));
+		$id = $_SESSION['id'];
 
 
-		if(!empty($_POST["email"]) AND !empty($_POST["comments"]) AND !empty($_POST["sujet"])) 
+		if(!empty($_POST["comments"]) AND !empty($_POST["sujet"])) 
 		{
-			$insertmess = $bdd->prepare("INSERT INTO messages(email,subject,comment) VALUES(?,?,?)");
-			$insertmess->execute(array($email,$subject,$comments));
+			$insertmess = $bdd->prepare("INSERT INTO messages(idc,subject,comment) VALUES(?,?,?)");
+			$insertmess->execute(array($id,$subject,$comments));
 			header("Location: mainpage.php");
 
 		}

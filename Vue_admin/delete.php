@@ -6,5 +6,5 @@ $id = $_GET['id'];
 $delete = $bdd->prepare("DELETE FROM client WHERE id=".$id);
 $delete->execute();
 
-header("Location: admin_modif.php");
+header("Location: adminmain.php");
 ?>

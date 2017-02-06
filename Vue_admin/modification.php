@@ -1,7 +1,7 @@
 <?php
-echo "<a href='admin_modif.php'>Retour</a>";
-$_SESSION['id'] = $_POST['id'];
-$_SESSION['mail'] = $_POST['mail'];
-$_SESSION['password'] = $_POST['password'];
+echo "<a href='adminmain.php'>Retour</a>";
+$_SESSION['id'] = $_GET['id'];
+$_SESSION['mail'] = $_GET['mail'];
+$_SESSION['password'] = $_GET['password'];
 include('../Vue/profil.php');
 ?>

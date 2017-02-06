@@ -12,26 +12,19 @@ include('../Controleur_admin/controleur_admin_modif.php');
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/admin_modif.css">
-	<link rel="stylesheet" type="text/css" href="../Styles/header-footer-admin.style.css">
 	<script src="../Javascript/admin_modif.js"></script>
 	<title>admin modif</title>
 </head>
 
-<?php
-
-include("header-admin.html");
-
-?>
-
 <body>
-
-
 
 	<form method="POST" action="">
 
 		<h2>Mes Clients</h2>
 
-		<input type="text" id="myInput" placeholder="Search for lastnames ..." title="Type in a name" onkeyup="finder()" >
+		<input type="text" id="myInputid" placeholder="Search for id ..." title="Type in an id" onkeyup="finderid()" >
+		<input type="text" id="myInputlastname" placeholder="Search for lastname ..." title="Type in a lastname" onkeyup="finderlastname()" >
+		<input type="text" id="myInputfirstname" placeholder="Search for firstname ..." title="Type in a firstname" onkeyup="finderfirstname()" >
 
 		<table name="client" id="client">
 
@@ -79,11 +72,5 @@ include("header-admin.html");
 	</form>
 
 </body>
-
-<?php
-
-include("footer-admin.html");
-
-?>
 
 </html>
