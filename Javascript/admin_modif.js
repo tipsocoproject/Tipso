@@ -1,10 +1,37 @@
 
 
-function finder()
+function finderid()
 {
   var input, filter, table, tr, td, i;
 
-  input = document.getElementById("myInput");
+  input = document.getElementById("myInputid");
+  filter = input.value.toUpperCase();
+
+  table = document.getElementById("client");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++)
+  {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td)
+    {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1)
+      {
+        tr[i].style.display = "";
+      }
+      else
+      {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function finderlastname()
+{
+  var input, filter, table, tr, td, i;
+
+  input = document.getElementById("myInputlastname");
   filter = input.value.toUpperCase();
 
   table = document.getElementById("client");
@@ -27,6 +54,32 @@ function finder()
   }
 }
 
+function finderfirstname()
+{
+  var input, filter, table, tr, td, i;
+
+  input = document.getElementById("myInputfirstname");
+  filter = input.value.toUpperCase();
+
+  table = document.getElementById("client");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++)
+  {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td)
+    {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1)
+      {
+        tr[i].style.display = "";
+      }
+      else
+      {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
 
 function deleteRow(r)
 {
