@@ -6,8 +6,14 @@ session_start();
 <head>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../Styles/header-footer-admin.style.css">
 	<title>Mode Admin</title>
 </head>
+<?php
+
+include("header-admin.html");
+
+?>
 <body>
 
 	<ul>
@@ -25,4 +31,9 @@ session_start();
 	<h3>Attention toute action doit être réfléchie !</h3>
 
 </body>
+<?php
+
+include("footer-admin.html");
+
+?>
 </html>

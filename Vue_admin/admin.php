@@ -14,11 +14,15 @@ if($_GET['admin']=="admin")
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/admin_sensor.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/header-footer-admin.style.css">
 	<title>Rentrez le numéro de serie de votre produit</title>
 </head>
 
-<header>
-</header>
+<?php
+
+include("header-admin.html");
+
+?>
 
 <body>
     <div class="form" align="center">
@@ -52,8 +56,11 @@ if($_GET['admin']=="admin")
 		<?php
 			include ("../Modele/error.php");
 		?>
-<footer>
-</footer>
+<?php
+
+include("footer-admin.html");
+
+?>
 </body>
 </html>
 <?php 
