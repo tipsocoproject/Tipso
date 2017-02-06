@@ -34,10 +34,14 @@ a{
 
 }
 
-.div {
+div {
+	position: relative;
+	left: 25%;
 	text-align: center;
+	width: 50%;
+	height: 80%;
 }
 
-p, h2, h3, br {
+p, h2, h3, {
 	text-align: center;
 }

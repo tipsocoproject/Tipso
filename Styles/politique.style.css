@@ -1,16 +1,10 @@
 
-textarea{
-	position: relative;
-	left: 35vh;
-	width: 100vh;
-	height: 100vh;
-}
 
 h1 { 
 	top: 8vh;
 	width: 600px;
 	position: relative;
-	left: 40%;
+	left: 20%;
 	color:#627890;
     text-shadow: rgb(224, 234, 255) 0px 2px 5px;
     font-size: 3vh;
@@ -24,3 +18,10 @@ h2, p {
 	text-align: center;
 }
 
+div {
+	position: relative;
+	left: 24%;
+	text-align: center;
+	width: 50%;
+	height: 80%;
+}

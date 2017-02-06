@@ -18,7 +18,7 @@
 				<br>
 				<br>
 				<br>
-				<div class="div"></div>
+				<div class="div">
 					
 					<h2>Introduction</h3>
 					<p>Devant le développement des nouveaux outils de communication, il est nécessaire de porter une attention particulière à la protection de la vie privée. C'est pourquoi, nous nous engageons à respecter la confidentialité des renseignements personnels que nous collectons.</p>
