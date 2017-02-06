@@ -3,6 +3,8 @@ session_start();
 require("../Modele/connexion.php");
 include("../fonction/function_uninjection_sql.php");
 include("../Controleur/controleur_adminsensor.php");
+if(isset($_SESSION['type']) AND $_SESSION['type'] ==1)
+{
 ?>
 
 <html>
@@ -53,3 +55,9 @@ include("../Controleur/controleur_adminsensor.php");
 </footer>
 </body>
 </html>
+<?php
+}
+else
+{
+	header("Location: ../Vue/login.php");
+}
