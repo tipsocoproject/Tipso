@@ -29,7 +29,7 @@ if($_GET['admin']=="admin")
 				$_SESSION['type'] = $admininfo['type'];
 				//ajouter id à sensoriel sensors
 
-				header("Location: ../Vue_admin/adminmain.php?id=".$_SESSION['id']);
+				header("Location: ../Vue_admin/admin_co.php?id=".$_SESSION['id']);
 
 
 				// redirect to first time login mainpage

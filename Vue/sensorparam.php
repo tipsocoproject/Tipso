@@ -219,8 +219,12 @@ else
 					<tr>
 						<td><br><label class="text-input" for="last-name" name="capteur">Capteurs</label></td>	
 						<td><br><label class="text-input" for="last-name" name="room">Pièces</label></td>
-						<td><br><label class="text-input" for="last-name" name="room">Etat pièce</label></td>	
-						<td><br><label class="text-input" for="last-name" name="capteur">Etat capteur</label></td>	
+						<td><br><label class="text-input" for="last-name" name="room">Etat pièce</label></td>
+						<?php if($title == "Température")
+						{
+							echo '<td><br><label class="text-input" for="last-name" name="room">Modification</label></td>';
+						}?>
+						<td><br><label class="text-input" for="last-name" name="capteur">Etat</label></td>	
 					</tr>
 						<?php
 
@@ -253,11 +257,11 @@ else
 											}
 											if($state == 1)
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											else
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											echo '<td><br><input id="button-alert" type="submit" name="confirm-alert" value="Avertir"></td>';
 										echo '</tr>';
@@ -280,11 +284,11 @@ else
 											}
 											if($state == 1)
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											else
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											echo '<td><br><input id="button-alert" type="submit" name="confirm-alert" value="Avertir"></td>';
 										echo '</tr>';
@@ -293,9 +297,10 @@ else
 									{
 										echo '<tr>';
 											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
-											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'" readonly></td>';
 											if($tempval != 0)
 											{
+												echo '<td><br><input class="input-box" name="modification" value="'.$tempval."°C".'" readonly></td>';
 												echo '<td><br><select class="input-box" name="modification"><option selected="selected">'.$tempval."°C".'</option><option>15°C</option><option>16°C</option><option>17°C</option><option>18°C</option><option>19°C</option><option>20°C</option><option>21°C</option><option>22°C</option><option>23°C</option><option>24°C</option><option>25°C</option><option>26°C</option><option>27°C</option><option>28°C</option><option>29°C</option><option>30°C</option></select></td>';
 											}
 											else
@@ -304,11 +309,11 @@ else
 											}
 											if($state == 1)
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											else
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 
 											}
 											echo '<td><br><input id="button-alert" type="submit" name="confirm-alert" value="Avertir"></td>';
@@ -329,11 +334,11 @@ else
 											}
 											if($state == 1)
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											else
 											{
-												echo '<td><img class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											echo '<td><br><input id="button-alert" type="submit" name="confirm-alert" value="Avertir"></td>';
 											echo '</tr>';
@@ -350,6 +355,12 @@ else
 						<td></td>
 						<td></td>
 						<td></td>
+						<?php if($title == "Température")
+						{
+							echo '<td></td>';
+
+						}
+						?>
 						<td><br><br><input id="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>

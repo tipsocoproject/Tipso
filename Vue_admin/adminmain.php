@@ -13,7 +13,7 @@ include('../Controleur_admin/controleur_admin_modif.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../Styles/admin_modif.css">
 	<script src="../Javascript/admin_modif.js"></script>
-	<title>admin modif</title>
+	<title>Gestion Admin</title>
 </head>
 
 <body>
