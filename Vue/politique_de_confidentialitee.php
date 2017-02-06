@@ -4,7 +4,7 @@
 			<meta charset="utf-8">
 			<link rel="stylesheet" type="text/css" href="../Styles/header_footer_for_connected_style.css">
 			<link rel="stylesheet" type="text/css" href="../Styles/politique.style.css">
-			<title>Condition général d'utilisation</title>
+			<title>	Politique de confidentialitée</title>
 		</head>
 		<?php
 			include("header.html")

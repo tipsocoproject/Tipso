@@ -18,11 +18,11 @@
 				<br>
 				<br>
 				<br>
-			
-					<h2>Politique modèle de confidentialité.</h2>
-					<h3>Introduction</h3>
+				<div class="div"></div>
+					
+					<h2>Introduction</h3>
 					<p>Devant le développement des nouveaux outils de communication, il est nécessaire de porter une attention particulière à la protection de la vie privée. C'est pourquoi, nous nous engageons à respecter la confidentialité des renseignements personnels que nous collectons.</p>
-					<h3>Collecte des renseignements personnels</h3>
+					<h2>Collecte des renseignements personnels</h3>
 					<p>Nous collectons les renseignements suivants :</p>
 					<p>Nom,
 					prénom,
@@ -33,7 +33,7 @@
 
 					<p> Les renseignements personnels que nous collectons sont recueillis au travers de formulaires et grâce à l'interactivité établie entre vous et notre site Web. Nous utilisons également, comme indiqué dans la section suivante, des fichiers témoins et/ou journaux pour réunir des informations vous concernant.</p>
 
-					<h3>Formulaires  et interactivité:</h3>
+					<h2>Formulaires  et interactivité:</h3>
 					<p>Vos renseignements personnels sont collectés par le biais de formulaire, à savoir :
 					Formulaire d'inscription au site Web
 					Nous utilisons les renseignements ainsi collectés pour les finalités suivantes :
@@ -43,25 +43,25 @@
 
 					Vos renseignements sont également collectés par le biais de l'interactivité pouvant s'établir entre vous et notre site Web et ce, de la façon suivante:
 
-					<h3>Contact</h3>
+					<h2>Contact</h3>
 					<p>Gestion du site Web (présentation, organisation)
 					Nous utilisons les renseignements ainsi collectés pour les finalités suivantes :
 					Correspondance
 					Droit d'accès
 					Nous nous engageons à reconnaître un droit d'accès et de rectification aux personnes concernées désireuses de consulter, modifier, voire radier les informations les concernant.</p>
 
-					<h3>L'exercice de ce droit se fera :</h3>
-					<p>Code postal : 10 rue de vanves, Issy-les-Moulineaux 92130
-					Courriel : admin.tipso@gmail.com
-					Téléphone : 0638197527
-					Section du site web : www.tipsoco.com</p>
-					<h3>Sécurité</h3>
-					Les renseignements personnels que nous collectons sont conservés dans un environnement sécurisé. Les personnes travaillant pour nous sont tenues de respecter la confidentialité de vos informations.
-					Pour assurer la sécurité de vos renseignements personnels, nous avons recours aux mesures suivantes :
-					Identifiant / mot de passe
-					Nous nous engageons à maintenir un haut degré de confidentialité en intégrant les dernières innovations technologiques permettant d'assurer la confidentialité de vos transactions. Toutefois, comme aucun mécanisme n'offre une sécurité maximale, une part de risque est toujours présente lorsque l'on utilise Internet pour transmettre des renseignements personnels.
+					<h2>L'exercice de ce droit se fera :</h3>
+					<p>Code postal : 10 rue de vanves, Issy-les-Moulineaux 92130</p>
+					<p>Courriel : admin.tipso@gmail.com</p>
+					<p>Téléphone : 0638197527</p>
+					<p>Section du site web : www.tipsoco.com</p>
+					<h2>Sécurité</h3>
+					<p>Les renseignements personnels que nous collectons sont conservés dans un environnement sécurisé. Les personnes travaillant pour nous sont tenues de respecter la confidentialité de vos informations.</p>
+					<p>Pour assurer la sécurité de vos renseignements personnels, nous avons recours aux mesures suivantes :</p>
+					<p>Identifiant / mot de passe</p>
+					<p>Nous nous engageons à maintenir un haut degré de confidentialité en intégrant les dernières innovations technologiques permettant d'assurer la confidentialité de vos transactions. Toutefois, comme aucun mécanisme n'offre une sécurité maximale, une part de risque est toujours présente lorsque l'on utilise Internet pour transmettre des renseignements personnels.</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
 	
-
+					</div>
 
 
 			</body>
