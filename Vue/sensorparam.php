@@ -162,8 +162,9 @@ else
 							{ 
 
 								$listidsens = $listecapteur[$i];
-					        	$reqroomchart = $bdd->prepare('SELECT * FROM rooms WHERE idsens=?');
-								$reqroomchart->execute(array($listidsens));
+								$idc = $_SESSION['id'];
+					        	$reqroomchart = $bdd->prepare('SELECT * FROM rooms WHERE idsens=? AND idc=?');
+								$reqroomchart->execute(array($listidsens, $idc));
 								$fetchroom = $reqroomchart->fetch();
 
 								echo '<option value="'.$fetchroom['roomname'].'">'.$fetchroom['roomname'].'</option>';
@@ -245,7 +246,7 @@ else
 									{
 										echo '<tr>';
 											echo '<td><br><input class="input-box" type="text" name="sensor[]" value="  ';?><?php echo $title;?><?php echo '" readonly></td>';
-											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'"></td>';
+											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'" readonly></td>';
 											if($onval == 0)
 											{
 												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" value="'.$array[$i].'"><div class=""></div></label></td>';

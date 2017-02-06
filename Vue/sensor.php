@@ -39,7 +39,7 @@ include("header.html");
 
                                     $('#plus').click(function() {
                                         counter++;
-                                        $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" placeholder="  Numéro de série du capteur"required><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Bureau</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Autres</option></select><input type="text" name="room[]" required placeholder="  Nom attributé (i.e Chambre parentale)"><img name="minus[]" src="../icon/minusbutton.png" id="minus"></div>');
+                                        $('#plus').before('<div class="image"><input type="text" name="serialnumber[]" placeholder="  Numéro de série du capteur"required><select name="selectroom[]" required><option>Entrée</option><option>Salon</option><option>Chambre</option><option>Cuisine</option><option>Bureau</option><option>Buanderie</option><option>Terrasse</option><option>Salle à manger</option><option>Salle de Bain</option></select><input type="text" name="room[]" required placeholder="  Nom attributé (i.e Chambre parentale)"><img name="minus[]" src="../icon/minusbutton.png" id="minus"></div>');
                                         $('img#minus').click(function(){
                                             $(this).parent().remove();
                                         });

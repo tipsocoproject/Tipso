@@ -3,6 +3,7 @@
 //query to get data from the table
 if (isset($_POST['confirm-chart']))
 {
+
 	$selectdate=htmlspecialchars($_POST['date']);
 	$selectroomname = htmlspecialchars($_POST['roomname']);
 
@@ -44,8 +45,8 @@ if (isset($_POST['confirm-chart']))
 }
 
 	//print list date
-	$reqdate = $bdd->prepare(sprintf("SELECT DISTINCT date FROM data ORDER BY date"));
-	$reqdate->execute(array());
+	$reqdate = $bdd->prepare("SELECT DISTINCT data.date, data.idsens, sensors.idsens, sensors.idc FROM data INNER JOIN sensors ON data.idsens=sensors.idsens WHERE sensors.idc=? GROUP BY date");
+	$reqdate->execute(array($_SESSION['id']));
 
 	$resultdate = $reqdate->fetchAll(PDO::FETCH_COLUMN);
 
@@ -60,10 +61,11 @@ if (isset($_POST['confirm-chart']))
 
 
 	//print list capteur
-	$reqcapteur = $bdd->prepare(sprintf("SELECT DISTINCT idsens FROM data ORDER BY idsens ASC"));
-	$reqcapteur->execute(array());
+	$reqcapteur = $bdd->prepare("SELECT DISTINCT data.idsens, sensors.idsens, sensors.idc FROM data INNER JOIN sensors ON data.idsens=sensors.idsens WHERE sensors.idc=?");
+	$reqcapteur->execute(array($_SESSION['id']));
 
 	$resultcapteur = $reqcapteur->fetchAll(PDO::FETCH_COLUMN);
+
 
 	$listecapteur = array();
 
