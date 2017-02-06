@@ -234,9 +234,16 @@ else
 							     {
 						        	$reqroom = $bdd->prepare('SELECT * FROM rooms WHERE idsens=?');
 									$reqroom->execute(array($array[$i])); //array is idsens
+									
+									$prepdata = $bdd->prepare('SELECT * FROM `data` WHERE idsens=? ORDER BY `time` DESC, `date` DESC');
+									$prepdata->execute(array($array[$i]));
+
+									$datafetch = $prepdata->fetch();
+
+									$onval = $datafetch['datasent'];
+
 
 									$array_room = $reqroom->fetch();
-									$onval = 0;
 									$movval = 0;
 									$tempval = 25;
 									$state = 1;
@@ -253,7 +260,7 @@ else
 											}
 											else
 											{
-												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" checked="checked"><div class=""></div></label></td>';
+												echo '<td><label class="switch"><input name="switch[]" type="checkbox" class="checkbox" value="'.$array[$i].'" checked="checked"><div class=""></div></label></td>';
 
 											}
 											if($state == 1)
@@ -345,11 +352,6 @@ else
 											echo '</tr>';
 									}
 								}
-								/*if(isset($_POST['switch']))
-								{
-									echo 'hey that"s pretty good';
-								}
-								*/
 						?>			
 					<tr>
 						<td></td>

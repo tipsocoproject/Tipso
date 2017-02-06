@@ -50,7 +50,6 @@
 			$array = $reqsens->fetchAll(PDO::FETCH_COLUMN);
 			$sortarray = $array;
 
-
 		//$idsens = $sensinfo['idsens'];
 
 		/*$reqroom = $bdd->prepare('SELECT * FROM home WHERE idsens=?');
@@ -80,44 +79,57 @@
 
 					if($title=="Lumière")
 					{
-						$onarray = array();
-
-						for ($i = 0; $i <= $switchcount-1; $i++)
+						if($switchcount > 1)
 						{
-							if(isset($_POST['switch'][$i]))
+							for ($i = 0; $i <= $switchcount-1; $i++)
 							{
-								$valueon = $_POST['switch'][$i];
-								$onarray[] = $valueon;
-							}
-							
-						}
-
-
-
-
-						for ($y = 0; $y <= count($onarray)-1; $y++)
-						{
-							if (($key = array_search($onarray[$y], $sortarray)) !== false) 
-							{
-							    unset($sortarray[$key]);
+								if(isset($_POST['switch'][$i]))
+								{
+									$valueon = $_POST['switch'][$i];
+									$onarray[] = $valueon;
+								}
+								
 							}
 
+							for ($y = 0; $y <= count($onarray)-1; $y++)
+							{
+								if (($key = array_search($onarray[$y], $sortarray)) !== false) 
+								{
+								    unset($sortarray[$key]);
+								}
+
+							}
+
+							$offaray = array_values($sortarray);
+
+
+							for($x=0; $x <= count($onarray)-1; $x++)
+							{
+								$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+								$insertdata->execute(array($onarray[$x], 5, 1, $time, $date));
+
+							}
+
+							for($w=0; $w <= count($offaray)-1; $w++)
+							{
+								$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+								$insertdata->execute(array($offaray[$w], 5, 0, $time, $date));
+							}
+
 						}
-
-						$offaray = array_values($sortarray);
-
-
-						for($x=0; $x <= count($onarray)-1; $x++)
+						else
 						{
-							$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
-							$insertdata->execute(array($onarray[$x], 5, 1, $time, $date));
+							if(isset($_POST['switch']))
+							{
+								$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+								$insertdata->execute(array($sortarray[0], 5, 1, $time, $date));
+							}
+							else
+							{
+								$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
+								$insertdata->execute(array($sortarray[0], 5, 0, $time, $date));
 
-						}
-
-						for($w=0; $w <= count($offaray)-1; $w++)
-						{
-							$insertdata = $bdd->prepare("INSERT INTO data(idsens, typetram, datasent, time, date) VALUES(?,?,?,?,?)");
-							$insertdata->execute(array($offaray[$w], 5, 0, $time, $date));
+							}
 						}
 					}
 /*
