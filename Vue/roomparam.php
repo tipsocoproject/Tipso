@@ -41,7 +41,6 @@ include("../Controleur/controleur_roomparam.php");
 						<td><br><label class="text-input" for="last-name" name="capteur">Pièces</label></td>
 						<td><br><label class="text-input" for="last-name" name="room">Capteurs</label></td>
 						<td><br><label class="text-input" for="last-name" name="capteur">Etat</label></td>	
-						<td><br><label class="text-input" for="last-name" name="room">Modification</label></td>	
 					</tr>
 
 					<?php
@@ -57,6 +56,7 @@ include("../Controleur/controleur_roomparam.php");
 						$onval = 0;
 						$movval = 0;
 						$tempval = 25;
+						$humval = 50;
 
 
 						echo '<tr>';
@@ -90,7 +90,7 @@ include("../Controleur/controleur_roomparam.php");
 							{
 								if($onval == 0)
 								{
-									echo '<td><label style="position:relative; left: 3.5vh;" class="switch"><input name="switch[]" type="checkbox" class="checkbox"/><div class=""></div></label></td>';
+									echo '<td><label style="position:relative;" class="switch"><input name="switch[]" type="checkbox" class="checkbox"/><div class=""></div></label></td>';
 								}
 								else
 								{
@@ -98,11 +98,17 @@ include("../Controleur/controleur_roomparam.php");
 
 								}
 							}
-							else
+							elseif($idname['sensortype'] == "Humidité")
 							{
-								echo '<td><br><input class="input-box" type="text" name="modification" value=""></td>';
+								if($humval != 0)
+								{
+									echo '<td><br><input class="input-box" type="text" name="state" value="'.$humval."%".'" readonly></td>';
+								}
+								else
+								{
+									echo '<td><br><input class="input-box" type="text" name="state" value="" placeholder=" " readonly></td>';
+								}
 							}
-							echo '<td><br><input class="input-box" type="text" name="modification" value=""></td>';
 						echo '</tr>';
 
 
@@ -115,8 +121,7 @@ include("../Controleur/controleur_roomparam.php");
 						<td></td>
 						<td></td>
 						<td></td>
-						<td></td>
-						<td><br><input class="button" type="submit" name="confirm-button" value="Valider"></td>
+						<td><br><input style="position: relative; left: -0.1vh;"class="button" type="submit" name="confirm-button" value="Valider"></td>
 					</tr>
 				</table>
 				<span class="error">

@@ -253,12 +253,12 @@
 
 									
 								<div class="function-text">
-													<p class="bath-text">Bathroom</p>
-													<p class="bed-text">Bedroom</p>
-													<p class="kitchen-text">Kitchen</p>
-													<p class="laundry-text">Laundryroom</p>
-													<p class="living-text">Livingroom</p>
-													<p class="office-text">Office</p>
+													<p class="bath-text">Salle de Bain</p>
+													<p class="bed-text">Chambre</p>
+													<p class="kitchen-text">Cuisine</p>
+													<p class="laundry-text">Buanderie</p>
+													<p class="living-text">Salon</p>
+													<p class="office-text">Bureau</p>
 												</div>
 
 												<div class="menu-bar-room" id="bathroom">

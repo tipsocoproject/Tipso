@@ -88,6 +88,10 @@
 									$valueon = $_POST['switch'][$i];
 									$onarray[] = $valueon;
 								}
+								else
+								{
+									$onarray[] = 0;
+								}
 								
 							}
 
