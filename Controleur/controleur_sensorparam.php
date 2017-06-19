@@ -2,7 +2,6 @@
 
 	if(isset($_SESSION['id']))
 	{
-
 		$idc = $_SESSION['id'];
 		$title = $_GET['val'];
 
@@ -92,7 +91,6 @@
 								{
 									$onarray[] = 0;
 								}
-								
 							}
 
 							for ($y = 0; $y <= count($onarray)-1; $y++)

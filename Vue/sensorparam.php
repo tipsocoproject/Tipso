@@ -242,7 +242,6 @@ else
 
 									$onval = $datafetch['datasent'];
 
-
 									$array_room = $reqroom->fetch();
 									$movval = 0;
 									$tempval = 25;

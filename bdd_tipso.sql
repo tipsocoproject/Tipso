@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 05 Février 2017 à 13:29
+-- Généré le :  Lun 19 Juin 2017 à 16:15
 -- Version du serveur :  10.1.16-MariaDB
--- Version de PHP :  5.5.38
+-- Version de PHP :  5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -42,7 +42,8 @@ CREATE TABLE `administrator` (
 
 INSERT INTO `administrator` (`idadmin`, `firstname`, `lastname`, `mail`, `password`, `type`, `adminkey`) VALUES
 (3, 'Andrew', 'Philippick', 'philippick.a@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'superuser'),
-(4, '', '', '', '', 0, 'superuser2');
+(4, '', '', '', '', 0, 'superuser2'),
+(5, '', '', '', '', 0, 'SuperKey');
 
 -- --------------------------------------------------------
 
@@ -69,9 +70,8 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id`, `lastname`, `firstname`, `mail`, `password`, `type`, `country`, `city`, `postcode`, `mobilenumber`, `adresse`) VALUES
-(1, 'Philippick', 'Andrew', 'philippick.isep@gmail.com', 'eeb29b724bc484bbc0e77f319178b3ac46628d5f', 0, '', '', '', '0', ''),
 (38, 'Philippick', 'Andrew', 'philippick.a@gmail.com', 'bc2fbc9d44f24849bc6922215a6be02fb6c2217e', 0, 'France', 'Paris', '75016', '0638197527', '6 rue de la cure'),
-(41, 'Test', 'Test', 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 0, '', '', '', '', '');
+(44, 'Tipso', 'Tipso', 'lambda@gmail.com', '482fbdf656c5a7b9f6d7767c7ead2574b914aaff', 0, 'FR', 'Paris', '75006', '0638197527', '28 rue Notre Dame Des Champs');
 
 -- --------------------------------------------------------
 
@@ -94,54 +94,119 @@ CREATE TABLE `data` (
 --
 
 INSERT INTO `data` (`iddata`, `idsens`, `typetram`, `datanumber`, `datasent`, `time`, `date`) VALUES
-(97, 11, 5, 0, 1, '13:01:37', '2017-02-07'),
-(98, 11, 5, 0, 1, '22:47:14', '2017-02-07'),
-(99, 11, 5, 0, 1, '11:51:50', '2017-02-07'),
-(100, 11, 5, 0, 1, '07:09:47', '2017-02-07'),
-(101, 11, 5, 0, 1, '01:50:28', '2017-02-07'),
-(102, 11, 5, 0, 1, '21:18:17', '2017-02-07'),
-(103, 11, 5, 0, 1, '21:12:34', '2017-02-07'),
-(104, 11, 5, 0, 0, '01:27:42', '2017-02-07'),
-(105, 11, 5, 0, 1, '00:13:05', '2017-02-07'),
-(106, 11, 5, 0, 1, '15:53:05', '2017-02-07'),
-(107, 11, 5, 0, 0, '01:07:03', '2017-02-07'),
-(108, 11, 5, 0, 0, '00:49:23', '2017-02-07'),
-(109, 11, 5, 0, 0, '02:09:27', '2017-02-07'),
-(110, 11, 5, 0, 1, '00:31:38', '2017-02-07'),
-(111, 11, 5, 0, 1, '17:35:18', '2017-02-07'),
-(112, 11, 5, 0, 1, '23:14:50', '2017-02-07'),
-(113, 11, 5, 0, 1, '01:39:34', '2017-02-07'),
-(114, 11, 5, 0, 0, '17:13:57', '2017-02-07'),
-(115, 11, 5, 0, 0, '16:37:18', '2017-02-07'),
-(116, 11, 5, 0, 0, '14:44:00', '2017-02-07'),
-(117, 11, 5, 0, 1, '16:43:27', '2017-02-07'),
-(118, 11, 5, 0, 1, '12:00:00', '2017-02-07'),
-(119, 11, 5, 0, 1, '16:13:02', '2017-02-07'),
-(120, 11, 5, 0, 1, '17:16:56', '2017-02-07'),
-(121, 11, 5, 0, 0, '17:21:04', '2017-02-08'),
-(122, 11, 5, 0, 1, '02:49:48', '2017-02-08'),
-(123, 11, 5, 0, 1, '10:22:32', '2017-02-08'),
-(124, 11, 5, 0, 1, '00:53:36', '2017-02-08'),
-(125, 11, 5, 0, 1, '21:32:26', '2017-02-08'),
-(126, 11, 5, 0, 1, '07:43:21', '2017-02-08'),
-(127, 11, 5, 0, 0, '17:05:47', '2017-02-08'),
-(128, 11, 5, 0, 1, '07:34:02', '2017-02-08'),
-(129, 11, 5, 0, 1, '23:17:33', '2017-02-08'),
-(130, 11, 5, 0, 0, '20:40:40', '2017-02-08'),
-(131, 11, 5, 0, 0, '06:22:46', '2017-02-08'),
-(132, 11, 5, 0, 0, '07:18:13', '2017-02-08'),
-(133, 11, 5, 0, 1, '16:36:25', '2017-02-08'),
-(134, 11, 5, 0, 1, '11:41:43', '2017-02-08'),
-(135, 11, 5, 0, 1, '20:13:31', '2017-02-08'),
-(136, 11, 5, 0, 1, '18:06:09', '2017-02-08'),
-(137, 11, 5, 0, 0, '19:29:02', '2017-02-08'),
-(138, 11, 5, 0, 1, '22:46:32', '2017-02-08'),
-(139, 11, 5, 0, 0, '04:38:00', '2017-02-08'),
-(140, 11, 5, 0, 1, '09:57:50', '2017-02-08'),
-(141, 11, 5, 0, 0, '01:55:24', '2017-02-08'),
-(142, 11, 5, 0, 1, '23:55:05', '2017-02-08'),
-(143, 11, 5, 0, 0, '01:36:14', '2017-02-08'),
-(144, 11, 5, 0, 1, '00:53:15', '2017-02-08');
+(264, 41, 5, 0, 1, '14:38:38', '2017-02-07'),
+(265, 0, 5, 0, 1, '14:38:38', '2017-02-07'),
+(266, 45, 5, 0, 0, '14:38:38', '2017-02-07'),
+(267, 0, 5, 0, 1, '14:38:40', '2017-02-07'),
+(268, 0, 5, 0, 1, '14:38:40', '2017-02-07'),
+(269, 41, 5, 0, 0, '14:38:40', '2017-02-07'),
+(270, 45, 5, 0, 0, '14:38:40', '2017-02-07'),
+(271, 41, 5, 0, 1, '14:39:10', '2017-02-07'),
+(272, 0, 5, 0, 1, '14:39:10', '2017-02-07'),
+(273, 45, 5, 0, 0, '14:39:10', '2017-02-07'),
+(274, 0, 5, 0, 1, '14:39:11', '2017-02-07'),
+(275, 0, 5, 0, 1, '14:39:11', '2017-02-07'),
+(276, 41, 5, 0, 0, '14:39:11', '2017-02-07'),
+(277, 45, 5, 0, 0, '14:39:11', '2017-02-07'),
+(278, 41, 5, 0, 1, '14:39:13', '2017-02-07'),
+(279, 0, 5, 0, 1, '14:39:13', '2017-02-07'),
+(280, 45, 5, 0, 0, '14:39:13', '2017-02-07'),
+(281, 0, 5, 0, 1, '14:39:15', '2017-02-07'),
+(282, 0, 5, 0, 1, '14:39:15', '2017-02-07'),
+(283, 41, 5, 0, 0, '14:39:15', '2017-02-07'),
+(284, 45, 5, 0, 0, '14:39:15', '2017-02-07'),
+(285, 41, 5, 0, 1, '14:39:16', '2017-02-07'),
+(286, 0, 5, 0, 1, '14:39:16', '2017-02-07'),
+(287, 45, 5, 0, 0, '14:39:16', '2017-02-07'),
+(288, 0, 5, 0, 1, '14:39:17', '2017-02-07'),
+(289, 0, 5, 0, 1, '14:39:17', '2017-02-07'),
+(290, 41, 5, 0, 0, '14:39:17', '2017-02-07'),
+(291, 45, 5, 0, 0, '14:39:17', '2017-02-07'),
+(292, 41, 5, 0, 1, '14:39:18', '2017-02-07'),
+(293, 0, 5, 0, 1, '14:39:18', '2017-02-07'),
+(294, 45, 5, 0, 0, '14:39:18', '2017-02-07'),
+(295, 63, 20, 0, 20, '16:54:50', '2017-02-08'),
+(296, 63, 20, 0, 22, '22:32:36', '2017-02-08'),
+(297, 63, 20, 0, 25, '18:52:47', '2017-02-08'),
+(298, 63, 20, 0, 22, '17:27:16', '2017-02-08'),
+(299, 63, 20, 0, 23, '05:02:55', '2017-02-08'),
+(300, 63, 20, 0, 20, '09:41:37', '2017-02-08'),
+(301, 63, 20, 0, 18, '22:40:15', '2017-02-08'),
+(302, 63, 20, 0, 20, '16:30:40', '2017-02-08'),
+(303, 63, 20, 0, 24, '10:59:45', '2017-02-08'),
+(304, 63, 20, 0, 21, '19:09:24', '2017-02-08'),
+(305, 63, 20, 0, 25, '17:16:27', '2017-02-08'),
+(306, 63, 20, 0, 15, '10:52:48', '2017-02-08'),
+(307, 63, 20, 0, 22, '04:45:20', '2017-02-08'),
+(308, 63, 20, 0, 23, '20:55:55', '2017-02-08'),
+(309, 63, 20, 0, 21, '20:41:25', '2017-02-08'),
+(310, 63, 20, 0, 15, '18:33:43', '2017-02-08'),
+(311, 63, 20, 0, 24, '04:19:40', '2017-02-08'),
+(312, 63, 20, 0, 23, '09:01:11', '2017-02-08'),
+(313, 63, 20, 0, 25, '02:55:07', '2017-02-08'),
+(314, 63, 20, 0, 18, '09:33:21', '2017-02-08'),
+(315, 63, 20, 0, 16, '03:42:45', '2017-02-08'),
+(316, 63, 20, 0, 19, '01:25:12', '2017-02-08'),
+(317, 63, 20, 0, 25, '05:57:35', '2017-02-08'),
+(318, 63, 20, 0, 20, '01:51:45', '2017-02-08'),
+(319, 63, 20, 0, 19, '20:54:36', '2017-02-09'),
+(320, 63, 20, 0, 18, '16:07:59', '2017-02-09'),
+(321, 63, 20, 0, 16, '23:48:48', '2017-02-09'),
+(322, 63, 20, 0, 19, '13:28:54', '2017-02-09'),
+(323, 63, 20, 0, 17, '01:55:10', '2017-02-09'),
+(324, 63, 20, 0, 19, '23:09:31', '2017-02-09'),
+(325, 63, 20, 0, 19, '02:28:45', '2017-02-09'),
+(326, 63, 20, 0, 23, '14:24:48', '2017-02-09'),
+(327, 63, 20, 0, 20, '12:44:31', '2017-02-09'),
+(328, 63, 20, 0, 17, '16:29:47', '2017-02-09'),
+(329, 63, 20, 0, 19, '07:57:28', '2017-02-09'),
+(330, 63, 20, 0, 18, '22:39:27', '2017-02-09'),
+(331, 63, 20, 0, 25, '23:22:37', '2017-02-09'),
+(332, 63, 20, 0, 22, '14:08:48', '2017-02-09'),
+(333, 63, 20, 0, 24, '10:14:56', '2017-02-09'),
+(334, 63, 20, 0, 24, '08:12:51', '2017-02-09'),
+(335, 63, 20, 0, 18, '03:49:26', '2017-02-09'),
+(336, 63, 20, 0, 20, '10:06:35', '2017-02-09'),
+(337, 63, 20, 0, 22, '03:21:08', '2017-02-09'),
+(338, 63, 20, 0, 15, '13:05:00', '2017-02-09'),
+(339, 63, 20, 0, 17, '20:05:02', '2017-02-09'),
+(340, 63, 20, 0, 19, '22:23:06', '2017-02-09'),
+(341, 63, 20, 0, 20, '05:16:06', '2017-02-09'),
+(342, 63, 20, 0, 23, '07:15:53', '2017-02-09'),
+(343, 11, 5, 0, 1, '15:07:24', '2017-06-12'),
+(344, 0, 5, 0, 1, '15:07:24', '2017-06-12'),
+(345, 0, 5, 0, 1, '15:07:24', '2017-06-12'),
+(346, 30, 5, 0, 0, '15:07:24', '2017-06-12'),
+(347, 49, 5, 0, 0, '15:07:24', '2017-06-12');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `dataflow`
+--
+
+CREATE TABLE `dataflow` (
+  `id` int(255) NOT NULL,
+  `tramtype` int(255) NOT NULL,
+  `groupe` varchar(255) NOT NULL,
+  `tramstate` int(11) NOT NULL,
+  `sensortype` varchar(255) NOT NULL,
+  `sensornumber` varchar(255) NOT NULL,
+  `sensorvalue` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `dataflow`
+--
+
+INSERT INTO `dataflow` (`id`, `tramtype`, `groupe`, `tramstate`, `sensortype`, `sensornumber`, `sensorvalue`, `date`, `time`) VALUES
+(171, 1, '004D', 1, 'A', '01', '0001', '2017-06-12', '16:25:14'),
+(172, 1, '004D', 1, 'A', '01', '0001', '2017-06-12', '16:25:14'),
+(173, 1, '004D', 1, 'A', '01', '0001', '2017-06-12', '16:25:14'),
+(174, 1, '004D', 1, 'A', '01', '0001', '2017-06-12', '16:25:14'),
+(175, 1, '004D', 1, 'A', '01', '0001', '2017-06-12', '16:25:14');
 
 -- --------------------------------------------------------
 
@@ -168,7 +233,10 @@ INSERT INTO `event` (`idevent`, `idc`, `idsens`, `date`, `time`, `room`, `action
 (35, 38, 49, '02/18/2017', '22:30', 'Chambre Andrew', '1'),
 (40, 38, 9, '02/10/2017', '03:40', 'Salon jeux', '18°C'),
 (41, 38, 30, '02/16/2017', '21:03', 'Entrée principale', '1'),
-(42, 38, 30, '02/16/2017', '21:03', 'Entrée principale', '1');
+(42, 38, 30, '02/16/2017', '21:03', 'Entrée principale', '1'),
+(43, 38, 11, '02/07/2017', '22:22', 'Bureau Victor', '0'),
+(44, 44, 41, '02/08/2017', '20:30', 'Chambre Tipso', '0'),
+(45, 38, 49, '06/13/2017', '21:40', 'Chambre Andrew', '0');
 
 -- --------------------------------------------------------
 
@@ -203,18 +271,19 @@ INSERT INTO `home` (`idhome`, `idc`, `dimension`, `roomnumb`, `address`, `postco
 CREATE TABLE `messages` (
   `idm` int(11) NOT NULL,
   `idc` int(11) NOT NULL,
-  `nom` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8 NOT NULL,
   `subject` text NOT NULL,
-  `comment` text CHARACTER SET utf8 NOT NULL
+  `comment` text CHARACTER SET utf8 NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `messages`
 --
 
-INSERT INTO `messages` (`idm`, `idc`, `nom`, `email`, `subject`, `comment`) VALUES
-(1, 0, '', 'philippick.a@gmail.com', 'problem', 'odjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfoodjfsjfdsdjfo');
+INSERT INTO `messages` (`idm`, `idc`, `subject`, `comment`, `date`) VALUES
+(11, 39, 'synchronisation', 'je constate des temps de latences pour l\\''activation de mes volets.', '2017-02-05 12:46:36'),
+(12, 39, 'synchronisation', ' je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets. je constate des temps de latences pour lactivation de mes volets.', '2017-02-05 13:03:42'),
+(13, 44, ' Capteur Lumière', 'J\\''ai un problème ve cmon cpateur est-ce que vous pouvez envoyer quelqu\\''un s\\''il vous plait\\r\\n\\r\\nCordialement, \\r\\n\\r\\nLambda', '2017-02-07 13:40:03');
 
 -- --------------------------------------------------------
 
@@ -241,7 +310,12 @@ INSERT INTO `rooms` (`idroom`, `idc`, `roomname`, `type`, `idsens`, `iddom`) VAL
 (10, 38, 'Bureau chambre Andrew', 'Bureau', 25, 0),
 (11, 38, 'Chambre Andrew', 'Chambre', 49, 0),
 (12, 41, 'Chambre Test', 'Chambre', 39, 0),
-(13, 38, 'Bureau Victor', 'Bureau', 11, 0);
+(13, 38, 'Bureau Victor', 'Bureau', 11, 0),
+(14, 38, 'Patio balcon Papa', 'Terrasse', 43, 0),
+(20, 44, 'Chambre Tipso', 'Chambre', 41, 0),
+(21, 44, 'Salon principale', 'Salon', 45, 0),
+(22, 44, 'SDB Tips', 'Salle de Bain', 44, 0),
+(23, 44, 'Salon principale', 'Salon', 47, 0);
 
 -- --------------------------------------------------------
 
@@ -275,13 +349,13 @@ INSERT INTO `sensors` (`sensorserial`, `idsens`, `idc`, `idroom`, `mail`, `senso
 ('1000139', 38, 0, 0, '', 'Mouvement'),
 ('1000151', 39, 41, 0, 'test@gmail.com', 'Température'),
 ('1000152', 40, 0, 0, '', 'Humidité'),
-('1000153', 41, 0, 0, '', 'Lumière'),
+('1000153', 41, 44, 0, 'lambda@gmail.com', 'Lumière'),
 ('1000154', 42, 0, 0, '', 'Mouvement'),
-('1000161', 43, 0, 0, '', 'Température'),
-('1000162', 44, 0, 0, '', 'Humidité'),
-('1000163', 45, 0, 0, '', 'Lumière'),
+('1000161', 43, 38, 0, 'philippick.a@gmail.com', 'Température'),
+('1000162', 44, 44, 0, 'lambda@gmail.com', 'Humidité'),
+('1000163', 45, 44, 0, 'lambda@gmail.com', 'Lumière'),
 ('1000164', 46, 0, 0, '', 'Mouvement'),
-('1000171', 47, 0, 0, '', 'Température'),
+('1000171', 47, 44, 0, 'lambda@gmail.com', 'Température'),
 ('1000172', 48, 0, 0, '', 'Humidité'),
 ('1000173', 49, 38, 0, 'philippick.a@gmail.com', 'Lumière'),
 ('1000174', 50, 0, 0, '', 'Mouvement');
@@ -322,6 +396,12 @@ ALTER TABLE `client`
 --
 ALTER TABLE `data`
   ADD PRIMARY KEY (`iddata`);
+
+--
+-- Index pour la table `dataflow`
+--
+ALTER TABLE `dataflow`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `event`
@@ -367,32 +447,37 @@ ALTER TABLE `userservice`
 -- AUTO_INCREMENT pour la table `administrator`
 --
 ALTER TABLE `administrator`
-  MODIFY `idadmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idadmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT pour la table `data`
 --
 ALTER TABLE `data`
-  MODIFY `iddata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+  MODIFY `iddata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=348;
+--
+-- AUTO_INCREMENT pour la table `dataflow`
+--
+ALTER TABLE `dataflow`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 --
 -- AUTO_INCREMENT pour la table `event`
 --
 ALTER TABLE `event`
-  MODIFY `idevent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `idevent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `idm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT pour la table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idroom` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT pour la table `sensors`
 --
