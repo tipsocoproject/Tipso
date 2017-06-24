@@ -238,12 +238,16 @@ else
 									$prepdata = $bdd->prepare('SELECT * FROM `data` WHERE idsens=? ORDER BY `time` DESC, `date` DESC');
 									$prepdata->execute(array($array[$i]));
 
+									$prepdata2 = $bdd->prepare('SELECT * FROM `dataflow` WHERE sensorref=69 ORDER BY `time` DESC, `date` DESC');
+
+
 									$datafetch = $prepdata->fetch();
+									$datafetch2 = $prepdata2->fetch();
 
 									$onval = $datafetch['datasent'];
 
 									$array_room = $reqroom->fetch();
-									$movval = 0;
+									$movval = $datafetch2['sensorvalue'];
 									$tempval = 25;
 									$state = 1;
 									$humval = 50;
@@ -280,7 +284,7 @@ else
 											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'" readonly></td>';
 											echo '<input name="titlesens" type="hidden" value='.$array[$i].'>';
 
-											if($movval == 0)
+											if($movval == "0000")
 											{
 												echo '<td><br><select class="input-box" type="text" name="state"><option selected="selected">Disponible</option><option>Occupée</option></select></td>';
 											}
@@ -289,7 +293,7 @@ else
 												echo '<td><br><select class="input-box" type="text" name="state"><option>Disponible</option><option selected="selected">Occupée</option></select></td>';
 
 											}
-											if($state == 1)
+											if($movval == "0001")
 											{
 												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}

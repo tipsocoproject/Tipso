@@ -270,6 +270,7 @@ echo "Hello";
 	echo "Tabular Data:<br />";
 
 	for($i=0, $size=count($data_tab); $i<$size; $i++){
+
 		echo "Trame $i: $data_tab[$i]<br />";
 
 		$trame = $data_tab[1];
@@ -293,8 +294,8 @@ echo "Hello";
 
 
 		echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
-		$req = $bdd->prepare("INSERT INTO dataflow(tramtype, groupe, tramstate, sensortype, sensornumber, sensorvalue, date, time) VALUES (?,?,?,?,?,?,?,?)");
-		$req->execute(array($t,$o,$r,$c,$n,$v,$myDate, $time));
+		$req = $bdd->prepare("INSERT INTO dataflow(tramtype, groupe, tramstate, sensortype, sensornumber, sensorvalue, sensorref, date, time) VALUES (?,?,?,?,?,?,?,?,?)");
+		$req->execute(array($t,$o,$r,$c,$n,$v,$x,$myDate, $time));
 
 
 
