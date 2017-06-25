@@ -238,7 +238,7 @@ else
 									$prepdata = $bdd->prepare('SELECT * FROM `data` WHERE idsens=? ORDER BY `time` DESC, `date` DESC');
 									$prepdata->execute(array($array[$i]));
 
-									$prepdata2 = $bdd->prepare('SELECT * FROM `dataflow` WHERE sensorref=69 ORDER BY `time` DESC, `date` DESC');
+									$prepdata2 = $bdd->prepare('SELECT * FROM `dataflow` WHERE sensortype=8 ORDER BY `id` DESC, `time` DESC, `date` DESC LIMIT 1');
 
 
 									$datafetch = $prepdata->fetch();
@@ -247,7 +247,7 @@ else
 									$onval = $datafetch['datasent'];
 
 									$array_room = $reqroom->fetch();
-									$movval = $datafetch2['sensorvalue'];
+									$movval = $datafetch2['groupe'];
 									$tempval = 25;
 									$state = 1;
 									$humval = 50;
@@ -284,22 +284,22 @@ else
 											echo '<td><br><input class="input-box" type="text" name="modification" value="'.$array_room['roomname'].'" readonly></td>';
 											echo '<input name="titlesens" type="hidden" value='.$array[$i].'>';
 
-											if($movval == "0000")
+											if($movval == 0000)
 											{
-												echo '<td><br><select class="input-box" type="text" name="state"><option selected="selected">Disponible</option><option>Occupée</option></select></td>';
+												echo '<td><br><select class="input-box" type="text" name="state"><option selected="selected">Disponible</option><option>Disponible</option></select></td>';
 											}
 											else
 											{
 												echo '<td><br><select class="input-box" type="text" name="state"><option>Disponible</option><option selected="selected">Occupée</option></select></td>';
 
 											}
-											if($movval == "0001")
+											if($movval == 0000)
 											{
 												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
 											}
 											else
 											{
-												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/greenbutton.png"/></td>';
+												echo '<td><img style="positon: relative; left: -0.1vh;" class="sens-img" src="../icon/redbutton.png"/></td>';
 											}
 											echo '<td><br><input id="button-alert" type="submit" name="confirm-alert" value="Avertir"></td>';
 										echo '</tr>';
@@ -374,7 +374,7 @@ else
 				<?php
 					require("../Modele/error.php");
 				?>
-				</span>	
+				</span>
 			</form>
 			<br>
 		</div>

@@ -67,14 +67,12 @@
 		*/
 				if(isset($_POST['confirm-button']))
 				{
-
                 	date_default_timezone_set("Europe/Paris");
 
                     $date = date('Y/m/d');
 					$time = date('H:i:s');
 
 	            	$switchcount = count($_POST['sensor']);
-	            	
 
 					if($title=="Lumière")
 					{
@@ -118,6 +116,10 @@
 								$insertdata->execute(array($offaray[$w], 5, 0, $time, $date));
 							}
 
+						}
+						if($title == "Mouvement"){
+							$movstate = $_POST['state']; 
+							
 						}
 						else
 						{

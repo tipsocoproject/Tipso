@@ -273,7 +273,7 @@ echo "Hello";
 
 		echo "Trame $i: $data_tab[$i]<br />";
 
-		$trame = $data_tab[1];
+		$trame = $data_tab[$i];
 
 		// décodage avec des substring
 
@@ -287,15 +287,14 @@ echo "Hello";
 		
 		$time = $hour.":".$min.":".$sec; 
 		$myDate =  $year."-".$month."-".$day; 
-		echo ("Time");
-		echo ($time); 
-		echo ("Date");
-		echo ($myDate); 
-
 
 		echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 		$req = $bdd->prepare("INSERT INTO dataflow(tramtype, groupe, tramstate, sensortype, sensornumber, sensorvalue, sensorref, date, time) VALUES (?,?,?,?,?,?,?,?,?)");
 		$req->execute(array($t,$o,$r,$c,$n,$v,$x,$myDate, $time));
+
+		echo "Here's the value : ";
+		echo $v; 
+		echo " // ";
 
 
 
