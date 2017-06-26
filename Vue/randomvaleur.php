@@ -1,6 +1,5 @@
 <?php
 require('../Modele/connexion.php');
-include('../fonction/function_uninjection_sql.php');
 
 function randomTime($start_date, $end_date)
 {
@@ -252,7 +251,6 @@ if (isset($_POST['confirm-button']))
 
 <?php
 
-echo "Hello"; 
 
 
 	$ch = curl_init();
@@ -262,16 +260,16 @@ echo "Hello";
 	$data = curl_exec($ch);
 	curl_close($ch);
 
-	echo "Raw Data:<br />";
-	echo("$data");
+//	echo "Raw Data:<br />";
+//	echo("$data");
 
 	$data_tab = str_split($data,33);
 
-	echo "Tabular Data:<br />";
+//	echo "Tabular Data:<br />";
 
 	for($i=0, $size=count($data_tab); $i<$size; $i++){
 
-		echo "Trame $i: $data_tab[$i]<br />";
+//		echo "Trame $i: $data_tab[$i]<br />";
 
 		$trame = $data_tab[$i];
 
@@ -288,17 +286,19 @@ echo "Hello";
 		$time = $hour.":".$min.":".$sec; 
 		$myDate =  $year."-".$month."-".$day; 
 
-		echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
+		//echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 		$req = $bdd->prepare("INSERT INTO dataflow(tramtype, groupe, tramstate, sensortype, sensornumber, sensorvalue, sensorref, date, time) VALUES (?,?,?,?,?,?,?,?,?)");
 		$req->execute(array($t,$o,$r,$c,$n,$v,$x,$myDate, $time));
 
-		echo "Here's the value : ";
-		echo $v; 
-		echo " // ";
+	//	echo "Here's the value : ";
+	//	echo $v; 
+	//	echo " // ";
 
 
 
 	}
+
+
 /*
 	$trame = $data_tab[1];
 

@@ -1,4 +1,5 @@
 <?php 
+	require("../Vue/randomvaleur.php");
 
 	if(isset($_SESSION['id']))
 	{
@@ -18,6 +19,7 @@
 		if($title=="mouvement")
 		{
 			$title="Mouvement";
+
 		}
 
 		if($title=="temperature")
@@ -116,10 +118,6 @@
 								$insertdata->execute(array($offaray[$w], 5, 0, $time, $date));
 							}
 
-						}
-						if($title == "Mouvement"){
-							$movstate = $_POST['state']; 
-							
 						}
 						else
 						{
